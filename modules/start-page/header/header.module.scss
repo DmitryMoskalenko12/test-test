@@ -70,7 +70,7 @@
     width: 100%;
     height: calc(100% - 51px);
     background-color: variables.$primary-bg;
-    transition: 0.3s all;
+    transition: 0.3s left;
     z-index: 80;
 }
 
@@ -84,7 +84,7 @@
     width: 100%;
     height: calc(100% - 51px);
     background-color: variables.$primary-bg;
-    transition: 0.3s all;
+    transition: 0.3s left;
     z-index: 80;   
 }
 
