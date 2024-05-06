@@ -3,12 +3,20 @@ import classes from './header.module.scss';
 import Link from 'next/link';
 import LanguageChanger from '@/components/LanguageChanger/LanguageChanger';
 import cn from 'classnames';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Hamburger from '@/ui/start-page/hamburger/Hamburger';
 
 const Header = () => {
     const [active, setActive] = useState(false);
     
+    useEffect(() => {
+        if (active) {
+         document.querySelector('body').style.overflow = 'hidden'
+        } else {
+         document.querySelector('body').style.overflow = 'initial'
+        }
+    },[active])
+
     return <header className={classes.header}>
               <div className='container'>
                  <div style={{height: active ? '40px' : 'initial'}} className={classes.wrapper}>
