@@ -1,0 +1,42 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.button {
+    width: 343px;
+    height: 58px;
+    @include mixins.flex(flex, center, center);
+    border-radius: 8px;
+    background: variables.$primary-dark-blue;
+    cursor: pointer;
+    border: none;
+    color: variables.$primary-white;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    text-align: center;
+}
+
+@media(min-width: 991px) {
+    .button {
+        transition: 0.3s all;
+    }
+    
+    .button:hover {
+        transition: 0.3s all;
+        background: variables.$primary-white;
+        color: variables.$primary-dark-blue;
+        border: 2px solid variables.$primary-dark-blue;
+    }
+}
+
+@media(min-width: 1024px) {
+    .button {
+        width: 250px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .button {
+        width: 212px;
+        height: 56px;
+    }
+}

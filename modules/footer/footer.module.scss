@@ -1,0 +1,49 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+.footer {
+    padding: 22px 16px 22px 16px;
+}
+
+.dots {
+    display: none
+}
+
+.wrapper {
+    @include mixins.flex(flex, flex-start, center);
+    gap: 16px;
+    min-width: 246px;
+}
+
+.footer_social {
+    color: variables.$primary-dark-blue;
+    font-family: 'Proxima Nova';
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    text-align: left;
+}
+
+.social_block {
+    @include mixins.flex(flex, center, center);
+    gap: 6px;
+}
+
+@media(min-width: 991px) {
+    .footer {
+        padding: 22px 50px 22px 50px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .footer {
+        position: relative;
+        padding: 64px 76px 39px 76px;
+    }
+
+    .dots {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+    }
+}

@@ -1,0 +1,64 @@
+@use '../../style/variables.scss';
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: blur(10px);
+    background: variables.$modal-bg;
+    z-index: 30;
+}
+
+.content {
+    width: 343px;
+    height: 239px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80px 12px 80px 12px;
+    border-radius: 8px;
+    background: variables.$primary-white;
+}
+
+.close {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    top: 21px;
+    right: 21px;
+    color: variables.$close-modal;
+    font-size: 30px;
+    background: transparent;
+    border: 1px solid variables.$close-border-color;
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.title {
+    color: variables.$primary-dark-blue;
+    font-family: 'Proxima Nova';
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight600;
+    text-align: center;
+}
+
+.text {
+    color: variables.$primary-dark-blue;
+    font-family: 'Proxima Nova';
+    font-size: variables.$font-size18;
+    font-weight: variables.$font-weight400;
+    text-align: center;
+    margin-top: 16px;
+    padding: 0 20px 0 20px;
+}
+
+@media(min-width: 767px) {
+    .content {
+        width: 544px;
+        height: 239px;
+    }
+}

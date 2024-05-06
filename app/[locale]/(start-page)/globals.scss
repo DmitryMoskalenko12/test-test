@@ -1,0 +1,233 @@
+@use '/style/variables.scss';
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Regular.eot');
+  src: local('ProximaNova-Regular'), local('ProximaNova-Regular'),
+    url('./fonts/ProximaNova-Regular.eot') format('embedded-opentype'),
+    url('./fonts/ProximaNova-Regular.woff') format('woff'),
+    url('./fonts/ProximaNova-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNova-Semibold.eot');
+  src: local('ProximaNova-Regular'), local('ProximaNova-Regular'),
+    url('./fonts/ProximaNova-Semibold.eot') format('embedded-opentype'),
+    url('./fonts/ProximaNova-Semibold.woff') format('woff'),
+    url('./fonts/ProximaNova-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/ProximaNovaCond-Bold.eot');
+  src: local('ProximaNovaCond-Bold'), local('ProximaNovaCond-Bold'),
+    url('./fonts/ProximaNovaCond-Bold.eot') format('embedded-opentype'),
+    url('./fonts/ProximaNovaCond-Bold.woff') format('woff'),
+    url('./fonts/ProximaNovaCond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  z-index: -999;
+}
+
+body {
+  position: relative;
+  z-index: -999;
+  background: #FDFFFE;
+  margin: 0;
+  padding: 0;
+  font-family: 'Proxima Nova', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.pr1 {
+  position: absolute;
+  right: 156px;
+}
+
+.pr2 {
+  position: absolute;
+  top: 215px;
+  left: 175px;
+}
+
+.pr3 {
+  position: absolute;
+  top: 432px;
+  right: 156px;
+}
+
+.pr4 {
+  position: absolute;
+  top: 648px;
+  left: 175px;
+}
+
+.pr5 {
+  position: absolute;
+  top: 864px;
+  right: 156px;
+}
+
+.main-bg {
+  background: variables.$main-background;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+@media (min-width: 320px) {
+  .container {
+    width: auto;
+  }
+}
+
+@media(min-width: 576px) {
+  .pr2 {
+    left: 156px;
+  }
+
+  .pr4 {
+    left: 156px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .pr1 {
+    top: 20px;
+    left: 20px;
+    right: initial;
+  }
+
+  .pr2 {
+    top: 132px;
+    left: 185px;
+  }
+
+  .pr3 {
+    top: 4px;
+    right: -233px;
+  }
+
+  .pr4 {
+    position: absolute;
+    top: 108px;
+    left: 530px;
+  }
+
+  .pr5 {
+    top: -174px;
+    right: -456px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .pr2 {
+    top: 132px;
+    left: 235px;
+  }
+
+  .pr3 {
+    top: 4px;
+    right: -310px;
+  }
+
+  .pr4 {
+    left: 636px;
+  }
+
+  .pr5 {
+    right: -672px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .pr2 {
+    top: 145px;
+    left: 251px;
+  }
+
+  .pr3 {
+    top: 4px;
+    right: -350px;
+  }
+
+  .pr4 {
+    left: 680px;
+  }
+
+  .pr5 {
+    right: -749px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1128px;
+  }
+
+  .pr1 {
+    top: 43px;
+    left: 20px;
+  }
+
+  .pr2 {
+    top: 173px;
+    left: 262px;
+  }
+
+  .pr3 {
+    top: 6px;
+    right: -405px;
+  }
+
+  .pr4 {
+    left: 735px;
+    top: 138px;
+  }
+
+  .pr5 {
+    top: -170px;
+    right: -869px;
+  }
+}

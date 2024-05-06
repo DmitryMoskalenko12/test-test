@@ -1,0 +1,146 @@
+@use '../../../style/start-page/mixins.scss';
+@use '../../../style/start-page/variables.scss';
+
+  .services {
+   padding: 92px 16px 0 16px;
+  }
+
+  .title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight600;
+  }
+
+  .imgWrapper {
+    display: none;
+  }
+
+  .servicesTitle {
+    background: variables.$primary-linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight700;
+  }
+
+  .text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: 300;
+    line-height: 150%;
+  }
+
+  .servicesButton {
+   display: none;
+  }
+
+  .servicesButtonCollapse {
+    width: 328px;
+    height: 56px;
+    display: block;
+    @include mixins.flex(flex, center, center);
+    text-align: center;
+    gap: 12px;
+    cursor: pointer;
+    border-radius: 32px;
+    text-decoration: none;
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    background: variables.$primary-button-bg;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+
+  .collapse {
+    margin-top: 48px;
+  }
+
+  @media(min-width: 768px) {
+    .services {
+        padding: 225px 16px 0 16px;
+    }
+
+    .wrapper {
+        @include mixins.flex(flex, space-between, flex-start);
+        gap: 120px;
+    }
+
+    .servicesTextBlock {
+      flex-shrink: 0;
+      width: 206px;
+    }
+  }
+
+  @media(min-width: 992px) {
+    .services {
+        padding: 295px 16px 0 16px;
+    }
+
+    .servicesTextBlock {
+        position: sticky;
+        top: 55px;
+    }
+
+  }
+
+  @media(min-width: 1280px) {
+    .services {
+      padding: 480px 76px 0 76px;
+    }
+
+    .imgWrapper {
+      display: initial;
+      position: absolute;
+      width: 400px;
+      height: 69px;
+      top: 418px;
+      left: -78px;
+    }
+
+    .title {
+      font-size: variables.$font-size56;
+    }
+
+    .servicesTitle {
+      font-size: variables.$font-size56;
+      font-weight: variables.$font-weight600;
+    }
+
+    .wrapper {
+      position: relative;
+      gap: 94px;
+    }
+
+    .text {
+      font-size: variables.$font-size18;
+      margin-top: 24px;
+    }
+
+    .servicesTextBlock {
+      width: 370px;
+      top: 67px;
+    }
+
+    .servicesButton {
+      display: initial;
+      width: 264px;
+      height: 56px;
+      @include mixins.flex(flex, center, center);
+      text-align: center;
+      gap: 12px;
+      cursor: pointer;
+      border-radius: 32px;
+      text-decoration: none;
+      color: variables.$primary-color;
+      font-size: variables.$font-size16;
+      font-weight: variables.$font-weight400;
+      background: variables.$primary-button-bg;
+      margin-top: 88px;
+    }
+
+    .servicesButtonCollapse {
+      display: none;
+    }
+  }
