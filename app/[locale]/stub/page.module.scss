@@ -1,0 +1,7 @@
+@use '../../../style/variables.scss';
+
+.mainBg {
+    position: relative;
+    z-index: -999;
+    background: variables.$main-background;
+}

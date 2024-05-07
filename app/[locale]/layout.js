@@ -1,8 +1,8 @@
 import './globals.scss';
-import Header from '@/modules/header/Header';
-import Footer from '@/modules/footer/Footer';
-import initTranslations from '../../../i18n';
-import TranslationsProvider from '../../../TranslationsProvider';
+import initTranslations from '../i18n';
+import TranslationsProvider from '../TranslationsProvider';
+import Header from '@/modules/start-page/header/Header';
+import Footer from '@/modules/start-page/footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
@@ -59,26 +59,26 @@ export const metadata = {
   },
 }
 
-export default async function RootLayout({params: {locale}, children }) {
+const MainLayout = async ({params: {locale}, children }) => {
+    const { t, resources } = await initTranslations(locale, ['main']);
+    
+    return <TranslationsProvider locale={locale} resources={resources} namespaces={['main']}>  
+               <html lang='en'>
+                <head>
+                  <title>{t('lang-title')}</title>
+                  <meta name="description" content={t('lang-description')} />
+                </head>
+                 <body>
+                    <Header/>
+                    <main>   
+                        {children}
+                    </main>
+                    <Footer/>
+                    <GoogleAnalytics gaId="G-FSXZ91P77K" />
+                 </body>
+               </html>
+           </TranslationsProvider>
 
-  const { t, resources } = await initTranslations(locale, ['main']);
-
-  return (
-      <TranslationsProvider locale={locale} resources={resources} namespaces={['main']}> 
-        <html lang='en'>
-           <head>
-            <title>{t('lang-title')}</title>
-            <meta name="description" content={t('lang-description')} />
-          </head>
-          <body className='main-bg'>
-            <Header/>
-             <main>
-               {children}
-             </main>
-            <Footer/>
-            <GoogleAnalytics gaId="G-FSXZ91P77K" />
-          </body>
-        </html>
-      </TranslationsProvider>
-  )
 }
+
+export default MainLayout;

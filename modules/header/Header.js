@@ -3,7 +3,7 @@ import LanguageChanger from '@/components/LanguageChanger/LanguageChanger';
 
 const Header = async () => {
 
-    return <header className={classes.header}>
+    return <header  className={classes.header}>
             <svg className={classes.dots} width="46" height="424" viewBox="0 0 46 424" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.0625 307.184C10.0625 307.911 10.7061 308.5 11.5 308.5C12.2939 308.5 12.9375 307.911 12.9375 307.184C12.9375 306.457 12.2939 305.868 11.5 305.868C10.7061 305.868 10.0625 306.457 10.0625 307.184Z" fill="#FDFFFE"/>
                 <path d="M26.5938 307.184C26.5938 307.911 27.2373 308.5 28.0313 308.5C28.8252 308.5 29.4688 307.911 29.4688 307.184C29.4688 306.457 28.8252 305.868 28.0313 305.868C27.2373 305.868 26.5938 306.457 26.5938 307.184Z" fill="#FDFFFE"/>

@@ -25,9 +25,6 @@ const Services = () => {
     return <section className={classes.services}>
                <div className='container'>
                   <div className={classes.wrapper}>
-                     <div className={classes.imgWrapper}>
-                        <Image src={dots.src} width={436} height={69} alt='You will see dots'/>
-                     </div>
                         <div className={classes.servicesTextBlock}>
                              <h2 className={classes.title}>{t('our')} <span className={classes.servicesTitle}>{t('services')}</span></h2>
                              <p className={classes.text}>

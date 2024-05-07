@@ -5,23 +5,25 @@ import LanguageChanger from '@/components/LanguageChanger/LanguageChanger';
 import cn from 'classnames';
 import { useState, useEffect } from 'react';
 import Hamburger from '@/ui/start-page/hamburger/Hamburger';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
     const [active, setActive] = useState(false);
-    
-    useEffect(() => {
-        if (active) {
-         document.querySelector('body').style.overflow = 'hidden'
-        } else {
-         document.querySelector('body').style.overflow = 'initial'
-        }
-    },[active])
+    const path = usePathname().includes('stub');
 
-    return <header className={classes.header}>
+    useEffect(() => {
+      if (active) {
+       document.querySelector('body').style.overflow = 'hidden'
+      } else {
+       document.querySelector('body').style.overflow = 'initial'
+      }
+   },[active])
+
+    return <header style={{zIndex : path ? '-999' : '999'}} className={classes.header}>
               <div className='container'>
                  <div style={{height: active ? '40px' : 'initial'}} className={classes.wrapper}>
                  <div className={classes.logoNav}>
-                    <Link className={classes.logo} href="#">
+                    <Link className={classes.logo} href="/">
                         <svg className={classes.logoMobile} width="58" height="22" viewBox="0 0 58 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.456 14.992C8.64533 15.792 7.45067 16.192 5.872 16.192C4.29333 16.192 3.09333 15.792 2.272 14.992C1.46133 14.1813 1.056 13.0987 1.056 11.744V5.328H3.36V11.664C3.36 12.432 3.57867 13.0453 4.016 13.504C4.45333 13.952 5.072 14.176 5.872 14.176C6.672 14.176 7.28533 13.952 7.712 13.504C8.14933 13.0453 8.368 12.432 8.368 11.664V5.328H10.688V11.728C10.688 13.104 10.2773 14.192 9.456 14.992ZM18.6304 16H15.7824L11.6544 5.328H14.2464L17.2064 13.536L20.1504 5.328H22.7424L18.6304 16ZM25.9999 16H23.7279V5.328H25.9999V16Z" fill="#232B50"/>
                             <path d="M32.8705 16H30.5825V7.328H27.4625V5.328H35.9745V7.328H32.8705V16ZM44.983 16H37.431V5.328H44.983V7.328H39.703V9.584H44.871V11.584H39.703V14H44.983V16ZM56.3111 16H54.1191L49.0311 9.04V16H46.7591V5.328H49.0951L54.0391 12.032V5.328H56.3111V16Z" fill="url(#paint0_linear_608_332)"/>
@@ -115,7 +117,7 @@ const Header = () => {
                        </ul>
 
                        <div className={classes.langSocial}>
-                        <LanguageChanger dividerClass={classes.divider}/>
+                        <LanguageChanger display={classes.visible} dividerClass={classes.divider}/>
 
                         <div className={classes.socialBlock}>
                           <a className={classes.socialLink} href="#">
@@ -134,7 +136,7 @@ const Header = () => {
                  </div>
 
                   <div className={classes.leftSide}>
-                    <LanguageChanger display={classes.visability} dividerClass={classes.divider}/>
+                     <LanguageChanger display={classes.visability} dividerClass={classes.divider}/>  
                     <a className={cn(classes.headerButton, {[classes.headerButtonHidden]: active})} href='#'>
                        Contact us
                     </a>

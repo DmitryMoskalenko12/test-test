@@ -43,8 +43,8 @@
     width: 360px;
     height: 1214px;
     position: absolute;
-    top: 31px;
-    left: -29px;
+    top: 33px;
+    left: -18px;
     z-index: -5;
     img {
         width: 100%;
@@ -54,7 +54,7 @@
 }
 
 .project {
-    width: 153px;
+    width: 156px;
     height: auto;
     @include mixins.flex(flex, center, flex-start);
     flex-direction: column;
@@ -73,11 +73,12 @@
 }
 
 .projectList {
+    width: 134px;
     list-style-type: disc;
     @include mixins.flex(flex, center, flex-start);
-    gap: 4px;
+    gap: 1px;
     flex-direction: column;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .item {
@@ -125,6 +126,7 @@
         position: absolute;
         top: -240px;
         left: 0;
+        z-index: -5;
         display: initial;
     }
     

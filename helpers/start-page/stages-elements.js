@@ -1,7 +1,7 @@
 
 export const stagesArr = [
     {title: 'Project Initation ', text: {
-        item1: 'Define the project’ purpose, scope, and objectives denIentify key stakeholders',
+        item1: 'Define the project’ purpose, scope, and objectives',
         item2: 'IdenIdentify key stakeholders',
         item3: 'Create project  charter'
     }, clazz: 'pr1', id: 1},

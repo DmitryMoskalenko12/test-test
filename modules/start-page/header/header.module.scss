@@ -29,6 +29,12 @@
     gap: 16px;
 }
 
+.visible {
+    width: 51px;
+    @include mixins.flex(flex, center, center);
+    gap: 4px;
+}
+
 .visability {
   display: none;
 }
@@ -68,9 +74,9 @@
     left: -100%;
     top: 51px;
     width: 100%;
-    height: calc(100% - 51px);
+    height: calc(100vh - 50px);
     background-color: variables.$primary-bg;
-    transition: 0.3s left;
+    transition: 0.3s all;
     z-index: 80;
 }
 
@@ -82,9 +88,9 @@
     left: 0%;
     top: 51px;
     width: 100%;
-    height: calc(100% - 51px);
+    height: calc(100vh - 50px);
     background-color: variables.$primary-bg;
-    transition: 0.3s left;
+    transition: 0.3s all;
     z-index: 80;   
 }
 
@@ -190,6 +196,20 @@
     background: variables.$primary-linear;
 }
 
+@media(min-width: 576px) {
+
+.list {
+    margin-top: 35%;
+}
+
+.lines {
+    width: 645px;
+    right: 0;
+    left: 0;
+}
+
+}
+
 @media(min-width: 768px) {
 
     .lines {
@@ -233,6 +253,7 @@
 
     .visability {
         display: flex;
+        gap: 8px;
     }
 
     .langSocial {

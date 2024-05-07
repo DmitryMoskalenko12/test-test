@@ -14,6 +14,7 @@ export default function LanguageChanger({display, dividerClass}) {
   const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
+  const path = usePathname().includes('stub');
 
   useEffect(() => {
    setActiveLang(currentLocale);
@@ -43,7 +44,7 @@ export default function LanguageChanger({display, dividerClass}) {
   };
 
   return (
-    <div className={`${classes.wrapper} ${display}`}>
+    <div className={`${path ? classes.wrapperStartPage: display}`}>
       <button onClick={handleChange} className={cn(classes.en, {[classes.active]: activeLang === 'en'})}>EN</button>
       <div className={dividerClass}></div>
       <button onClick={handleChange} className={cn(classes.uk, {[classes.active]: activeLang === 'uk'})}>UK</button>

@@ -1,7 +1,12 @@
+'use client';
+
 import classes from './footer.module.scss';
+import { usePathname } from 'next/navigation';
 
 const Footer = () => {
-    return <footer className={classes.footer}>
+    const path = usePathname().includes('stub');
+
+    return <footer style={{display: path ? 'none' : 'block'}} className={classes.footer}>
             <div className='container'>
                 <div className={classes.wrapper}>
                     <div className={classes.contentWrapper}>

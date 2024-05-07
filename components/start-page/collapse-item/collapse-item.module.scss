@@ -9,8 +9,7 @@
 
   .hrActive {
    border-bottom: 1px solid variables.$secondary-green;
-   margin-top: 16px;
-   margin-bottom: 16px;
+   margin-top: 32px;
   }
 
   .collapse {
@@ -68,6 +67,7 @@
     height: 32px;
     position: relative;
     z-index: -3;
+    background: variables.$primary-linear;
     border: 1px solid variables.$secondary-green;
     border-radius: 100%;
     @include mixins.flex(flex, center, center);

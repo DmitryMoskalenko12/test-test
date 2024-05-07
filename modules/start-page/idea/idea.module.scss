@@ -20,7 +20,7 @@
     height: 100%;
     position: absolute;
     left: 0;
-    bottom: -80px;
+    bottom: -100px;
     z-index: -999;
 }
 
@@ -31,7 +31,7 @@
 .title {
     width: 330px;
     color: variables.$primary-color;
-    font-size: variables.$font-size68;
+    font-size: variables.$font-size78;
     font-weight: variables.$font-weight700;
     line-height: 115%; 
 }
@@ -41,7 +41,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: variables.$font-size68;
+    font-size: variables.$font-size78;
     font-weight: variables.$font-weight700;
     line-height: 115%;
 }
@@ -64,6 +64,7 @@
     font-size: variables.$font-size14;
     font-weight: variables.$font-weight400;
     text-decoration: none;
+    gap: 12px;
     border-radius: 32px;
     background: variables.$primary-button-bg;
     margin: 0 auto;
@@ -138,6 +139,12 @@
     .imgWrapper {
         bottom: 80px;
     }
+
+    .ideaButton {
+        padding: 16px 62px;
+        gap: 0;
+        @include mixins.flex(flex, flex-start, center);
+    }
 }
 
 @media(min-width: 1280px) {
@@ -178,6 +185,8 @@
     }
 
     .ideaButton {
+        padding: 16px 52px;
+        gap: 5px;
         font-size: variables.$font-size16;
     }
 }
