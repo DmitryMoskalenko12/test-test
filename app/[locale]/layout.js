@@ -44,14 +44,14 @@ export const metadata = {
       }
     ],
   },
-  robots: {
+ /*  robots: {
     index: true,
     follow: true,
     googleBot: {
       index: true,
       follow: true
     },
-  },
+  }, */
   keywords: ['розробка програмного забезпечення, веб розробка, веб сайти, виділена команда програмістів, замовити веб сайт, мобільні застосунки, аудит веб сайту, МВП, старт-ап'],
   keywords: ['custom software development', 'web design', 'web sites', 'dedicated team', 'order web site', 'mobile application', 'web site audit', 'MVP', 'start-up'],
   icons: {
