@@ -9,13 +9,6 @@ export const metadata = {
   title: 'Uviten | Software development company',
   description:'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
   authors: [{url: 'http://uviten.com' }],
-  alternates: {
-    canonical: 'http://uviten.com',
-    languages: {
-      'en': 'http://uviten.com/en',
-      'ua': 'http://uviten.com/ua',
-    },
-  },
   openGraph: {
     title: 'Uviten | Software development company',
     url: 'http://uviten.com',

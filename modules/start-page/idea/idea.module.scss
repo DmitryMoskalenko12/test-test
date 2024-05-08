@@ -20,7 +20,7 @@
     height: 100%;
     position: absolute;
     left: 0;
-    bottom: -100px;
+    bottom: -75px;
     z-index: -999;
 }
 
@@ -31,7 +31,7 @@
 .title {
     width: 330px;
     color: variables.$primary-color;
-    font-size: variables.$font-size78;
+    font-size: variables.$font-size68;
     font-weight: variables.$font-weight700;
     line-height: 115%; 
 }
@@ -41,7 +41,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: variables.$font-size78;
+    font-size: variables.$font-size68;
     font-weight: variables.$font-weight700;
     line-height: 115%;
 }
