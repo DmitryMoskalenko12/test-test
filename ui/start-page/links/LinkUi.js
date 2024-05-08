@@ -31,6 +31,7 @@ const LinkUi = ({clazz}) => {
             whileHover="hover"
             className={clazz} 
             href="#"
+            title="Shedule a demo"
             >
             <span>Schedule a demo</span>
                 <motion.svg variants={svgAnimation} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">

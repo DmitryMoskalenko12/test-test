@@ -23,7 +23,7 @@ const Header = () => {
               <div className='container'>
                  <div style={{height: active ? '40px' : 'initial'}} className={classes.wrapper}>
                  <div className={classes.logoNav}>
-                    <Link className={classes.logo} href="/">
+                    <Link title="Logo" className={classes.logo} href="/">
                         <svg className={classes.logoMobile} width="58" height="22" viewBox="0 0 58 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.456 14.992C8.64533 15.792 7.45067 16.192 5.872 16.192C4.29333 16.192 3.09333 15.792 2.272 14.992C1.46133 14.1813 1.056 13.0987 1.056 11.744V5.328H3.36V11.664C3.36 12.432 3.57867 13.0453 4.016 13.504C4.45333 13.952 5.072 14.176 5.872 14.176C6.672 14.176 7.28533 13.952 7.712 13.504C8.14933 13.0453 8.368 12.432 8.368 11.664V5.328H10.688V11.728C10.688 13.104 10.2773 14.192 9.456 14.992ZM18.6304 16H15.7824L11.6544 5.328H14.2464L17.2064 13.536L20.1504 5.328H22.7424L18.6304 16ZM25.9999 16H23.7279V5.328H25.9999V16Z" fill="#232B50"/>
                             <path d="M32.8705 16H30.5825V7.328H27.4625V5.328H35.9745V7.328H32.8705V16ZM44.983 16H37.431V5.328H44.983V7.328H39.703V9.584H44.871V11.584H39.703V14H44.983V16ZM56.3111 16H54.1191L49.0311 9.04V16H46.7591V5.328H49.0951L54.0391 12.032V5.328H56.3111V16Z" fill="url(#paint0_linear_608_332)"/>
@@ -110,22 +110,22 @@ const Header = () => {
                            </defs>
                      </svg>
                        <ul className={classes.list}>
-                          <li className={classes.li}><Link onClick={() => setActive(false)} className={classes.link} href="/stub/">Services</Link></li>
-                          <li className={classes.li}><a onClick={() => setActive(false)} className={classes.link} href="#">Works</a></li>
-                          <li className={classes.li}><a onClick={() => setActive(false)} className={classes.link} href="#">About us</a></li>
-                          <li className={classes.li}><a onClick={() => setActive(false)} className={classes.link} href="#">Contacts</a></li>
+                          <li className={classes.li}><Link onClick={() => setActive(false)} title="Services" className={classes.link} href="/stub/">Services</Link></li>
+                          <li className={classes.li}><a onClick={() => setActive(false)} title="Works" className={classes.link} href="#">Works</a></li>
+                          <li className={classes.li}><a onClick={() => setActive(false)} title="About us" className={classes.link} href="#">About us</a></li>
+                          <li className={classes.li}><a onClick={() => setActive(false)} title="Contacts" className={classes.link} href="#">Contacts</a></li>
                        </ul>
 
                        <div className={classes.langSocial}>
                         <LanguageChanger display={classes.visible} dividerClass={classes.divider}/>
 
                         <div className={classes.socialBlock}>
-                          <a className={classes.socialLink} href="#">
+                          <a title="Instagram" className={classes.socialLink} href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 9.55C12.917 8.613 14.111 8 15.5 8C16.9587 8 18.3576 8.57946 19.3891 9.61091C20.4205 10.6424 21 12.0413 21 13.5V21H19V13.5C19 12.5717 18.6313 11.6815 17.9749 11.0251C17.3185 10.3687 16.4283 10 15.5 10C14.5717 10 13.6815 10.3687 13.0251 11.0251C12.3687 11.6815 12 12.5717 12 13.5V21H10V8.5H12V9.55ZM5 6.5C4.60218 6.5 4.22064 6.34196 3.93934 6.06066C3.65804 5.77936 3.5 5.39782 3.5 5C3.5 4.60218 3.65804 4.22064 3.93934 3.93934C4.22064 3.65804 4.60218 3.5 5 3.5C5.39782 3.5 5.77936 3.65804 6.06066 3.93934C6.34196 4.22064 6.5 4.60218 6.5 5C6.5 5.39782 6.34196 5.77936 6.06066 6.06066C5.77936 6.34196 5.39782 6.5 5 6.5ZM4 8.5H6V21H4V8.5Z" fill="#232B50"/>
                             </svg>
                           </a>
-                          <a className={classes.socialLink} href="#">
+                          <a title="Facebook" className={classes.socialLink} href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M13 10H17.5L17 12H13V21H11V12H7V10H11V8.128C11 6.345 11.186 5.698 11.534 5.046C11.875 4.40181 12.4018 3.87501 13.046 3.534C13.698 3.186 14.345 3 16.128 3C16.65 3 17.108 3.05 17.5 3.15V5H16.128C14.804 5 14.401 5.078 13.989 5.298C13.6933 5.45251 13.4521 5.69405 13.298 5.99C13.078 6.401 13 6.804 13 8.128V10Z" fill="#232B50"/>
                             </svg>
@@ -137,10 +137,10 @@ const Header = () => {
 
                   <div className={classes.leftSide}>
                      <LanguageChanger display={classes.visability} dividerClass={classes.divider}/>  
-                    <a className={cn(classes.headerButton, {[classes.headerButtonHidden]: active})} href='#'>
+                    <a title="Contact us" className={cn(classes.headerButton, {[classes.headerButtonHidden]: active})} href='#'>
                        Contact us
                     </a>
-                    <a className={classes.headerButtonDesktop} href='#'>
+                    <a title="Contact us" className={classes.headerButtonDesktop} href='#'>
                        <span className={classes.headerButtonDesktopText}>Contact us</span> 
                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                           <path d="M13.8259 17.8238L18.5429 13.1068C19.1519 12.4968 19.1529 11.5028 18.5429 10.8928L13.8249 6.17578L13.1179 6.88278L17.7349 11.4998H5.00088V12.4998H17.7359L13.1179 17.1168L13.8259 17.8238Z" fill="black"/>
