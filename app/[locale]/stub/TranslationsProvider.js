@@ -8,7 +8,7 @@ export default function TranslationsProvider({
   children,
   locale,
   namespaces,
-  resources
+  resources,
 }) {
   const i18n = createInstance();
 

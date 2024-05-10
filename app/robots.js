@@ -1,4 +1,3 @@
-
 export default function robots() {
   return {
     rules: {
@@ -7,5 +6,5 @@ export default function robots() {
       disallow: '/private/',
     },
     sitemap: 'https://uviten.com/sitemap.xml',
-  }
+  };
 }

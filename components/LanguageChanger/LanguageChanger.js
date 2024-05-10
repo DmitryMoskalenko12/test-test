@@ -7,7 +7,7 @@ import i18nConfig from '@/i18nConfig';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
 
-export default function LanguageChanger({display, dividerClass}) {
+export default function LanguageChanger({ display, dividerClass }) {
   const [activeLang, setActiveLang] = useState('');
 
   const { i18n } = useTranslation();
@@ -17,10 +17,10 @@ export default function LanguageChanger({display, dividerClass}) {
   const path = usePathname().includes('stub');
 
   useEffect(() => {
-   setActiveLang(currentLocale);
-  },[])
+    setActiveLang(currentLocale);
+  }, []);
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const newLocale = e.target.textContent.toLowerCase();
     setActiveLang(newLocale);
     const days = 30;
@@ -36,7 +36,7 @@ export default function LanguageChanger({display, dividerClass}) {
       router.push('/' + newLocale + currentPathname);
     } else {
       router.push(
-        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`)
+        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
       );
     }
 
@@ -44,10 +44,20 @@ export default function LanguageChanger({display, dividerClass}) {
   };
 
   return (
-    <div className={`${path ? classes.wrapperStartPage: display}`}>
-      <button onClick={handleChange} className={cn(classes.en, {[classes.active]: activeLang === 'en'})}>EN</button>
+    <div className={`${path ? classes.wrapperStartPage : display}`}>
+      <button
+        onClick={handleChange}
+        className={cn(classes.en, { [classes.active]: activeLang === 'en' })}
+      >
+        EN
+      </button>
       <div className={dividerClass}></div>
-      <button onClick={handleChange} className={cn(classes.uk, {[classes.active]: activeLang === 'uk'})}>UK</button>
+      <button
+        onClick={handleChange}
+        className={cn(classes.uk, { [classes.active]: activeLang === 'uk' })}
+      >
+        UK
+      </button>
     </div>
   );
 }

@@ -5,8 +5,8 @@ export default function sitemap() {
       lastModified: new Date(),
       alternates: {
         languages: {
-          es: 'https://uviten.com/en',
-          de: 'https://uviten.com/uk',
+          en: 'https://uviten.com/en',
+          uk: 'https://uviten.com/uk',
         },
       },
     },
@@ -15,10 +15,10 @@ export default function sitemap() {
       lastModified: new Date(),
       alternates: {
         languages: {
-          es: 'https://uviten.com/en/stub',
-          de: 'https://uviten.com/uk/stub',
+          en: 'https://uviten.com/en/stub',
+          uk: 'https://uviten.com/uk/stub',
         },
       },
     },
-  ]
+  ];
 }

@@ -69,7 +69,7 @@
 
     .servicesTextBlock {
       flex-shrink: 0;
-      width: 233px;
+      width: 254px;
     }
 
     .collapse {
@@ -88,7 +88,7 @@
     }
 
     .servicesButtonCollapse {
-      padding: 16px 85px;
+      padding: 16px 52px;
       gap: 0;
       @include mixins.flex(flex, flex-start, center);
     }

@@ -2,8 +2,10 @@ $primary-bg: #FDFFFE;
 $primary-color: #232B50;
 $secondary-gray: #B1B1B1;
 $secondary-green: #47F4B6;
+$secondary-gray-bg: rgba(236, 236, 236, 0.10);
 $primary-button-bg: linear-gradient(90deg, #47F4B6 0%, #4CF3B7 24.5%, #51EBC3 53%, #56E4CD 81%, #49F0DC 100%);
 $primary-linear: linear-gradient(90deg, #47F4B6 0%, #4CF3B7 24.5%, #51EBC3 53%, #56E4CD 81%, #49F0DC 100%);
+$font-size12: 12px;
 $font-size14: 14px;
 $font-size16: 16px;
 $font-size18: 18px;
@@ -17,6 +19,7 @@ $font-size78: 78px;
 $font-size108: 108px;
 $font-size124: 124px;
 
+$font-weight300: 300;
 $font-weight400: 400;
 $font-weight600: 600;
 $font-weight700: 700;
