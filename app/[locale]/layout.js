@@ -19,7 +19,7 @@ export const metadata = {
     locale: 'en',
     images: [
       {
-        url: 'http://uviten.com/images/socialMedia.png',
+        url: '/images/socialMedia.png',
         width: 1200,
         height: 630,
       },
