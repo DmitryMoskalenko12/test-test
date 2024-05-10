@@ -90,10 +90,10 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <meta property="og:title" lng-ogtitle="ogtitle" content="Vinitruck | Cargo delivery company"/>
           <meta property="og:url" content="http://uviten.com"/>
           <meta property="og:description" content='Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.'/>
-          <meta property="og:image" content="images/socialMedia.png"/>
+          <meta property="og:image" content="/images/socialMedia.png"/>
           <meta property="og:image:width" content="1200"/>
           <meta property="og:image:height" content="630"/>
-          <meta property="og:image:type" content="@/images/png"/>
+          <meta property="og:image:type" content="image/png"/>
           <meta name='description' content={t('lang-description')} />
         </head>
         <body>
