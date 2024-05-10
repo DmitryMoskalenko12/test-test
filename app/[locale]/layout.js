@@ -34,7 +34,7 @@ export const metadata = {
     locale: 'ua',
     images: [
       {
-        url: 'http://uviten.com/images/socialMedia.webp',
+        url: '/images/socialMedia.webp',
         width: 1200,
         height: 630,
       },
