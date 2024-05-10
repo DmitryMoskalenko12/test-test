@@ -12,14 +12,14 @@ export const metadata = {
   authors: [{ url: 'http://uviten.com' }],
   openGraph: {
     title: 'Uviten | Software development company',
-    url: 'http://uviten.com',
+    url: 'http://uviten.com/en',
     description:
       'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
     type: 'website',
     locale: 'en',
     images: [
       {
-        url: 'images/socialMedia.png',
+        url: 'http://uviten.com/images/socialMedia.webp',
         width: 1200,
         height: 630,
       },
@@ -34,7 +34,7 @@ export const metadata = {
     locale: 'uk',
     images: [
       {
-        url: 'images/socialMedia.webp',
+        url: 'http://uviten.com/images/socialMedia.webp',
         width: 1200,
         height: 630,
       },
