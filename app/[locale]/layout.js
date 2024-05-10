@@ -93,7 +93,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <meta property="og:image" content="images/socialMedia.png"/>
           <meta property="og:image:width" content="1200"/>
           <meta property="og:image:height" content="630"/>
-          <meta property="og:image:type" content="/image/png"/>
+          <meta property="og:image:type" content="images/png"/>
           <meta name='description' content={t('lang-description')} />
         </head>
         <body>
