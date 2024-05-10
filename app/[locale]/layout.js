@@ -19,7 +19,7 @@ export const metadata = {
     locale: 'en',
     images: [
       {
-        url: '/images/socialMedia.png',
+        url: 'images/socialMedia.png',
         width: 1200,
         height: 630,
       },
@@ -34,7 +34,7 @@ export const metadata = {
     locale: 'ua',
     images: [
       {
-        url: '/images/socialMedia.webp',
+        url: 'images/socialMedia.webp',
         width: 1200,
         height: 630,
       },
