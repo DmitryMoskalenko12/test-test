@@ -88,7 +88,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
         <head>
          {/*  <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} /> */}
-          <meta property="og:image" content={ogPicture.src} />
+         {/*  <meta property="og:image" content={ogPicture.src} /> */}
         {/*   <meta property="og:title" content="Uviten | Software development company"/>
           <meta property="og:description" content="Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve. "/> */}
        {/*    <meta property="og:image:type" content="image/png" />
