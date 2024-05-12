@@ -15,7 +15,7 @@ export const metadata = {
     url: 'https://test-test-lac.vercel.app/images/socialMedia.png',
     description:
       'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
-    type: 'website',
+    type: 'image/png',
     locale: 'en',
     images: [
       {
