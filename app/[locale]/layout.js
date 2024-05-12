@@ -10,36 +10,6 @@ export const metadata = {
   description:
     'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
   authors: [{ url: 'https://test-test-rouge-nine.vercel.app/' }],
-  openGraph: {
-    title: 'Uviten | Software development company',
-    url: 'https://test-test-rouge-nine.vercel.app/images/socialMedia.png',
-    description:
-      'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
-    type: 'website',
-    locale: 'en',
-    images: [
-      {
-        url: 'https://test-test-rouge-nine.vercel.app/images/socialMedia.png',
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
-  openGraph: {
-    title: 'Uviten | Компанія розробки програмного забезпечення',
-    url: 'https://test-test-rouge-nine.vercel.app/uk',
-    description:
-      'Відкрийте можливості зростання зі спеціалізованим програмним забезпеченням та інноваційними веб рішеннями. Наша виділена команда пропонує виключний рівень сервісу у різних доменах, впевнюючись що ваш бізнес залишається на випереджені конкурентів.',
-    type: 'website',
-    locale: 'uk',
-    images: [
-      {
-        url: 'https://test-test-rouge-nine.vercel.app/images/socialMedia.png',
-        width: 1200,
-        height: 630,
-      },
-    ],
-  },
   robots: {
     index: true,
     follow: true,
@@ -86,14 +56,14 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-         {/*  <title>{t('lang-title')}</title>
-          <meta name='description' content={t('lang-description')} /> */}
-         {/*  <meta property="og:image" content={ogPicture.src} /> */}
-        {/*   <meta property="og:title" content="Uviten | Software development company"/>
-          <meta property="og:description" content="Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve. "/> */}
-       {/*    <meta property="og:image:type" content="image/png" />
+          <title>{t('lang-title')}</title>
+          <meta name='description' content={t('lang-description')} />
+          <meta property="og:image" content={ogPicture.src} />
+          <meta property="og:title" content="Uviten | Software development company"/>
+          <meta property="og:description" content="Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve. "/>
+          <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" /> */}
+          <meta property="og:image:height" content="630" />
         </head>
         <body>
           <Header />
