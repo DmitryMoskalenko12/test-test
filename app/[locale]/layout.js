@@ -25,7 +25,7 @@ export const metadata = {
       },
     ],
   },
-  openGraph: {
+ /*  openGraph: {
     title: 'Uviten | Компанія розробки програмного забезпечення',
     url: 'http://uviten.com/uk',
     description:
@@ -39,7 +39,7 @@ export const metadata = {
         height: 630,
       },
     ],
-  },
+  }, */
   robots: {
     index: true,
     follow: true,
