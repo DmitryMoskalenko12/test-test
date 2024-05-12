@@ -19,7 +19,7 @@ export const metadata = {
     locale: 'en',
     images: [
       {
-        url: ogPicture.src,
+        url: 'https://test-test-lac.vercel.app/images/socialMedia.png',
         width: 1200,
         height: 630,
       },
