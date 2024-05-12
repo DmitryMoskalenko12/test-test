@@ -10,7 +10,7 @@ export const metadata = {
   description:
     'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
   authors: [{ url: 'http://uviten.com' }],
-/*   openGraph: {
+  openGraph: {
     title: 'Uviten | Software development company',
     url: 'http://uviten.com',
     description:
@@ -19,7 +19,7 @@ export const metadata = {
     locale: 'en',
     images: [
       {
-        url: 'https://test-test-lac.vercel.app/images/socialMedia.png',
+        url: ogPicture.src,
         width: 1200,
         height: 630,
       },
@@ -34,12 +34,12 @@ export const metadata = {
     locale: 'uk',
     images: [
       {
-        url: 'https://test-test-lac.vercel.app/images/socialMedia.png',
+        url: ogPicture.src,
         width: 1200,
         height: 630,
       },
     ],
-  }, */
+  },
   robots: {
     index: true,
     follow: true,
@@ -85,7 +85,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
       namespaces={['main']}
     >
       <html lang={t('language')}>
-        <head>
+{/*         <head>
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property="og:image" content={ogPicture.src} />
@@ -94,7 +94,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <meta property="og:image:type" content="image/png" />
           <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
-        </head>
+        </head> */}
         <body>
           <Header />
           <main>{children}</main>
