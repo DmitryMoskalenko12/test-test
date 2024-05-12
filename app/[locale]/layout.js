@@ -25,21 +25,21 @@ export const metadata = {
       },
     ],
   },
- /*  openGraph: {
+  openGraph: {
     title: 'Uviten | Компанія розробки програмного забезпечення',
-    url: 'http://uviten.com/uk',
+    url: 'https://test-test-rouge-nine.vercel.app/uk',
     description:
       'Відкрийте можливості зростання зі спеціалізованим програмним забезпеченням та інноваційними веб рішеннями. Наша виділена команда пропонує виключний рівень сервісу у різних доменах, впевнюючись що ваш бізнес залишається на випереджені конкурентів.',
     type: 'website',
     locale: 'uk',
     images: [
       {
-        url: ogPicture.src,
+        url: 'https://test-test-rouge-nine.vercel.app/images/socialMedia.png',
         width: 1200,
         height: 630,
       },
     ],
-  }, */
+  },
   robots: {
     index: true,
     follow: true,
