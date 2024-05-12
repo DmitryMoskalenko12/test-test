@@ -12,7 +12,7 @@ export const metadata = {
   authors: [{ url: 'https://test-test-rouge-nine.vercel.app/' }],
   openGraph: {
     title: 'Uviten | Software development company',
-    url: 'https://test-test-rouge-nine.vercel.app/',
+    url: 'https://test-test-rouge-nine.vercel.app/images/socialMedia.png',
     description:
       'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
     type: 'website',
