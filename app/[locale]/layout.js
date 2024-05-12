@@ -9,10 +9,10 @@ export const metadata = {
   title: 'Uviten | Software development company',
   description:
     'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
-  authors: [{ url: 'http://uviten.com' }],
+  authors: [{ url: 'https://test-test-lac.vercel.app/' }],
   openGraph: {
     title: 'Uviten | Software development company',
-    url: 'http://uviten.com',
+    url: 'https://test-test-lac.vercel.app/',
     description:
       'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
     type: 'website',
