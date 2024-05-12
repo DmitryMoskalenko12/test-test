@@ -3,14 +3,13 @@ import initTranslations from '../i18n';
 import TranslationsProvider from '../TranslationsProvider';
 import Header from '@/modules/start-page/header/Header';
 import Footer from '@/modules/start-page/footer/Footer';
-import { GoogleAnalytics } from '@next/third-parties/google';
 
 export const metadata = {
   title: 'Uviten | Software development company',
   description:
     'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
   authors: [{ url: 'http://uviten.com' }],
-  openGraph: {
+/*   openGraph: {
     title: 'Uviten | Software development company',
     url: 'http://uviten.com',
     description:
@@ -39,7 +38,7 @@ export const metadata = {
         height: 630,
       },
     ],
-  },
+  }, */
   robots: {
     index: true,
     follow: true,
@@ -85,17 +84,20 @@ const MainLayout = async ({ params: { locale }, children }) => {
       namespaces={['main']}
     >
       <html lang={t('language')}>
-     {/*    <head>
+        <head>
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
-        </head> */}
+          <meta property="og:image" content="https://source to image.png" />
+          <meta property="og:title" content="Uviten | Software development company"/>
+          <meta property="og:description" content="Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve. "/>
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+        </head>
         <body>
           <Header />
           <main>{children}</main>
           <Footer />
-          {process.env.NODE_ENV === 'production' ? (
-            <GoogleAnalytics gaId='G-FSXZ91P77K' />
-          ) : null}
         </body>
       </html>
     </TranslationsProvider>
