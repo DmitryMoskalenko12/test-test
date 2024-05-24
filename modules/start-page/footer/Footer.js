@@ -1,18 +1,44 @@
+'use client';
 import Link from 'next/link';
 import classes from './footer.module.scss';
 import initTranslations from '@/app/i18n';
+import { useRouter } from 'next/navigation';
+import { useTranslation } from 'react-i18next';
+import { useRef, useState } from 'react';
 
-const Footer = async ({locale}) => {
+const Footer =  ({locale}) => {
+  const route = useRouter();
+  const {t} = useTranslation('start');
+  const [scroll, setScroll] = useState(true);
+  const [scrollServices, setScrollServices] = useState(true);
+  const refProjects = useRef();
+  const refServices = useRef();
 
-  const { t, resources } = await initTranslations(locale, ['start', 'main']);
+  const cancelReloadProjects = () => {
+    if (scroll) {
+      route.push('/')
+       setTimeout(() => {
+        refProjects.current.click();
+      }, 600);
+    }
+  }
+
+  const cancelReloadServices = () => {
+    if (scrollServices) {
+      route.push('/')
+       setTimeout(() => {
+        refServices.current.click();
+      }, 600);
+    }
+  }
 
   return (
-    <footer className={classes.footer}>
+    <footer className={`${classes.footer} footer`}>
       <div className='container'>
         <div className={classes.wrapper}>
           <div className={classes.contentWrapper}>
             <div className={classes.logoRights}>
-              <Link title='Logo' className={classes.logoWrapper} href='/'>
+              <Link className={classes.logoWrapper} href='/'>
                 <svg
                   className={classes.logoMobile}
                   width='56'
@@ -56,12 +82,12 @@ const Footer = async ({locale}) => {
             <nav className={classes.nav}>
               <ul className={classes.list}>
                 <li className={classes.li}>
-                  <a className={classes.link} href='#services'>
+                  <a ref={refServices} className={classes.link} onClick={() => {setScrollServices((prev) => !prev); cancelReloadServices()}} href='#services'>
                     {t('servicesHeader')}
                   </a>
                 </li>
                 <li className={classes.li}>
-                  <a className={classes.link} href='#projects'>
+                  <a ref={refProjects} className={classes.link} onClick={() => {setScroll((prev) => !prev); cancelReloadProjects()}} href='#projects'>
                     {t('projects')}
                   </a>
                 </li>
@@ -80,7 +106,7 @@ const Footer = async ({locale}) => {
 
             <div className={classes.socialBlock}>
               <div className={classes.contactsBlock}>
-                <a title='office@uviten.com' className={classes.email} href='mailto:office@uviten.com'>
+                <a className={classes.email} href='mailto:office@uviten.com'>
                   <span className={classes.circleEmail}>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -97,7 +123,7 @@ const Footer = async ({locale}) => {
                   </span>
                   office@uviten.com
                 </a>
-                <a title='380633784500' className={classes.phone} href='tel:380633784500'>
+                <a className={classes.phone} href='tel:380633784500'>
                   <span className={classes.circlePhone}>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
@@ -118,7 +144,7 @@ const Footer = async ({locale}) => {
 
               <div className={classes.follow}>
                 <span className={classes.followUs}>{t('follow')}:</span>
-                <a title='Linkedin' href='https://www.linkedin.com/company/uviten/' target='__blank' className={classes.insta}>
+                <a href='https://www.linkedin.com/company/uviten/' target='__blank' className={classes.insta}>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='17'
@@ -132,7 +158,7 @@ const Footer = async ({locale}) => {
                     />
                   </svg>
                 </a>
-                <a title='Facebook' href='https://www.facebook.com/uviten' target='__blank' className={classes.face}>
+                <a href='https://www.facebook.com/uviten' target='__blank' className={classes.face}>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='17'
@@ -146,7 +172,7 @@ const Footer = async ({locale}) => {
                     />
                   </svg>
                 </a>
-                <a title='Behance' href='https://www.behance.net/uviten' target='__blank' className={classes.social}>
+                <a href='https://www.behance.net/uviten' target='__blank' className={classes.social}>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='17'

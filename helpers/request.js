@@ -12,29 +12,17 @@ const request = (method, url, value, setNotText, setNotTitle, t) => {
       if (response.ok) {
         setNotText(t('thanks_text'));
         setNotTitle(t('thanks'));
-        setTimeout(() => {
-          setNotTitle('');
-        }, 3000);
       } else if (!response.ok) {
         setNotText(t('error_text'));
         setNotTitle(t('error_title'));
-        setTimeout(() => {
-          setNotTitle('');
-        }, 3000);
       } else {
         setNotText(t('error_text'));
         setNotTitle(t('error_title'));
-        setTimeout(() => {
-          setNotTitle('');
-        }, 3000);
       }
     })
     .catch((error) => {
       setNotText(t('error_text'));
       setNotTitle(t('error_title'));
-      setTimeout(() => {
-        setNotTitle('');
-      }, 3000);
     });
 };
 

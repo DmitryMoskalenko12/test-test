@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Modal from '@/ui/modal/Modal';
 import request from '@/helpers/request';
 import ContactBlockInput from '@/ui/contact-block-input/ContactBlockInput';
+import { useEffect } from 'react';
 
 const ContactForm = () => {
   const { t } = useTranslation('main');
@@ -22,6 +23,18 @@ const ContactForm = () => {
   const removeNotification = () => {
     setNotification('');
   };
+ 
+  useEffect(() => {
+   if (notification) {
+    document.querySelector('.footer').style.zIndex = '-999999';
+    document.querySelector('.header').style.zIndex = '-999';
+    document.body.style.overflow = 'hidden';
+   } else {
+    document.querySelector('.footer').style.zIndex = 'initial';
+    document.querySelector('.header').style.zIndex = '999';
+    document.body.style.overflow = '';
+   }
+  },[notification])
 
   const onGetInfo = (value) => {
     request(

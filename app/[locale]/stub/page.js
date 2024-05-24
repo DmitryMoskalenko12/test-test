@@ -2,8 +2,6 @@ import classes from './page.module.scss';
 import initTranslations from '@/app/i18n';
 import TranslationsProvider from '@/app/TranslationsProvider';
 import MainContent from '@/modules/main-content/MainContent';
-import Header from '@/modules/header/Header';
-import Footer from '@/modules/footer/Footer';
 
 const Stub = async ({ params: { locale } }) => {
   const { t, resources } = await initTranslations(locale, ['main']);
@@ -15,11 +13,9 @@ const Stub = async ({ params: { locale } }) => {
       namespaces={['main']}
     >
       <div className={classes.mainBg}>
-        {/* <Header /> */}
         <div className={classes.main}>
           <MainContent />
         </div>
-        {/* <Footer /> */}
       </div>
       <div />
     </TranslationsProvider>

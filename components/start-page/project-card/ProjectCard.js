@@ -1,5 +1,6 @@
 import classes from './project-card.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
   return (
@@ -23,7 +24,7 @@ const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
       </div>
       <div className={classes.titleWrapper}>
         <h3 className={classes.title}>{title}</h3>
-        <a className={classes.projectLink} href={href}>
+        <Link className={classes.projectLink} href={href}>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='24'
@@ -36,7 +37,7 @@ const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
               fill='black'
             />
           </svg>
-        </a>
+        </Link>
       </div>
 
       <p className={classes.cardText}>{text}</p>

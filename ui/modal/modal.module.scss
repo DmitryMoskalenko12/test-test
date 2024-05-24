@@ -8,7 +8,7 @@
     bottom: 0;
     backdrop-filter: blur(10px);
     background: variables.$modal-bg;
-    z-index: 30;
+    z-index: 1000000;
 }
 
 .content {

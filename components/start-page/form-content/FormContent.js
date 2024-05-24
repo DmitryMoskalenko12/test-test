@@ -115,7 +115,7 @@ const FormContent = ({ close }) => {
                 />
                 <label htmlFor='policy' className={classes.label}>
                   {t('agreePolicy')}{' '}
-                  <Link className={classes.labelLink} href='/policy/'>
+                  <Link  onClick={() => close((prev) => !prev)} className={classes.labelLink} href='/policy/'>
                     {t('policy')}
                   </Link>{' '}
                 </label>

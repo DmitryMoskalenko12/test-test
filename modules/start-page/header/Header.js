@@ -3,18 +3,25 @@ import classes from './header.module.scss';
 import Link from 'next/link';
 import LanguageChanger from '@/components/LanguageChanger/LanguageChanger';
 import cn from 'classnames';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Hamburger from '@/ui/start-page/hamburger/Hamburger';
 import { usePathname } from 'next/navigation';
 import AsideModal from '../aside-modal/AsideModal';
 import { useTranslation } from 'react-i18next';
+import { useRouter } from 'next/navigation';
 
 const Header = () => {
   const [active, setActive] = useState(false);
   const [asideModalActive, setAsideModalActive] = useState(false);
+  const [scroll, setScroll] = useState(true);
+  const [scrollServices, setScrollServices] = useState(true);
+
   const path = usePathname().includes('stub');
   const { t } = useTranslation('start');
-
+  const route =  useRouter();
+  const refProjects = useRef();
+  const refServices = useRef();
+  
   useEffect(() => {
     if (active) {
       document.querySelector('body').style.overflow = 'hidden';
@@ -31,15 +38,34 @@ const Header = () => {
     }
   }, [asideModalActive]);
 
+
+  const cancelReloadProjects = () => {
+    if (scroll) {
+      route.push('/')
+       setTimeout(() => {
+        refProjects.current.click();
+      }, 600);
+    }
+  }
+
+  const cancelReloadServices = () => {
+    if (scrollServices) {
+      route.push('/')
+       setTimeout(() => {
+        refServices.current.click();
+      }, 600);
+    }
+  }
+
   return (
-    <header className={classes.header}>
+    <header className={`${classes.header} header`}>
       <div className='container'>
         <div
           style={{ height: active ? '40px' : 'initial' }}
           className={classes.wrapper}
         >
           <div className={classes.logoNav}>
-            <Link title='Logo' className={classes.logo} href='/'>
+            <Link className={classes.logo} href='/'>
               <svg
                 className={classes.logoMobile}
                 width='58'
@@ -273,7 +299,8 @@ const Header = () => {
               <ul className={classes.list}>
                 <li className={classes.li}>
                   <a
-                    onClick={() => setActive(false)}
+                    ref={refServices}
+                    onClick={(e) => {setActive(false); setScrollServices((prev) => !prev); cancelReloadServices()}}
                     className={classes.link}
                     href='#services'
                   >
@@ -282,7 +309,8 @@ const Header = () => {
                 </li>
                 <li className={classes.li}>
                   <a
-                    onClick={() => setActive(false)}
+                    ref={refProjects}
+                    onClick={(e) => {setActive(false); setScroll((prev) => !prev); cancelReloadProjects()}}
                     className={classes.link}
                     href='#projects'
                   >
