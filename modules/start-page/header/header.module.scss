@@ -44,6 +44,7 @@
     @include mixins.flex(flex, center, center);
     text-align: center;
     padding: 10px;
+    background: transparent;
     color: variables.$primary-color;
     font-size: variables.$font-size14;
     font-weight: variables.$font-weight400;
@@ -78,6 +79,7 @@
     background-color: variables.$primary-bg;
     transition: 0.3s all;
     z-index: 80;
+    overflow: hidden;
 }
 
 .activeNav {
@@ -88,6 +90,7 @@
     left: 0%;
     top: 51px;
     width: 100%;
+    overflow: initial;
     height: calc(100% - 50px);
     background-color: variables.$primary-bg;
     transition: 0.3s all;
@@ -161,6 +164,7 @@
     flex-direction: column;
     gap: 24px;
     margin-top: 60%;
+    list-style-type: none;
 }
 
 .link {
@@ -307,7 +311,6 @@
         fill: none;
         stroke-linecap: round;
         stroke-linejoin: round;
-        stroke: #234567;
         stroke-width: 1;
         transform: translateX(-5px);
         transition: all 0.3s ease;

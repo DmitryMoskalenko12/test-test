@@ -45,6 +45,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 main {
@@ -114,6 +115,10 @@ p {
 
 .container {
   margin: 0 auto;
+}
+
+.policy_style {
+ padding: 0 16px;
 }
 
 @media (min-width: 320px) {
@@ -214,6 +219,10 @@ p {
 @media (min-width: 1280px) {
   .container {
     max-width: 1128px;
+  }
+
+  .policy_style {
+    padding: 40px 0px;
   }
 
   .pr1 {

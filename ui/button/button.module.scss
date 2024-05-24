@@ -5,7 +5,7 @@
     width: 343px;
     height: 58px;
     @include mixins.flex(flex, center, center);
-    border-radius: 8px;
+    border-radius: 32px;
     background: variables.$primary-dark-blue;
     cursor: pointer;
     border: none;

@@ -1,7 +1,11 @@
 import classes from './idea.module.scss';
-import LinkUi from '@/ui/start-page/links/LinkUi';
+import AnchorUI from '@/ui/start-page/links/AnchorUI';
+import initTranslations from '@/app/i18n';
 
-const Idea = () => {
+const Idea = async ({ locale }) => {
+
+  const { t, resources } = await initTranslations(locale, ['start', 'main']);
+  
   return (
     <section className={classes.idea}>
       <div className='container'>
@@ -466,9 +470,9 @@ const Idea = () => {
 
           <div className={classes.potential}>
             <p className={classes.text}>
-              Unlock the full potential of your project with our company.
+              {t('ideaText')}
             </p>
-            <LinkUi clazz={classes.ideaButton} text={'Schedule a demo'} />
+            <AnchorUI clazz={classes.ideaButton} href={'#contact'} text={t('shedule')} />
           </div>
         </div>
       </div>

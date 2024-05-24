@@ -1,0 +1,172 @@
+@use '../../../style/start-page/variables.scss';
+@use '../../../style/start-page/mixins.scss';
+
+.error {
+    position: relative;
+    @include mixins.flex(flex, center, flex-start);
+    flex-direction: column;
+    padding: 48px 16px 100px 16px;
+    background: variables.$primary-linear;
+    gap: 26px;
+    margin-top: 32px;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 21.5px;
+    background: transparent;
+    border: 1px solid variables.$primary-bg;
+    cursor: pointer;
+}
+
+.title {
+    color: variables.$secondary-red;
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight600;
+    line-height: 140%;
+    margin-top: 50px;
+}
+
+.text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight400;
+    line-height: 150%; 
+    margin-top: 50px;
+}
+
+.button {
+    @include mixins.flex(flex, center, center);
+    width: 100%;
+    height: 56px;
+    gap: 12px;
+    background: variables.$primary-color;
+    border: none;
+    border-radius: 32px;
+    color: variables.$primary-bg;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.wave {
+    position: absolute;
+    width: 360px;
+    height: 338px;
+    top: 191px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.textTitle {
+    position: relative;
+    z-index: 5;
+}
+
+@media(min-width: 425px) {
+    .textTitle {
+        width: 355px;
+        margin: 0 auto;
+    }
+}
+
+
+@media(min-width: 768px) {
+    
+    .button {
+        width: 264px;
+    }
+
+    .error {
+        padding: 48px;
+        height: 490px;
+        width: 515px;
+        flex-shrink: 0;
+        border-radius: 32px;
+        margin-top: 0;
+    }
+
+    .wave {
+        display: none;
+    }
+}
+
+@media(min-width: 992px) {
+    .error {
+        @include mixins.flex(flex, center, flex-start);
+        flex-direction: column;
+        width: 515px;
+    }
+
+    .title {
+        font-size: variables.$font-size30;
+    }
+    
+    .button {
+        gap: 12px;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        margin-top: 50px;
+        svg {
+            margin-left: initial;
+            margin-bottom: 3px;
+        }
+
+    }
+
+    .button:hover {
+        color: variables.$primary-color;
+        background: variables.$primary-bg;
+        border: none;
+        svg {
+            position: relative;
+            left: 6px;
+            path {
+                fill: variables.$primary-color;
+            }
+        }
+    }
+
+}
+
+@media(min-width: 1280px) {
+    .error {
+        width: 552px;
+        height: 501px;
+    }
+
+    .title {
+        font-size: variables.$font-size40;
+        font-weight: variables.$font-weight600;
+        margin-top: initial;
+    }
+
+    .close {
+        right: 24px;
+        top: 24px;
+    }
+
+    .text {
+        margin-top: 24px;
+        font-size: variables.$font-size24;
+        font-weight: variables.$font-weight400; 
+    }
+
+    .textTitle {
+        width: 405px;
+    }
+
+    .button {
+        @include mixins.flex(flex, center, center);
+        font-size: variables.$font-size16;
+        width: 264px;
+        height: 56px;
+        margin-top: 56px;
+    }
+}

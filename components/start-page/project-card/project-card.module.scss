@@ -21,17 +21,17 @@
 }
 
 .filter {
+    width: 99px;
     position: absolute;
     top: 12px;
     left: 12px;
-    cursor: pointer;
     @include mixins.flex(flex, center, center);
     text-align: center;
     border-radius: 32px;
     border: 1px solid variables.$secondary-gray;
     background: variables.$secondary-gray-bg;
     backdrop-filter: blur(1.5px);
-    padding: 2px 8px;
+    padding: 2px 4px;
     color: variables.$primary-color;
     font-size: variables.$font-size12;
     font-weight: variables.$font-weight400;
@@ -112,6 +112,10 @@
         top: 15px;
         left: 35px;
     }
+
+    .card {
+        width: 459.6px;
+    }
     
     .card:hover {
         .title {
@@ -147,8 +151,17 @@
 
 @media(min-width: 1280px) {
     .imgWrapper {
-        width: 552px;
+        width: 100%;
         height: 344px;
+    }
+
+    .filter {
+      width: 113px;
+      padding: 2px 8px;
+    }
+
+    .card {
+        width: 552px;
     }
 
     .title {

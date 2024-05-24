@@ -88,16 +88,24 @@
     }
 
     .servicesButtonCollapse {
-      padding: 16px 52px;
-      gap: 0;
-      @include mixins.flex(flex, flex-start, center);
+      padding: 0;
+      gap: 12px;
+      @include mixins.flex(flex, center, center);
+    }
+
+    .servicesButtonCollapse:hover {
+        svg {
+          position: relative;
+          left: 6px;
+        }
+        background: variables.$primary-linear-reverse;
     }
 
   }
 
   @media(min-width: 1280px) {
     .services {
-      padding: 480px 76px 0 76px;
+      padding: 160px 76px 0 76px;
     }
 
     .title {
@@ -125,13 +133,13 @@
     }
 
     .servicesButton {
-      @include mixins.flex(flex, flex-start, center);
+      @include mixins.flex(flex, center, center);
       width: 264px;
       height: 56px;
       text-align: center;
       cursor: pointer;
-      gap: 5px;
-      padding: 16px 52px;
+      gap: 12px;
+      padding: 0;
       border-radius: 32px;
       text-decoration: none;
       color: variables.$primary-color;
@@ -140,6 +148,14 @@
       background: variables.$primary-button-bg;
       margin-top: 88px;
     }
+
+    .servicesButton:hover {
+      svg {
+        position: relative;
+        left: 6px;
+      }
+      background: variables.$primary-linear-reverse;
+  }
 
     .servicesButtonCollapse {
       display: none;

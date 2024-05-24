@@ -3,13 +3,11 @@ import initTranslations from '../i18n';
 import TranslationsProvider from '../TranslationsProvider';
 import Header from '@/modules/start-page/header/Header';
 import Footer from '@/modules/start-page/footer/Footer';
-import ogPicture from '@/images/socialMedia.png';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import ogPicture from '@/images/socialMedia.webp';
 
 export const metadata = {
-  title: 'Uviten | Software development company',
-  description:
-    'Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.',
-  authors: [{ url: 'https://test-test-rouge-nine.vercel.app/' }],
+  authors: [{ url: 'http://uviten.com' }],
   robots: {
     index: true,
     follow: true,
@@ -18,57 +16,51 @@ export const metadata = {
       follow: true,
     },
   },
-  keywords: [
-    'розробка програмного забезпечення',
-    'веб розробка',
-    'веб сайти',
-    'виділена команда програмістів',
-    'замовити веб сайт',
-    'мобільні застосунки',
-    'аудит веб сайту',
-    'МВП',
-    'старт-ап',
-  ],
-  keywords: [
-    'custom software development',
-    'web design',
-    'web sites',
-    'dedicated team',
-    'order web site',
-    'mobile application',
-    'web site audit',
-    'MVP',
-    'start-up',
-  ],
   icons: {
     icon: '/favicon.ico',
   },
 };
 
 const MainLayout = async ({ params: { locale }, children }) => {
-  const { t, resources } = await initTranslations(locale, ['main']);
+  const { t, resources } = await initTranslations(locale, ['main', 'start']);
 
   return (
     <TranslationsProvider
       locale={locale}
       resources={resources}
-      namespaces={['main']}
+      namespaces={['main', 'start']}
     >
       <html lang={t('language')}>
         <head>
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
-          <meta property="og:image" content={ogPicture.src} />
-          <meta property="og:title" content="Uviten | Software development company"/>
-          <meta property="og:description" content="Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve. "/>
-          <meta property="og:image:type" content="image/png" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
+          <meta property='og:image' content={ogPicture.src} />
+          <meta
+            property='og:title'
+            content={t('ogTitle')}
+          />
+          <meta
+            property='og:description'
+            content={t('ogDescr')}
+          />
+          <meta name='keywords' content={t('keywords')}/>
+          <meta property='og:image:type' content='image/webp' />
+          <meta property='og:image:width' content='1200' />
+          <meta property='og:image:height' content='630' />
         </head>
-        <body>
+        <body
+          style={{
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: '100vh',
+          }}
+        >
           <Header />
-          <main>{children}</main>
-          <Footer />
+          <main style={{ flexGrow: 1 }}>{children}</main>
+          <Footer locale={locale}/>
+          {process.env.NODE_ENV === 'production' ? (
+            <GoogleAnalytics gaId='G-FSXZ91P77K' />
+          ) : null}
         </body>
       </html>
     </TranslationsProvider>

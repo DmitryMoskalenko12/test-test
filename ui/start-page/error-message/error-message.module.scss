@@ -1,0 +1,186 @@
+@use '../../../style/start-page/variables.scss';
+@use '../../../style/start-page/mixins.scss';
+
+.error {
+    @include mixins.flex(flex, flex-start, stretch);
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: 0;
+    padding: 72px 16px 72px 16px;
+    transform: translate(-50%, -50%);
+    background: variables.$primary-bg;
+    overflow-y: auto;
+    width: 360px;
+    height: 435px;
+    border-radius: 3px;
+    background: variables.$primary-linear;
+    z-index: 100000;
+}
+
+.close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 21.5px;
+    background: transparent;
+    border: 1px solid variables.$primary-bg;
+    cursor: pointer;
+}
+
+.title {
+    color: variables.$secondary-red;
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight600;
+    line-height: 140%;
+}
+
+.text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    margin-top: 24px;
+}
+
+.button {
+    width: 328px;
+    height: 48px;
+    border-radius: 32px;
+    @include mixins.flex(flex, center, center);
+    gap: 3px;
+    background: variables.$primary-color;
+    color: variables.$primary-bg;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    cursor: pointer;
+    border: none;
+    margin: 0 auto;
+    margin-top: 96px;
+    flex-shrink: 0;
+}
+
+.svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -5;
+    width: 100%;
+}
+
+.svgDesktop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -5;
+    display: none;
+}
+
+@media(min-width: 425px) {
+    .error {
+        width: 345px;
+        right: 0;
+        top: 0;
+        overflow: auto;
+        height: 100%;
+        transform: none;
+        left: initial;
+    }
+
+    .button {
+        width: 312px;
+        margin-top: 325px;
+    }
+}
+
+@media(min-width: 576px) {
+    .error {
+        left: initial;
+        right: 0;
+        width: 70%;
+        height: 100%;
+    }
+
+    .title {
+        font-size: variables.$font-size36;
+    }
+
+    .text {
+        font-size: variables.$font-size24;
+        margin-top: 24px;
+    }
+}
+
+@media(min-width: 768px) {
+    .error {
+        width: 55%;
+    }
+
+    .title {
+        font-size: variables.$font-size40;
+    }
+
+}
+
+@media(min-width: 992px) {
+    .error {
+        width: 42%;
+    }
+
+    .button {
+        @include mixins.flex(flex, center, center);
+        font-size: variables.$font-size16;
+        padding: 0;
+        width: 264px;
+        height: 56px;
+        margin: 0;
+    }
+
+    .button:hover {
+        color: variables.$primary-color;
+        background: variables.$primary-bg;
+        border: none;
+        svg {
+            position: relative;
+            left: 6px;
+            path {
+                fill: variables.$primary-color;
+            }
+        }
+    }
+}
+
+@media(min-width: 1200px) {
+    .error {
+        width: 520px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .error {
+        overflow: hidden;
+        padding: 152px 37.5px 290px 37.5px;
+    }
+
+    .text {
+        margin-top: 32px;
+    }
+
+    .svg {
+        display: none;
+    }
+
+    .svgDesktop {
+        display: initial;
+        height: 100%;
+    }
+
+    .button {
+        width: 264px;
+        height: 56px;
+        margin: 0;
+        margin-top: 56px;
+    }
+}

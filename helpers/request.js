@@ -9,13 +9,13 @@ const request = (method, url, value, setNotText, setNotTitle, t) => {
   })
     .then((response) => response.json())
     .then((response) => {
-      if (response.code === 200) {
+      if (response.ok) {
         setNotText(t('thanks_text'));
         setNotTitle(t('thanks'));
         setTimeout(() => {
           setNotTitle('');
         }, 3000);
-      } else if (response.code === 422) {
+      } else if (!response.ok) {
         setNotText(t('error_text'));
         setNotTitle(t('error_title'));
         setTimeout(() => {

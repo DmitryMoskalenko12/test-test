@@ -10,6 +10,7 @@
     "format": "prettier --write \"app/**/*.js\" \"components/**/*.js\" \"modules/**/*.js\" \"helpers/**/*.js\" \"ui/**/*.js\""
   },
   "dependencies": {
+    "@formspree/react": "^2.5.1",
     "@next/third-parties": "^14.2.2",
     "classnames": "^2.5.1",
     "formik": "^2.4.5",

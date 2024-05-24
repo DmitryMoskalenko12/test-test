@@ -1,0 +1,130 @@
+@use '../../style/start-page/mixins.scss';
+@use '../../style/start-page/variables.scss';
+
+.error {
+    overflow: hidden;
+    padding: 219px 16px 100px 16px;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight600;
+    line-height: 140%
+}
+
+.text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    margin-top: 64px;
+    line-height: 150%;
+}
+
+.link {
+    width: 328px;
+    height: 48px;
+    @include mixins.flex(flex, center, center);
+    border-radius: 32px;
+    background: variables.$primary-linear;
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 183px;
+    border: none;
+    cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.svg {
+    width: 110%;
+    position: absolute;
+    top: -227px;
+    left: -18px;
+    z-index: -5;
+}
+
+.svgDesktop {
+    display: none;
+}
+
+@media(min-width: 576px) {
+    .content {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width: 768px) {
+    .svg {
+        display: none;
+    }
+
+    .svgDesktop {
+        display: initial;
+        position: absolute;
+        top: -164px;
+        right: 0;
+        bottom: 0;
+        z-index: -5; 
+    }
+
+    .content {
+        margin: 0;
+    }
+
+    .title {
+        font-size: variables.$font-size32;
+    }
+
+    .text {
+        font-size: variables.$font-size18; 
+        margin-top: 24px;
+    }
+
+    .link {
+        width: 264px;
+        height: 56px;
+        margin: 0;
+        margin-top: 48px;
+    }
+}
+
+@media(min-width: 992px) {
+ .link {
+        justify-content: center;
+        gap: 12px;
+        padding: 0;
+ }
+
+ .link:hover {
+    svg {
+        position: relative;
+        left: 6px;
+    }
+    background: variables.$primary-linear-reverse;
+}
+}
+
+@media(min-width: 1280px) {
+    .content {
+        width: initial;
+    }
+
+    .title {
+        width: 645px;
+    }
+
+    .text {
+        width: 551px;
+    }
+
+    .svgDesktop {
+        right: -67px;
+    }
+}

@@ -1,0 +1,144 @@
+@use '../../../style/start-page/mixins.scss';
+@use '../../../style/start-page/variables.scss';
+
+.notFound {
+ position: relative;
+ padding: 88px 16px 100px 16px;
+}
+
+.wrapper {
+    @include mixins.flex(flex, center, center);
+    flex-direction: column-reverse;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight600;
+    margin-top: 12px;
+}
+
+.error404 {
+    text-align: center;
+    font-size: variables.$font-size148;
+    font-weight: variables.$font-weight700;
+    background: variables.$primary-linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 140%;
+}
+
+.text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    margin-top: 40px;
+}
+
+.mainLink {
+    width: 328px;
+    height: 48px;
+    @include mixins.flex(flex, center, center);
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    border-radius: 32px;
+    background: variables.$primary-button-bg;
+    text-decoration: none;
+    margin: 0 auto;
+    margin-top: 119px;
+}
+
+.waveDesktop {
+    display: none;
+}
+
+.wave {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+@media(min-width: 768px) {
+    .wrapper {
+        @include mixins.flex(flex, space-between, center);
+        flex-direction: row;
+    }
+
+    .mainLink {
+        width: 264px;
+        height: 56px;
+        margin: 0;
+        margin-top: 48px;
+    }
+
+    .title {
+        font-size: variables.$font-size32;
+        margin-top: 0;
+    }
+
+    .text {
+        font-size: variables.$font-size18;
+        margin-top: 24px;
+    }
+
+    .content {
+        width: 335px;
+    }
+
+    .wave {
+        display: none;
+    }
+
+    .waveDesktop {
+        display: initial;
+        width: 100%;
+        position: absolute;
+        top: -39px;
+        left: 0;
+        z-index: -5;
+    }
+}
+
+@media(min-width: 992px) {
+    .content {
+        width: 495px;
+    }
+
+    .mainLink {
+        gap: 12px;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .mainLink:hover {
+        svg {
+          position: relative;
+          left: 6px;
+        }
+        background: variables.$primary-linear-reverse;  
+    }
+}
+
+@media(min-width: 1280px) {
+    .notFound {
+       padding: 141px 76px 88px 76px;
+    }
+
+    .error404 {
+       font-size: variables.$font-size280;
+    }
+
+    .content {
+        width: 455px;
+    }
+
+    .mainLink {
+        padding: 0;
+        gap: 12px;
+        @include mixins.flex(flex, center, center);
+    }
+}

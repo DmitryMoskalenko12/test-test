@@ -5,8 +5,12 @@ import project1 from '@/images/start-page/project1.png';
 import project1Desktop from '@/images/start-page/project1Desktop.png';
 import project2 from '@/images/start-page/project2.png';
 import project2Desktop from '@/images/start-page/project2Desktop.png';
+import initTranslations from '@/app/i18n';
 
-const Projects = () => {
+const Projects = async ({locale}) => {
+
+  const { t, resources } = await initTranslations(locale, ['start', 'main']);
+
   const projectsArr = [
     {
       filter: 'LANDING PAGE',
@@ -14,7 +18,7 @@ const Projects = () => {
       imgDesktop: project1Desktop,
       href: '#',
       title: 'Vini Truck',
-      text: 'Redesign the website with a modern and visually appealing layout, incorporating contemporary design trends and aesthetics.',
+      text: t('redesign'),
       id: 1,
     },
     {
@@ -23,20 +27,19 @@ const Projects = () => {
       imgDesktop: project2Desktop,
       href: '#',
       title: 'DentaCare',
-      text: 'Crafting a user-friendly and stylish landing page for a dentist clinic  with intuitive functionality to provide visitors with a seamless experience.',
+      text: t('crafting'),
       id: 2,
     },
   ];
 
   return (
-    <section className={classes.projects}>
+    <section id='projects' className={classes.projects}>
       <div className='container'>
         <h2 className={classes.title}>
-          Our <span className={classes.projectsTitle}>projects</span>
+          {t('our')} <span className={classes.projectsTitle}>{t('projects2')}</span>
         </h2>
         <p className={classes.text}>
-          Discover how we transformed client visions into digital innovation
-          realities
+          {t('discover')}
         </p>
         <div className={classes.projectsWrapper}>
           {projectsArr.map(
@@ -55,7 +58,7 @@ const Projects = () => {
             },
           )}
         </div>
-        <LinkUi clazz={classes.projectLink} text={'All cases'} />
+        <LinkUi clazz={classes.projectLink} href={'/stub/'} text={t('cases')} />
       </div>
     </section>
   );

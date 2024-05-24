@@ -141,15 +141,23 @@
     }
 
     .ideaButton {
-        padding: 16px 62px;
-        gap: 0;
-        @include mixins.flex(flex, flex-start, center);
+        padding: 16px 44px 16px 50px;
+        gap: 12px;
+        @include mixins.flex(flex, center, center);
+    }
+
+    .ideaButton:hover {
+        svg {
+            position: relative;
+            left: 6px;
+        }
+        background: variables.$primary-linear-reverse;
     }
 }
 
 @media(min-width: 1280px) {
     .idea {
-        padding: 128px 76px 0 76px;
+        padding: 128px 76px 320px 76px;
     }
 
     .wrapper {
@@ -168,7 +176,7 @@
     }
 
     .delivery {
-        font-size: variables.$font-size108;
+        font-size: variables.$font-size124;
     }
 
     .text {
@@ -185,8 +193,8 @@
     }
 
     .ideaButton {
-        padding: 16px 52px;
-        gap: 5px;
+        padding: 0;
+        gap: 12px;
         font-size: variables.$font-size16;
     }
 }

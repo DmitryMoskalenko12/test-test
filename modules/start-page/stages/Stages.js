@@ -1,13 +1,69 @@
 import classes from './stages.module.scss';
-import { stagesArr } from '@/helpers/start-page/stages-elements';
 import StagesCard from '@/components/start-page/stages-card/StagesCard';
 import SvgComponent1 from '@/ui/start-page/svg-componets/SvgComponent1';
 import SvgComponent2 from '@/ui/start-page/svg-componets/SvgComponent2';
 import SvgComponent3 from '@/ui/start-page/svg-componets/SvgComponent3';
 import SvgComponent4 from '@/ui/start-page/svg-componets/SvgComponent4';
 import SvgComponent5 from '@/ui/start-page/svg-componets/SvgComponent5';
+import initTranslations from '@/app/i18n';
 
-const Stages = () => {
+const Stages = async ({locale}) => {
+
+  const { t, resources } = await initTranslations(locale, ['start', 'main']);
+
+  const stagesArr = [
+    {
+      title: t('initiation'),
+      text: {
+        item1: t('define'),
+        item2: t('identify'),
+        item3: t('charter'),
+      },
+      clazz: 'pr1',
+      id: 1,
+    },
+    {
+      title: t('planning'),
+      text: {
+        item1: t('plan'),
+        item2: t('structure'),
+        item3: t('strategy'),
+      },
+      clazz: 'pr2',
+      id: 2,
+    },
+    {
+      title: t('execution'),
+      text: {
+        item1: t('working-plan'),
+        item2: t('team-members'),
+        item3: t('loop'),
+      },
+      clazz: 'pr3',
+      id: 3,
+    },
+    {
+      title: t('monitoring'),
+      text: {
+        item1: t('reviews'),
+        item2: t('kpi'),
+        item3: t('apply-changes'),
+      },
+      clazz: 'pr4',
+      id: 4,
+    },
+    {
+      title: t('closure'),
+      text: {
+        item1: t('deliverables'),
+        item2: t('failures'),
+        item3: t('document'),
+      },
+      clazz: 'pr5',
+      id: 5,
+    },
+  ];
+
   return (
     <section className={classes.stages}>
       <div className={classes.imgWrapperDesktop}>
@@ -78,11 +134,10 @@ const Stages = () => {
         <div className={classes.wrapper}>
           <div className={classes.titleTextBlock}>
             <h2 className={classes.title}>
-              Project <span className={classes.stagesTitle}>stages</span>
+              {t('projectS')} <span className={classes.stagesTitle}>{t('stages')}</span>
             </h2>
             <p className={classes.text}>
-              You're gaining a partner dedicated to delivering quality solutions
-              that drive success for your business.
+              {t('gaining')}
             </p>
           </div>
 

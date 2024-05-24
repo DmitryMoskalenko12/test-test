@@ -17,7 +17,7 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: variables.$font-size40;
-    font-weight: variables.$font-weight700;
+    font-weight: variables.$font-weight600;
 }
 
 .text {
@@ -56,10 +56,23 @@
 
 @media(min-width: 992px) {
     .projectsWrapper {
-        @include mixins.flex(flex, space-between, center);
+        @include mixins.flex(flex, space-between, flex-start);
         flex-direction: row;
-        gap: 40px;
+        gap: 24px;
         margin-top: 48px;
+    }
+
+    .projectLink {
+        padding: 0;
+        justify-content: center;
+    }
+    
+    .projectLink:hover {
+        svg {
+            position: relative;
+            left: 6px;
+        }
+        background: variables.$primary-linear-reverse;
     }
 }
 
@@ -88,7 +101,7 @@
     .projectLink {
         width: 264px;
         height: 56px;
-        @include mixins.flex(flex, flex-start, center);
-        padding: 16px 52px 16px 94px;
+        @include mixins.flex(flex, center, center);
+        padding: 0;
     }
 }

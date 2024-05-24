@@ -26,7 +26,7 @@ const ContactForm = () => {
   const onGetInfo = (value) => {
     request(
       'POST',
-      'https://formspree.io/f/mleqalbq',
+      'https://formspree.io/f/xpzvynwe',
       value,
       setNotificationText,
       setNotification,

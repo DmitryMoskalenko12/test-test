@@ -15,11 +15,11 @@ const Stub = async ({ params: { locale } }) => {
       namespaces={['main']}
     >
       <div className={classes.mainBg}>
-        <Header />
-        <main className={classes.main}>
+        {/* <Header /> */}
+        <div className={classes.main}>
           <MainContent />
-        </main>
-        <Footer />
+        </div>
+        {/* <Footer /> */}
       </div>
       <div />
     </TranslationsProvider>

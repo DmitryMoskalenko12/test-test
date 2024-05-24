@@ -6,7 +6,7 @@ export default function sitemap() {
       alternates: {
         languages: {
           en: 'https://uviten.com/en',
-          uk: 'https://uviten.com/uk',
+          uk: 'https://uviten.com/ua',
         },
       },
     },
@@ -16,7 +16,7 @@ export default function sitemap() {
       alternates: {
         languages: {
           en: 'https://uviten.com/en/stub',
-          uk: 'https://uviten.com/uk/stub',
+          uk: 'https://uviten.com/ua/stub',
         },
       },
     },

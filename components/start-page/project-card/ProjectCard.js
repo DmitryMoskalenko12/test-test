@@ -19,7 +19,7 @@ const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
           height={344}
           alt='You will see project'
         />
-        <button className={classes.filter}>{filter}</button>
+        <div className={classes.filter}>{filter}</div>
       </div>
       <div className={classes.titleWrapper}>
         <h3 className={classes.title}>{title}</h3>

@@ -3,7 +3,7 @@
 import classes from './services.module.scss';
 import { useState, useRef, useEffect } from 'react';
 import { collapseArr } from '@/helpers/start-page/collapse-elements';
-import LinkUi from '@/ui/start-page/links/LinkUi';
+import AnchorUI from '@/ui/start-page/links/AnchorUI';
 import CollapseItem from '@/components/start-page/collapse-item/CollapseItem';
 import { useTranslation } from 'react-i18next';
 
@@ -21,7 +21,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className={classes.services}>
+    <section id='services' className={classes.services}>
       <div className='container'>
         <div className={classes.wrapper}>
           <div className={classes.servicesTextBlock}>
@@ -30,7 +30,7 @@ const Services = () => {
               <span className={classes.servicesTitle}>{t('services')}</span>
             </h2>
             <p className={classes.text}>{t('servicesText')}</p>
-            <LinkUi clazz={classes.servicesButton} text={'Schedule a demo'} />
+            <AnchorUI clazz={classes.servicesButton} href={'#contact'} text={t('shedule')} />
           </div>
 
           <div className={classes.collapse}>
@@ -50,9 +50,10 @@ const Services = () => {
                 />
               );
             })}
-            <LinkUi
+            <AnchorUI
+              href={'#contact'}
               clazz={classes.servicesButtonCollapse}
-              text={'Schedule a demo'}
+              text={t('shedule')}
             />
           </div>
         </div>
