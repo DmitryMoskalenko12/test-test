@@ -13,8 +13,8 @@ import { useRouter } from 'next/navigation';
 const Header = () => {
   const [active, setActive] = useState(false);
   const [asideModalActive, setAsideModalActive] = useState(false);
-  const [scroll, setScroll] = useState(true);
-  const [scrollServices, setScrollServices] = useState(true);
+  const [scroll, setScroll] = useState(false);
+  const [scrollServices, setScrollServices] = useState(false);
 
   const path = usePathname().includes('stub');
   const { t } = useTranslation('start');
