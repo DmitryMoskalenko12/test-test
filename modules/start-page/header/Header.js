@@ -13,8 +13,8 @@ import { useRouter } from 'next/navigation';
 const Header = () => {
   const [active, setActive] = useState(false);
   const [asideModalActive, setAsideModalActive] = useState(false);
-  const [scroll, setScroll] = useState(false);
-  const [scrollServices, setScrollServices] = useState(false);
+  const [scroll, setScroll] = useState(true);
+  const [scrollServices, setScrollServices] = useState(true);
 
   const path = usePathname().includes('stub');
   const { t } = useTranslation('start');
@@ -44,7 +44,7 @@ const Header = () => {
       route.push('/')
        setTimeout(() => {
         refProjects.current.click();
-      }, 600);
+      }, 1000);
     }/*  else {
       setScroll((prev) => !prev)
     } */
@@ -55,7 +55,7 @@ const Header = () => {
       route.push('/')
        setTimeout(() => {
         refServices.current.click();
-      }, 600);
+      }, 1000);
     } /* else {
       setScrollServices((prev) => !prev)
     } */
