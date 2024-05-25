@@ -44,7 +44,7 @@ const Header = () => {
       route.push('/')
        setTimeout(() => {
         refProjects.current.click();
-      }, 1000);
+      }, 1300);
     }/*  else {
       setScroll((prev) => !prev)
     } */
@@ -55,7 +55,7 @@ const Header = () => {
       route.push('/')
        setTimeout(() => {
         refServices.current.click();
-      }, 1000);
+      }, 1300);
     } /* else {
       setScrollServices((prev) => !prev)
     } */
