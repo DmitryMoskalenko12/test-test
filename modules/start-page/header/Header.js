@@ -300,7 +300,7 @@ const Header = () => {
                 <li className={classes.li}>
                   <a
                     ref={refServices}
-                    onClick={(e) => {setActive(false); setScrollServices((prev) => !prev); cancelReloadServices()}}
+                    onClick={(e) => {setActive(false); setScrollServices(true); cancelReloadServices()}}
                     className={classes.link}
                     href='#services'
                   >
@@ -310,7 +310,7 @@ const Header = () => {
                 <li className={classes.li}>
                   <a
                     ref={refProjects}
-                    onClick={(e) => {setActive(false); setScroll((prev) => !prev); cancelReloadProjects()}}
+                    onClick={(e) => {setActive(false); setScroll(true); cancelReloadProjects()}}
                     className={classes.link}
                     href='#projects'
                   >
