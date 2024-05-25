@@ -45,7 +45,9 @@ const Header = () => {
        setTimeout(() => {
         refProjects.current.click();
       }, 600);
-    }
+    }/*  else {
+      setScroll((prev) => !prev)
+    } */
   }
 
   const cancelReloadServices = () => {
@@ -54,7 +56,9 @@ const Header = () => {
        setTimeout(() => {
         refServices.current.click();
       }, 600);
-    }
+    } /* else {
+      setScrollServices((prev) => !prev)
+    } */
   }
 
   return (
@@ -300,7 +304,7 @@ const Header = () => {
                 <li className={classes.li}>
                   <a
                     ref={refServices}
-                    onClick={(e) => {setActive(false); setScrollServices(true); cancelReloadServices()}}
+                    onClick={(e) => {setActive(false); setScrollServices((prev) => !prev); cancelReloadServices()}}
                     className={classes.link}
                     href='#services'
                   >
@@ -310,7 +314,7 @@ const Header = () => {
                 <li className={classes.li}>
                   <a
                     ref={refProjects}
-                    onClick={(e) => {setActive(false); setScroll(true); cancelReloadProjects()}}
+                    onClick={(e) => {setActive(false); setScroll((prev) => !prev); cancelReloadProjects()}}
                     className={classes.link}
                     href='#projects'
                   >
