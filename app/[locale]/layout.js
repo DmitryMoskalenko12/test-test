@@ -61,7 +61,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale}/>
-          {(process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_PRODUCTION === referer.split('/')[2]) ? (
+          {(process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_PRODUCTION === /* referer.split('/')[2] */'test-test-rouge-nine.vercel.app') ? (
             <GoogleAnalytics gaId='G-FSXZ91P77K' />
           ) : null}
         </body>

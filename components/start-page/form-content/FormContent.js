@@ -10,7 +10,7 @@ import ErrorMessage from '@/ui/start-page/error-message/ErrorMessage';
 import contactFormRequest from '@/helpers/contactFormRequest';
 import LoadingFormSpinner from '@/ui/start-page/loading-form-spinner/LoadingFormSpinner';
 import { useTranslation } from 'react-i18next';
-import { usePathname } from 'next/navigation';
+
 
 const FormContent = ({ close }) => {
   const [loading, setLoading] = useState(false);
