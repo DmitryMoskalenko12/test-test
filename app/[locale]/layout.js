@@ -26,7 +26,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
   const headersList = headers()
   const referer = headersList.get('referer')
- console.log(process.env.NEXT_PUBLIC_PRODUCTION)
+ console.log(process.env.NODE_ENV)
   return (
     <TranslationsProvider
       locale={locale}
