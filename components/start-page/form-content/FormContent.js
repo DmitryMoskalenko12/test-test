@@ -18,7 +18,7 @@ const FormContent = ({ close }) => {
   const [success, setSuccess] = useState(null);
   const { t } = useTranslation('start');
   const path = window.location.href
-  console.log(process.env.NEXT_PRODUCTION === path.split('/')[2])
+  console.log(process.env.NEXT_PUBLIC_PRODUCTION, path.split('/')[2])
 
   const validationOrderForm = Yup.object().shape({
     name: Yup.string().required(t('required')),
