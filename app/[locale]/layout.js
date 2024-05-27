@@ -61,9 +61,9 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale}/>
-          {(process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_PRODUCTION === referer.split('/')[2].trim()) ? (
-            <GoogleAnalytics gaId='G-FSXZ91P77K' />
-          ) : null}
+          {
+            <GoogleAnalytics gaId={process.env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_PRODUCTION === referer.split('/')[2].trim() ? 'G-FSXZ91P77K' : null}/>
+          }
         </body>
       </html>
     </TranslationsProvider>
