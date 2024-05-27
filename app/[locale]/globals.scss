@@ -57,8 +57,6 @@ input:focus {
   background: rgba(253, 255, 254, 0.80);
 }
 
-
-
 main {
   position: relative;
   z-index: -999;
@@ -130,12 +128,6 @@ p {
 
 .policy_style {
  padding: 0 16px;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-input, textarea, select {
-  font-size: 16px;
-}
 }
 
 @media (min-width: 320px) {

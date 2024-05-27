@@ -83,17 +83,21 @@
     border: none;
     background: variables.$input-bg;
     outline: none;
+    font-size: variables.$font-size16;
 }
 
 .input::placeholder {
+    opacity: 1;
+    background: variables.$input-bg;
     color: variables.$primary-color;
-    font-size: variables.$font-size14;
+    font-size: variables.$font-size16;
     font-weight: variables.$font-weight400;
 }
 
 .input:focus {
+    background: variables.$input-bg;
     color: variables.$primary-color;
-    font-size: variables.$font-size14;
+    font-size: variables.$font-size16;
     font-weight: variables.$font-weight400;
 }
 
