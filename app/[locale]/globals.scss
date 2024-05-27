@@ -49,14 +49,6 @@
   scroll-behavior: smooth;
 }
 
-input, select, textarea {
-  font-size: 16px;
-}
-
-input:focus {
-  background: rgba(253, 255, 254, 0.80);
-}
-
 main {
   position: relative;
   z-index: -999;

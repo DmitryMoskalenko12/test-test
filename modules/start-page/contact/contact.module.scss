@@ -60,21 +60,17 @@
     padding: 12px;
     border-radius: 32px;
     border: none;
-    background: variables.$input-bg;
     outline: none;
     font-size: variables.$font-size16;
 }
 
 .input::placeholder {
-    opacity: 1;
-    background: variables.$input-bg;
     color: variables.$primary-color;
     font-size: variables.$font-size16;
     font-weight: variables.$font-weight400;
 }
 
 .input:focus {
-    background: variables.$input-bg;
     color: variables.$primary-color;
     font-size: variables.$font-size16;
     font-weight: variables.$font-weight400;
@@ -119,7 +115,7 @@
     border-radius: 19.75%;
     background-color: variables.$primary-bg;
     position: absolute;
-    top: -1px;
+    top: -2px;
     left: -26px;
     z-index: 1;
     transition: .1s linear, border .1s linear;
@@ -129,7 +125,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: 0px;
+    top: 2px;
     left: -20px;
     z-index: 2;
     opacity: 0;

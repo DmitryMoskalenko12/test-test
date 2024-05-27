@@ -5,6 +5,7 @@ import Header from '@/modules/start-page/header/Header';
 import Footer from '@/modules/start-page/footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
+import { headers } from 'next/headers';
 
 export const metadata = {
   authors: [{ url: 'http://uviten.com' }],
@@ -23,7 +24,11 @@ export const metadata = {
 
 const MainLayout = async ({ params: { locale }, children }) => {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
+  const headersList = headers();
+  const currentUrl = headersList.get('referer').includes('test');
 
+  console.log(currentUrl)
+  
   return (
     <TranslationsProvider
       locale={locale}
@@ -58,7 +63,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale}/>
-          {process.env.NODE_ENV === 'production' ? (
+          {process.env.NODE_ENV === 'production' && !currentUrl ? (
             <GoogleAnalytics gaId='G-FSXZ91P77K' />
           ) : null}
         </body>
