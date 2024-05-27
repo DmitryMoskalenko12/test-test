@@ -33,6 +33,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
       <html lang={t('language')}>
         <head>
           <title>{t('lang-title')}</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
           <meta

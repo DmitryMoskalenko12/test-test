@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
 import classes from './footer.module.scss';
-import initTranslations from '@/app/i18n';
 import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { useRef, useState } from 'react';
@@ -19,7 +18,7 @@ const Footer =  ({locale}) => {
       route.push('/')
        setTimeout(() => {
         refProjects.current.click();
-      }, 600);
+      }, 1300);
     }
   }
 
@@ -28,7 +27,7 @@ const Footer =  ({locale}) => {
       route.push('/')
        setTimeout(() => {
         refServices.current.click();
-      }, 600);
+      }, 1300);
     }
   }
 

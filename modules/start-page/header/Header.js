@@ -45,9 +45,7 @@ const Header = () => {
        setTimeout(() => {
         refProjects.current.click();
       }, 1300);
-    }/*  else {
-      setScroll((prev) => !prev)
-    } */
+    }
   }
 
   const cancelReloadServices = () => {
@@ -56,9 +54,7 @@ const Header = () => {
        setTimeout(() => {
         refServices.current.click();
       }, 1300);
-    } /* else {
-      setScrollServices((prev) => !prev)
-    } */
+    } 
   }
 
   return (
