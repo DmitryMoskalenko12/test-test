@@ -10,12 +10,15 @@ import ErrorMessage from '@/ui/start-page/error-message/ErrorMessage';
 import contactFormRequest from '@/helpers/contactFormRequest';
 import LoadingFormSpinner from '@/ui/start-page/loading-form-spinner/LoadingFormSpinner';
 import { useTranslation } from 'react-i18next';
+import { usePathname } from 'next/navigation';
 
 const FormContent = ({ close }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(null);
   const { t } = useTranslation('start');
+  const path = window.location.href
+  console.log(process.env.NEXT_PRODUCTION === path.split('/')[2])
 
   const validationOrderForm = Yup.object().shape({
     name: Yup.string().required(t('required')),
