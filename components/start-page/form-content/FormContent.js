@@ -18,7 +18,7 @@ const FormContent = ({ close }) => {
   const [success, setSuccess] = useState(null);
   const { t } = useTranslation('start');
   const path = window.location.href
-  console.log(process.env.NEXT_PUBLIC_PRODUCTION)
+  console.log(path.split('/')[2] === 'test-test-rouge-nine.vercel.app')
 
   const validationOrderForm = Yup.object().shape({
     name: Yup.string().required(t('required')),
