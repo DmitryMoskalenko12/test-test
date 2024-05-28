@@ -68,9 +68,9 @@ const Policy = () => {
                 ), describes how and why we might collect, store, use, and/or
                 share (<span className='block-component' />"
                 <strong>process</strong>"
-                <span className='statement-end-if-in-editor' />) your information
-                when you use our services (<span className='block-component' />"
-                <strong>Services</strong>"
+                <span className='statement-end-if-in-editor' />) your
+                information when you use our services (
+                <span className='block-component' />"<strong>Services</strong>"
                 <span className='statement-end-if-in-editor' />
                 ), such as when you:
               </span>
@@ -10500,7 +10500,10 @@ const Policy = () => {
                                                                                                   }}
                                                                                                 >
                                                                                                   <span data-custom-class='body_text'>
-                                                                                                    <span dir="rtl" className='statement-end-if-in-editor' />
+                                                                                                    <span
+                                                                                                      dir='rtl'
+                                                                                                      className='statement-end-if-in-editor'
+                                                                                                    />
                                                                                                   </span>
                                                                                                 </span>
                                                                                               </span>
@@ -10566,7 +10569,10 @@ const Policy = () => {
                                                                                                     }}
                                                                                                   >
                                                                                                     <span data-custom-class='body_text'>
-                                                                                                      <span dir="rtl" className='block-component' />
+                                                                                                      <span
+                                                                                                        dir='rtl'
+                                                                                                        className='block-component'
+                                                                                                      />
                                                                                                     </span>
                                                                                                   </span>
                                                                                                 </span>
@@ -10636,7 +10642,10 @@ const Policy = () => {
                                                                                                   }}
                                                                                                 >
                                                                                                   <span data-custom-class='body_text'>
-                                                                                                    <span dir="rtl" className='statement-end-if-in-editor' />
+                                                                                                    <span
+                                                                                                      dir='rtl'
+                                                                                                      className='statement-end-if-in-editor'
+                                                                                                    />
                                                                                                   </span>
                                                                                                 </span>
                                                                                               </span>
@@ -10702,7 +10711,10 @@ const Policy = () => {
                                                                                                     }}
                                                                                                   >
                                                                                                     <span data-custom-class='body_text'>
-                                                                                                      <span dir="rtl" className='block-component' />
+                                                                                                      <span
+                                                                                                        dir='rtl'
+                                                                                                        className='block-component'
+                                                                                                      />
                                                                                                     </span>
                                                                                                   </span>
                                                                                                 </span>
@@ -10777,7 +10789,10 @@ const Policy = () => {
                                                                                                   }}
                                                                                                 >
                                                                                                   <span data-custom-class='body_text'>
-                                                                                                    <span dir="rtl" className='statement-end-if-in-editor' />
+                                                                                                    <span
+                                                                                                      dir='rtl'
+                                                                                                      className='statement-end-if-in-editor'
+                                                                                                    />
                                                                                                   </span>
                                                                                                 </span>
                                                                                               </span>
@@ -10843,7 +10858,10 @@ const Policy = () => {
                                                                                                     }}
                                                                                                   >
                                                                                                     <span data-custom-class='body_text'>
-                                                                                                      <span dir="rtl" className='block-component' />
+                                                                                                      <span
+                                                                                                        dir='rtl'
+                                                                                                        className='block-component'
+                                                                                                      />
                                                                                                     </span>
                                                                                                   </span>
                                                                                                 </span>
@@ -10922,7 +10940,10 @@ const Policy = () => {
                                                                                                   }}
                                                                                                 >
                                                                                                   <span data-custom-class='body_text'>
-                                                                                                    <span dir="rtl" className='statement-end-if-in-editor' />
+                                                                                                    <span
+                                                                                                      dir='rtl'
+                                                                                                      className='statement-end-if-in-editor'
+                                                                                                    />
                                                                                                   </span>
                                                                                                 </span>
                                                                                               </span>
@@ -10988,7 +11009,10 @@ const Policy = () => {
                                                                                                     }}
                                                                                                   >
                                                                                                     <span data-custom-class='body_text'>
-                                                                                                      <span dir="rtl" className='block-component' />
+                                                                                                      <span
+                                                                                                        dir='rtl'
+                                                                                                        className='block-component'
+                                                                                                      />
                                                                                                     </span>
                                                                                                   </span>
                                                                                                 </span>
@@ -11061,7 +11085,10 @@ const Policy = () => {
                                                                                                   }}
                                                                                                 >
                                                                                                   <span data-custom-class='body_text'>
-                                                                                                    <span dir="rtl" className='statement-end-if-in-editor' />
+                                                                                                    <span
+                                                                                                      dir='rtl'
+                                                                                                      className='statement-end-if-in-editor'
+                                                                                                    />
                                                                                                   </span>
                                                                                                 </span>
                                                                                               </span>
@@ -11079,7 +11106,10 @@ const Policy = () => {
                                                                                     '1.5',
                                                                                 }}
                                                                               >
-                                                                                <span dir="rtl" className='block-component'>
+                                                                                <span
+                                                                                  dir='rtl'
+                                                                                  className='block-component'
+                                                                                >
                                                                                   <span data-custom-class='body_text' />
                                                                                 </span>
                                                                               </div>
@@ -11102,7 +11132,10 @@ const Policy = () => {
                                                                                     collected
                                                                                     about
                                                                                     you.
-                                                                                    <span dir="rtl" className='statement-end-if-in-editor' />
+                                                                                    <span
+                                                                                      dir='rtl'
+                                                                                      className='statement-end-if-in-editor'
+                                                                                    />
                                                                                   </span>
                                                                                 </li>
                                                                               </ul>
@@ -11297,7 +11330,10 @@ const Policy = () => {
                                                                                     '1.5',
                                                                                 }}
                                                                               >
-                                                                                <span dir="rtl" className='block-component'>
+                                                                                <span
+                                                                                  dir='rtl'
+                                                                                  className='block-component'
+                                                                                >
                                                                                   <span data-custom-class='body_text' />
                                                                                 </span>
                                                                               </div>

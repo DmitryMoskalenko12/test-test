@@ -2,19 +2,17 @@ import classes from './engagemet.module.scss';
 import LinkUi from '@/ui/start-page/links/LinkUi';
 import initTranslations from '@/app/i18n';
 
-const Engagemet = async({locale}) => {
-
+const Engagemet = async ({ locale }) => {
   const { t, resources } = await initTranslations(locale, ['start', 'main']);
 
   return (
     <section className={classes.engagemet}>
       <div className='container'>
         <h2 className={classes.title}>
-          {t('engagement')} <span className={classes.models}>{t('models')}</span>
+          {t('engagement')}{' '}
+          <span className={classes.models}>{t('models')}</span>
         </h2>
-        <p className={classes.text}>
-          {t('explore')}
-        </p>
+        <p className={classes.text}>{t('explore')}</p>
         <div className={classes.cardWrapper}>
           <article className={classes.card}>
             <div className={classes.svgTitleWrapper}>
@@ -127,7 +125,9 @@ const Engagemet = async({locale}) => {
                   </clipPath>
                 </defs>
               </svg>
-              <h3 className={`${classes.cardTitle} ${classes.cardTitleWidth}`}>{t('fixed')}</h3>
+              <h3 className={`${classes.cardTitle} ${classes.cardTitleWidth}`}>
+                {t('fixed')}
+              </h3>
             </div>
             <ul className={classes.cardList}>
               <li className={classes.textItem}>{t('final-price')}</li>

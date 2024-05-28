@@ -14,6 +14,7 @@ const ContactForm = () => {
   const { t } = useTranslation('main');
   const [notification, setNotification] = useState('');
   const [notificationText, setNotificationText] = useState('');
+  const endpoint = process.env.NEXT_PUBLIC_ENDPOINT_STUB;
 
   const validationOrderForm = Yup.object().shape({
     name: Yup.string().min(2, t('min_name')).required(t('required_name')),
@@ -23,28 +24,21 @@ const ContactForm = () => {
   const removeNotification = () => {
     setNotification('');
   };
- 
+
   useEffect(() => {
-   if (notification) {
-    document.querySelector('.footer').style.zIndex = '-999999';
-    document.querySelector('.header').style.zIndex = '-999';
-    document.body.style.overflow = 'hidden';
-   } else {
-    document.querySelector('.footer').style.zIndex = 'initial';
-    document.querySelector('.header').style.zIndex = '999';
-    document.body.style.overflow = '';
-   }
-  },[notification])
+    if (notification) {
+      document.querySelector('.footer').style.zIndex = '-999999';
+      document.querySelector('.header').style.zIndex = '-999';
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.querySelector('.footer').style.zIndex = 'initial';
+      document.querySelector('.header').style.zIndex = '999';
+      document.body.style.overflow = '';
+    }
+  }, [notification]);
 
   const onGetInfo = (value) => {
-    request(
-      'POST',
-      'https://formspree.io/f/xpzvynwe',
-      value,
-      setNotificationText,
-      setNotification,
-      t,
-    );
+    request('POST', endpoint, value, setNotificationText, setNotification, t);
   };
 
   return (

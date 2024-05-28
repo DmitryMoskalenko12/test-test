@@ -7,8 +7,7 @@ import SvgComponent4 from '@/ui/start-page/svg-componets/SvgComponent4';
 import SvgComponent5 from '@/ui/start-page/svg-componets/SvgComponent5';
 import initTranslations from '@/app/i18n';
 
-const Stages = async ({locale}) => {
-
+const Stages = async ({ locale }) => {
   const { t, resources } = await initTranslations(locale, ['start', 'main']);
 
   const stagesArr = [
@@ -134,11 +133,10 @@ const Stages = async ({locale}) => {
         <div className={classes.wrapper}>
           <div className={classes.titleTextBlock}>
             <h2 className={classes.title}>
-              {t('projectS')} <span className={classes.stagesTitle}>{t('stages')}</span>
+              {t('projectS')}{' '}
+              <span className={classes.stagesTitle}>{t('stages')}</span>
             </h2>
-            <p className={classes.text}>
-              {t('gaining')}
-            </p>
+            <p className={classes.text}>{t('gaining')}</p>
           </div>
 
           <div className={classes.stagesCardsBlock}>

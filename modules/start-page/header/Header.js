@@ -18,10 +18,10 @@ const Header = () => {
 
   const path = usePathname().includes('stub');
   const { t } = useTranslation('start');
-  const route =  useRouter();
+  const route = useRouter();
   const refProjects = useRef();
   const refServices = useRef();
-  
+
   useEffect(() => {
     if (active) {
       document.querySelector('body').style.overflow = 'hidden';
@@ -38,24 +38,23 @@ const Header = () => {
     }
   }, [asideModalActive]);
 
-
   const cancelReloadProjects = () => {
     if (scroll) {
-      route.push('/')
-       setTimeout(() => {
+      route.push('/');
+      setTimeout(() => {
         refProjects.current.click();
       }, 1300);
     }
-  }
+  };
 
   const cancelReloadServices = () => {
     if (scrollServices) {
-      route.push('/')
-       setTimeout(() => {
+      route.push('/');
+      setTimeout(() => {
         refServices.current.click();
       }, 1300);
-    } 
-  }
+    }
+  };
 
   return (
     <header className={`${classes.header} header`}>
@@ -300,7 +299,11 @@ const Header = () => {
                 <li className={classes.li}>
                   <a
                     ref={refServices}
-                    onClick={(e) => {setActive(false); setScrollServices((prev) => !prev); cancelReloadServices()}}
+                    onClick={(e) => {
+                      setActive(false);
+                      setScrollServices((prev) => !prev);
+                      cancelReloadServices();
+                    }}
                     className={classes.link}
                     href='#services'
                   >
@@ -310,11 +313,15 @@ const Header = () => {
                 <li className={classes.li}>
                   <a
                     ref={refProjects}
-                    onClick={(e) => {setActive(false); setScroll((prev) => !prev); cancelReloadProjects()}}
+                    onClick={(e) => {
+                      setActive(false);
+                      setScroll((prev) => !prev);
+                      cancelReloadProjects();
+                    }}
                     className={classes.link}
                     href='#projects'
                   >
-                      {t('projects')}
+                    {t('projects')}
                   </a>
                 </li>
                 <li className={classes.li}>
@@ -332,7 +339,7 @@ const Header = () => {
                     className={classes.link}
                     href='/stub/'
                   >
-                      {t('we-hire')}
+                    {t('we-hire')}
                   </Link>
                 </li>
               </ul>
@@ -344,7 +351,12 @@ const Header = () => {
                 />
 
                 <div className={classes.socialBlock}>
-                  <a title='Linkedin' target='__blank' className={classes.socialLink} href='https://www.linkedin.com/company/uviten/'>
+                  <a
+                    title='Linkedin'
+                    target='__blank'
+                    className={classes.socialLink}
+                    href='https://www.linkedin.com/company/uviten/'
+                  >
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       width='24'
@@ -358,7 +370,12 @@ const Header = () => {
                       />
                     </svg>
                   </a>
-                  <a title='Behance' href='https://www.behance.net/uviten' target='__blank' className={classes.socialLink}>
+                  <a
+                    title='Behance'
+                    href='https://www.behance.net/uviten'
+                    target='__blank'
+                    className={classes.socialLink}
+                  >
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       width='17'
@@ -384,7 +401,12 @@ const Header = () => {
                       </defs>
                     </svg>
                   </a>
-                  <a title='Facebook' target='__blank' className={classes.socialLink} href='https://www.facebook.com/uviten'>
+                  <a
+                    title='Facebook'
+                    target='__blank'
+                    className={classes.socialLink}
+                    href='https://www.facebook.com/uviten'
+                  >
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       width='24'
@@ -415,7 +437,7 @@ const Header = () => {
                 [classes.headerButtonHidden]: active,
               })}
             >
-             {t('contact-us')}
+              {t('contact-us')}
             </button>
             <a
               onClick={() => setAsideModalActive((prev) => !prev)}
@@ -424,10 +446,19 @@ const Header = () => {
               href='#'
             >
               <span className={classes.headerButtonDesktopText}>
-              {t('contact-us')}
+                {t('contact-us')}
               </span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M13.8259 17.8238L18.5429 13.1068C19.1519 12.4968 19.1529 11.5028 18.5429 10.8928L13.8249 6.17578L13.1179 6.88278L17.7349 11.4998H5.00088V12.4998H17.7359L13.1179 17.1168L13.8259 17.8238Z" fill="#232B50"/>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                fill='none'
+              >
+                <path
+                  d='M13.8259 17.8238L18.5429 13.1068C19.1519 12.4968 19.1529 11.5028 18.5429 10.8928L13.8249 6.17578L13.1179 6.88278L17.7349 11.4998H5.00088V12.4998H17.7359L13.1179 17.1168L13.8259 17.8238Z'
+                  fill='#232B50'
+                />
               </svg>
             </a>
 

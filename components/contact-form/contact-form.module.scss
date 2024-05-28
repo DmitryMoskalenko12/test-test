@@ -51,18 +51,19 @@
     border-left: none;
     border-right: none;
     outline: none;
+    font-size: variables.$font-size16;
     &::placeholder {
         position: relative;
         color: variables.$primary-dark-blue;
         font-family: 'Proxima Nova';
-        font-size: variables.$font-size14;
+        font-size: variables.$font-size16;
         font-weight: variables.$font-weight400;
         text-align: left;
     }
     &:focus {
         color: variables.$primary-dark-blue;
         font-family: "Proxima Nova";
-        font-size: variables.$font-size14;
+        font-size: variables.$font-size16;
         font-weight: variables.$font-weight400;
     }
 }

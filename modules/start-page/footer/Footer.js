@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import { useRef, useState } from 'react';
 
-const Footer =  ({locale}) => {
+const Footer = ({ locale }) => {
   const route = useRouter();
-  const {t} = useTranslation('start');
+  const { t } = useTranslation('start');
   const [scroll, setScroll] = useState(true);
   const [scrollServices, setScrollServices] = useState(true);
   const refProjects = useRef();
@@ -15,21 +15,21 @@ const Footer =  ({locale}) => {
 
   const cancelReloadProjects = () => {
     if (scroll) {
-      route.push('/')
-       setTimeout(() => {
+      route.push('/');
+      setTimeout(() => {
         refProjects.current.click();
       }, 1300);
     }
-  }
+  };
 
   const cancelReloadServices = () => {
     if (scrollServices) {
-      route.push('/')
-       setTimeout(() => {
+      route.push('/');
+      setTimeout(() => {
         refServices.current.click();
       }, 1300);
     }
-  }
+  };
 
   return (
     <footer className={`${classes.footer} footer`}>
@@ -81,12 +81,28 @@ const Footer =  ({locale}) => {
             <nav className={classes.nav}>
               <ul className={classes.list}>
                 <li className={classes.li}>
-                  <a ref={refServices} className={classes.link} onClick={() => {setScrollServices((prev) => !prev); cancelReloadServices()}} href='#services'>
+                  <a
+                    ref={refServices}
+                    className={classes.link}
+                    onClick={() => {
+                      setScrollServices((prev) => !prev);
+                      cancelReloadServices();
+                    }}
+                    href='#services'
+                  >
                     {t('servicesHeader')}
                   </a>
                 </li>
                 <li className={classes.li}>
-                  <a ref={refProjects} className={classes.link} onClick={() => {setScroll((prev) => !prev); cancelReloadProjects()}} href='#projects'>
+                  <a
+                    ref={refProjects}
+                    className={classes.link}
+                    onClick={() => {
+                      setScroll((prev) => !prev);
+                      cancelReloadProjects();
+                    }}
+                    href='#projects'
+                  >
                     {t('projects')}
                   </a>
                 </li>
@@ -143,7 +159,11 @@ const Footer =  ({locale}) => {
 
               <div className={classes.follow}>
                 <span className={classes.followUs}>{t('follow')}:</span>
-                <a href='https://www.linkedin.com/company/uviten/' target='__blank' className={classes.insta}>
+                <a
+                  href='https://www.linkedin.com/company/uviten/'
+                  target='__blank'
+                  className={classes.insta}
+                >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='17'
@@ -157,7 +177,11 @@ const Footer =  ({locale}) => {
                     />
                   </svg>
                 </a>
-                <a href='https://www.facebook.com/uviten' target='__blank' className={classes.face}>
+                <a
+                  href='https://www.facebook.com/uviten'
+                  target='__blank'
+                  className={classes.face}
+                >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='17'
@@ -171,7 +195,11 @@ const Footer =  ({locale}) => {
                     />
                   </svg>
                 </a>
-                <a href='https://www.behance.net/uviten' target='__blank' className={classes.social}>
+                <a
+                  href='https://www.behance.net/uviten'
+                  target='__blank'
+                  className={classes.social}
+                >
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='17'
@@ -199,9 +227,7 @@ const Footer =  ({locale}) => {
                 </a>
               </div>
 
-              <div className={classes.reservedMobile}>
-                {t('all-rights')}
-              </div>
+              <div className={classes.reservedMobile}>{t('all-rights')}</div>
             </div>
           </div>
         </div>

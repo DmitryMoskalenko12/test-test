@@ -2,7 +2,7 @@ import classes from './contact-thanks-message.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const ContactThanksMessage = ({ setSuccess }) => {
-  const {t} = useTranslation('start');
+  const { t } = useTranslation('start');
 
   return (
     <div className={classes.thanks}>
@@ -23,9 +23,7 @@ const ContactThanksMessage = ({ setSuccess }) => {
 
       <div className={classes.textTitle}>
         <h2 className={classes.title}>{t('thanks-modal')}</h2>
-        <p className={classes.text}>
-          {t('thanks-text')}
-        </p>
+        <p className={classes.text}>{t('thanks-text')}</p>
       </div>
 
       <svg

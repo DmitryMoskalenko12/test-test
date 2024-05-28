@@ -1,5 +1,12 @@
-const contactFormRequest = (url, method, value, setSuccess, setLoading, setError) => {
-  setLoading(true)
+const contactFormRequest = (
+  url,
+  method,
+  value,
+  setSuccess,
+  setLoading,
+  setError,
+) => {
+  setLoading(true);
   fetch(url, {
     method: method,
     headers: {
@@ -11,21 +18,21 @@ const contactFormRequest = (url, method, value, setSuccess, setLoading, setError
     .then((response) => response.json())
     .then((response) => {
       if (response.ok) {
-        setLoading(false)
+        setLoading(false);
         setSuccess(true);
       } else if (!response.ok) {
-        setLoading(false)
+        setLoading(false);
         setSuccess(false);
         setError(true);
       } else {
         setSuccess(false);
-        setLoading(false)
+        setLoading(false);
         setError(true);
       }
     })
     .catch((error) => {
       setSuccess(false);
-      setLoading(false)
+      setLoading(false);
       setError(true);
     });
 };

@@ -30,7 +30,11 @@ const Services = () => {
               <span className={classes.servicesTitle}>{t('services')}</span>
             </h2>
             <p className={classes.text}>{t('servicesText')}</p>
-            <AnchorUI clazz={classes.servicesButton} href={'#contact'} text={t('shedule')} />
+            <AnchorUI
+              clazz={classes.servicesButton}
+              href={'#contact'}
+              text={t('shedule')}
+            />
           </div>
 
           <div className={classes.collapse}>

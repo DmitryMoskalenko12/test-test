@@ -10,12 +10,8 @@ export default function Error({ reset }) {
       <div className='container'>
         <div className={classes.wrapper}>
           <div className={classes.content}>
-            <h2 className={classes.title}>
-              {t('oopsError')}
-            </h2>
-            <p className={classes.text}>
-              {t('errorText')}
-            </p>
+            <h2 className={classes.title}>{t('oopsError')}</h2>
+            <p className={classes.text}>{t('errorText')}</p>
             <button onClick={() => reset()} className={classes.link}>
               {t('reload')}
               <svg

@@ -3,8 +3,7 @@ import classes from './thanks-message.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const ThanksMessage = ({ close }) => {
-
-  const {t} = useTranslation('start');
+  const { t } = useTranslation('start');
 
   return (
     <div className={classes.thanks} onClick={(e) => e.stopPropagation()}>
@@ -23,9 +22,7 @@ const ThanksMessage = ({ close }) => {
         </svg>
       </button>
       <h2 className={classes.title}>{t('thanks-modal')}</h2>
-      <p className={classes.text}>
-        {t('thanks-text')}
-      </p>
+      <p className={classes.text}>{t('thanks-text')}</p>
       <svg
         className={classes.svg}
         width='360'

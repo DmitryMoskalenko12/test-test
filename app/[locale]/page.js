@@ -21,7 +21,7 @@ export default async function Home({ params: { locale } }) {
       <Projects locale={locale} />
       <Stages locale={locale} />
       <Engagemet locale={locale} />
-      <Contact locale={locale}/>
+      <Contact locale={locale} />
     </TranslationsProvider>
   );
 }

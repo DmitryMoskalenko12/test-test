@@ -2,8 +2,7 @@ import Link from 'next/link';
 import classes from './not-found.module.scss';
 import initTranslations from '@/app/i18n';
 
-export default async function NotFound({params: { locale }}) {
-
+export default async function NotFound({ params: { locale } }) {
   const { t, resources } = await initTranslations(locale, ['start']);
 
   return (
@@ -273,12 +272,8 @@ export default async function NotFound({params: { locale }}) {
         </svg>
         <div className={classes.wrapper}>
           <div className={classes.content}>
-            <h2 className={classes.title}>
-             {t('oops')}
-            </h2>
-            <p className={classes.text}>
-              {t('click-bellow')}
-            </p>
+            <h2 className={classes.title}>{t('oops')}</h2>
+            <p className={classes.text}>{t('click-bellow')}</p>
             <Link className={classes.mainLink} href={'/'}>
               {t('main-page')}
               <svg

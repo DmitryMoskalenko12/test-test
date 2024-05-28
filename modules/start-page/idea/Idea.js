@@ -3,9 +3,8 @@ import AnchorUI from '@/ui/start-page/links/AnchorUI';
 import initTranslations from '@/app/i18n';
 
 const Idea = async ({ locale }) => {
-
   const { t, resources } = await initTranslations(locale, ['start', 'main']);
-  
+
   return (
     <section className={classes.idea}>
       <div className='container'>
@@ -469,10 +468,12 @@ const Idea = async ({ locale }) => {
           </h1>
 
           <div className={classes.potential}>
-            <p className={classes.text}>
-              {t('ideaText')}
-            </p>
-            <AnchorUI clazz={classes.ideaButton} href={'#contact'} text={t('shedule')} />
+            <p className={classes.text}>{t('ideaText')}</p>
+            <AnchorUI
+              clazz={classes.ideaButton}
+              href={'#contact'}
+              text={t('shedule')}
+            />
           </div>
         </div>
       </div>

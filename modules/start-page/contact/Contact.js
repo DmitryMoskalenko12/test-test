@@ -16,6 +16,7 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(null);
+  const endpoint = process.env.NEXT_PUBLIC_FORM_MAIN;
 
   const validationOrderForm = Yup.object().shape({
     name: Yup.string().required(t('required')),
@@ -24,16 +25,16 @@ const Contact = () => {
 
   const onGetInfo = (value) => {
     contactFormRequest(
-      'https://formspree.io/f/xpzvynwe',
+      endpoint,
       'POST',
       value,
       setSuccess,
       setLoading,
-      setError
+      setError,
     );
   };
   const initial =
-    success === null && loading === false && error === false  ? (
+    success === null && loading === false && error === false ? (
       <Formik
         initialValues={{
           name: '',
@@ -184,10 +185,17 @@ const Contact = () => {
       </Formik>
     ) : null;
 
-  const loadingContent = loading === true && success === null && error === false ? <ContactSpinner/> : null;
+  const loadingContent =
+    loading === true && success === null && error === false ? (
+      <ContactSpinner />
+    ) : null;
   const errorContent =
     success === false && loading === false && error === true ? (
-      <ContactErrorMessage setLoading={setLoading} setError={setError} setSuccess={setSuccess} />
+      <ContactErrorMessage
+        setLoading={setLoading}
+        setError={setError}
+        setSuccess={setSuccess}
+      />
     ) : null;
   const thanks =
     success === true && loading === false && error === false ? (
@@ -201,9 +209,7 @@ const Contact = () => {
             <h2 className={classes.title}>
               {t('contact')} <span className={classes.us}>{t('us')}</span>
             </h2>
-            <p className={classes.text}>
-             {t('love-making')}
-            </p>
+            <p className={classes.text}>{t('love-making')}</p>
             <svg
               className={classes.desktopWave}
               width='872'

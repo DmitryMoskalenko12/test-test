@@ -11,14 +11,12 @@ import contactFormRequest from '@/helpers/contactFormRequest';
 import LoadingFormSpinner from '@/ui/start-page/loading-form-spinner/LoadingFormSpinner';
 import { useTranslation } from 'react-i18next';
 
-
 const FormContent = ({ close }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(null);
   const { t } = useTranslation('start');
-  const path = window.location.href
-  console.log(path.split('/')[2] === 'test-test-rouge-nine.vercel.app')
+  const endpoint = process.env.NEXT_PUBLIC_FORM_MAIN;
 
   const validationOrderForm = Yup.object().shape({
     name: Yup.string().required(t('required')),
@@ -27,18 +25,21 @@ const FormContent = ({ close }) => {
 
   const onGetInfo = (value) => {
     contactFormRequest(
-      'https://formspree.io/f/xpzvynwe',
+      endpoint,
       'POST',
       value,
       setSuccess,
       setLoading,
-      setError
+      setError,
     );
   };
 
-  const loadingContent = loading === true && success === null && error === false ? <LoadingFormSpinner/> : null;
+  const loadingContent =
+    loading === true && success === null && error === false ? (
+      <LoadingFormSpinner />
+    ) : null;
   const initial =
-    success === null && loading === false && error === false  ? (
+    success === null && loading === false && error === false ? (
       <div className={classes.content} onClick={(e) => e.stopPropagation()}>
         <button
           onClick={() => close((prev) => !prev)}
@@ -61,9 +62,7 @@ const FormContent = ({ close }) => {
           <h2 className={classes.title}>
             {t('contact')} <span className={classes.us}>{t('us')}</span>
           </h2>
-          <p className={classes.text}>
-            {t('love-making')}
-          </p>
+          <p className={classes.text}>{t('love-making')}</p>
         </div>
         <Formik
           initialValues={{
@@ -118,7 +117,11 @@ const FormContent = ({ close }) => {
                 />
                 <label htmlFor='policy' className={classes.label}>
                   {t('agreePolicy')}{' '}
-                  <Link  onClick={() => close((prev) => !prev)} className={classes.labelLink} href='/policy/'>
+                  <Link
+                    onClick={() => close((prev) => !prev)}
+                    className={classes.labelLink}
+                    href='/policy/'
+                  >
                     {t('policy')}
                   </Link>{' '}
                 </label>
@@ -144,12 +147,17 @@ const FormContent = ({ close }) => {
       </div>
     ) : null;
   const thanks =
-  success === true && loading === false && error === false ? (
+    success === true && loading === false && error === false ? (
       <ThanksMessage close={close} />
     ) : null;
   const errorContent =
-  success === false && loading === false && error === true ? (
-      <ErrorMessage setLoading={setLoading} setError={setError} setSuccess={setSuccess} close={close} />
+    success === false && loading === false && error === true ? (
+      <ErrorMessage
+        setLoading={setLoading}
+        setError={setError}
+        setSuccess={setSuccess}
+        close={close}
+      />
     ) : null;
   return (
     <>

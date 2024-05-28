@@ -2,11 +2,18 @@ import classes from './contact-error-message.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const ContactErrorMessage = ({ setSuccess, setLoading, setError }) => {
-  const {t} = useTranslation('start');
+  const { t } = useTranslation('start');
 
   return (
     <div className={classes.error}>
-      <button onClick={() => {setSuccess(null); setLoading(false); setError(false)}} className={classes.close}>
+      <button
+        onClick={() => {
+          setSuccess(null);
+          setLoading(false);
+          setError(false);
+        }}
+        className={classes.close}
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           width='14'
@@ -21,11 +28,16 @@ const ContactErrorMessage = ({ setSuccess, setLoading, setError }) => {
         </svg>
       </button>
       <div className={classes.textTitle}>
-        <h2 className={classes.title}>
-          {t('oopsErrorTitle')}
-        </h2>
+        <h2 className={classes.title}>{t('oopsErrorTitle')}</h2>
         <p className={classes.text}>{t('oopsErrorText')}</p>
-        <button onClick={() => {setSuccess(null); setLoading(false); setError(false) }} className={classes.button}>
+        <button
+          onClick={() => {
+            setSuccess(null);
+            setLoading(false);
+            setError(false);
+          }}
+          className={classes.button}
+        >
           {t('try')}
           <svg
             xmlns='http://www.w3.org/2000/svg'

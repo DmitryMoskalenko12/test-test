@@ -1,4 +1,3 @@
-
 const AnchorUI = ({ clazz, text, href }) => {
   return (
     <a className={clazz} href={href} title='Shedule a demo'>

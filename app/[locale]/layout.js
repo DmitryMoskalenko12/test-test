@@ -5,7 +5,6 @@ import Header from '@/modules/start-page/header/Header';
 import Footer from '@/modules/start-page/footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
-import { headers } from 'next/headers'
 
 export const metadata = {
   authors: [{ url: 'http://uviten.com' }],
@@ -25,8 +24,6 @@ export const metadata = {
 const MainLayout = async ({ params: { locale }, children }) => {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
   const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
-  const isProduction = process.env.NEXT_PUBLIC_IS_PRODUCTION === 'true';
-console.log(analyticsId)
 
   return (
     <TranslationsProvider
@@ -39,15 +36,9 @@ console.log(analyticsId)
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
-          <meta
-            property='og:title'
-            content={t('ogTitle')}
-          />
-          <meta
-            property='og:description'
-            content={t('ogDescr')}
-          />
-          <meta name='keywords' content={t('keywords')}/>
+          <meta property='og:title' content={t('ogTitle')} />
+          <meta property='og:description' content={t('ogDescr')} />
+          <meta name='keywords' content={t('keywords')} />
           <meta property='og:image:type' content='image/webp' />
           <meta property='og:image:width' content='1200' />
           <meta property='og:image:height' content='630' />
@@ -61,10 +52,8 @@ console.log(analyticsId)
         >
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
-          <Footer locale={locale}/>
-          {
-            <GoogleAnalytics gaId={isProduction && analyticsId ? 'G-FSXZ91P77K' : null}/>
-          }
+          <Footer locale={locale} />
+          {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
         </body>
       </html>
     </TranslationsProvider>

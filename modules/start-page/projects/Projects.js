@@ -7,8 +7,7 @@ import project2 from '@/images/start-page/project2.png';
 import project2Desktop from '@/images/start-page/project2Desktop.png';
 import initTranslations from '@/app/i18n';
 
-const Projects = async ({locale}) => {
-
+const Projects = async ({ locale }) => {
   const { t, resources } = await initTranslations(locale, ['start', 'main']);
 
   const projectsArr = [
@@ -36,11 +35,10 @@ const Projects = async ({locale}) => {
     <section id='projects' className={classes.projects}>
       <div className='container'>
         <h2 className={classes.title}>
-          {t('our')} <span className={classes.projectsTitle}>{t('projects2')}</span>
+          {t('our')}{' '}
+          <span className={classes.projectsTitle}>{t('projects2')}</span>
         </h2>
-        <p className={classes.text}>
-          {t('discover')}
-        </p>
+        <p className={classes.text}>{t('discover')}</p>
         <div className={classes.projectsWrapper}>
           {projectsArr.map(
             ({ filter, href, title, text, imgDesktop, imgMobile, id }) => {

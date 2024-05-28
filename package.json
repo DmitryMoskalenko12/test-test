@@ -4,15 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "start:prod": "env-cmd -f .env.prod next start",
+    "start:testing": "env-cmd -f .env.testing next start",
+    "build:prod": "env-cmd -f .env.prod next build",
+    "build:testing": "env-cmd -f .env.testing next build",
     "format": "prettier --write \"app/**/*.js\" \"components/**/*.js\" \"modules/**/*.js\" \"helpers/**/*.js\" \"ui/**/*.js\""
   },
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "@next/third-parties": "^14.2.2",
     "classnames": "^2.5.1",
+    "env-cmd": "^10.1.0",
     "formik": "^2.4.5",
     "framer-motion": "^11.1.7",
     "i18next": "^23.10.1",
