@@ -63,7 +63,7 @@ console.log(referer)
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale}/>
           {
-            <GoogleAnalytics gaId={process.env.NODE_ENV === 'production' && referer === 'test-test-rouge-nine.vercel.app' ? 'G-FSXZ91P77K' : null}/>
+            <GoogleAnalytics gaId={referer === 'test-test-rouge-nine.vercel.app' ? 'G-FSXZ91P77K' : null}/>
           }
         </body>
       </html>
