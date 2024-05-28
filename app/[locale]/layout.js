@@ -24,9 +24,9 @@ export const metadata = {
 
 const MainLayout = async ({ params: { locale }, children }) => {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
-  const headersList = headers()
-  const referer = headersList.get('referer')?.split('/')[2]
-console.log(referer)
+  const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
+  const isProduction = process.env.NEXT_PUBLIC_IS_PRODUCTION === 'true';
+console.log(analyticsId)
 
   return (
     <TranslationsProvider
@@ -63,7 +63,7 @@ console.log(referer)
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale}/>
           {
-            <GoogleAnalytics gaId={process.env.NODE_ENV === 'production' && referer === 'test-test-rouge-nine.vercel.app' ? 'G-FSXZ91P77K' : null}/>
+            <GoogleAnalytics gaId={isProduction && analyticsId ? 'G-FSXZ91P77K' : null}/>
           }
         </body>
       </html>
