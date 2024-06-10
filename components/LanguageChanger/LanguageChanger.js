@@ -74,7 +74,7 @@ export default function LanguageChanger({ display, dividerClass }) {
         UA
       </button>
      {
-      activeLang ?  <>
+      activeLang === 'ua' || activeLang === 'en' ?  <>
       <Script
       src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
       strategy="beforeInteractive"
