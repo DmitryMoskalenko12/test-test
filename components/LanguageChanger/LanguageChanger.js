@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
+import Banner from '@/ui/Banner';
 
 export default function LanguageChanger({ display, dividerClass }) {
   const [activeLang, setActiveLang] = useState('');
@@ -33,10 +34,12 @@ export default function LanguageChanger({ display, dividerClass }) {
       !i18nConfig.prefixDefault
     ) {
       router.push('/' + newLocale + currentPathname);
+      <Banner/>
     } else {
       router.push(
         currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
       );
+      <Banner/>
     }
    /*  document.location.reload() */
     router.refresh();
