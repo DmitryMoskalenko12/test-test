@@ -38,8 +38,8 @@ export default function LanguageChanger({ display, dividerClass }) {
         currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
       );
     }
-   /*  setTimeout(() => window.location.reload(), 300) */
-    /* router.refresh(); */
+   /*  document.location.reload() */
+    router.refresh();
   };
 
   return (

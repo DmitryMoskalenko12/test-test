@@ -6,6 +6,8 @@ import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
 import Script from 'next/script';
+import Banner from '@/ui/Banner';
+import dynamic from 'next/dynamic';
 
 export const metadata = {
   authors: [{ url: 'http://uviten.com' }],
@@ -25,7 +27,8 @@ export const metadata = {
 const MainLayout = async ({ params: { locale }, children }) => {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
   const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID;
-
+  const Scripts = dynamic(() => import('@/ui/Banner'), { ssr: false });
+  
   return (
     <TranslationsProvider
       locale={locale}
@@ -34,11 +37,12 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-       {/*  <Script
+         <Scripts/>
+      {/*    <Script
           src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
           strategy="afterInteractive"
-        />
-        <Script id="cookie-consent" strategy="afterInteractive">
+         />
+         <Script id="cookie-consent" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)}
@@ -57,7 +61,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
               window.cookiehub.load(cpm);
             });
           `}
-        </Script> */}
+          </Script> */}
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
