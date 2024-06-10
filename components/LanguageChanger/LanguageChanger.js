@@ -1,6 +1,7 @@
 'use client';
 import classes from './languageChanger.module.scss';
 import { useRouter } from 'next/navigation';
+import { useRouter as useReload } from 'next/router';
 import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
@@ -14,7 +15,7 @@ export default function LanguageChanger({ display, dividerClass }) {
   const currentLocale = i18n.language;
   const router = useRouter();
   const currentPathname = usePathname();
-
+  const reload = useReload();
   useEffect(() => {
     setActiveLang(currentLocale);
   }, []);
@@ -38,7 +39,7 @@ export default function LanguageChanger({ display, dividerClass }) {
         currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
       );
     }
-
+    reload.reload();
     router.refresh();
   };
 
