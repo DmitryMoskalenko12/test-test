@@ -44,7 +44,7 @@ export default function LanguageChanger({ display, dividerClass }) {
        /*  document.location.reload() */
     }
     window.location.href = newPathname;
-    router.refresh();
+   /*  router.refresh(); */
   };
 
   return (
