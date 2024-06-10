@@ -20,7 +20,7 @@ export default function LanguageChanger({ display, dividerClass }) {
     const checkCookieHubInit = () => {
       if (window.cookiehub && window.cookiehub.settings) {
         // Если CookieHub инициализирован, то находим и показываем шестеренку
-        const settingsIcon = document.querySelector('.cookiehub-settings-icon');
+        const settingsIcon = document.querySelector('.ch2-settings-tablist');
         if (settingsIcon) {
           settingsIcon.style.display = 'block';
         }
