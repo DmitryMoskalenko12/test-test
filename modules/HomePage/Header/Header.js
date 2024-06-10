@@ -16,7 +16,6 @@ const Header = () => {
   const [asideModalActive, setAsideModalActive] = useState(false);
   const [scroll, setScroll] = useState(true);
   const [scrollServices, setScrollServices] = useState(true);
-
   const path = usePathname().includes('stub');
   const { t } = useTranslation('start');
   const route = useRouter();
