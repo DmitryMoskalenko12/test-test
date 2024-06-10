@@ -33,7 +33,7 @@ export default function LanguageChanger({ display, dividerClass }) {
     return () => {
       document.removeEventListener('DOMContentLoaded', checkCookieHubInit);
     };
-  }, [currentLocale]);
+  }, [activeLang]);
 
   const handleChange = (e) => {
     const newLocale = e.target.textContent.toLowerCase();
