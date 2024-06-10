@@ -39,7 +39,7 @@ export default function LanguageChanger({ display, dividerClass }) {
       );
     }
    /*  setTimeout(() => window.location.reload(), 300) */
-    router.refresh();
+    /* router.refresh(); */
   };
 
   return (
