@@ -35,13 +35,13 @@ export default function LanguageChanger({ display, dividerClass }) {
     ) {
       newPathname = '/' + newLocale + newPathname;
       /* router.push('/' + newLocale + currentPathname); */
-      <Banner/>
+   /*    <Banner/> */
        /*  document.location.reload() */
     } else {
 
         newPathname = newPathname.replace(`/${currentLocale}`, `/${newLocale}`);
      
-      <Banner/>
+ /*      <Banner/> */
        /*  document.location.reload() */
     }
     window.location.href = newPathname;

@@ -9,8 +9,6 @@ import { usePathname } from 'next/navigation';
 import AsideModal from '../AsideModal/AsideModal';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/navigation';
-import Script from 'next/script';
-import Banner from '@/ui/Banner';
 
 const Header = () => {
   const [active, setActive] = useState(false);
@@ -59,7 +57,6 @@ const Header = () => {
 
   return (
     <header className={`${classes.header} header`}>
-      <Banner/>
       <div className='container'>
         <div
           style={{ height: active ? '40px' : 'initial' }}
