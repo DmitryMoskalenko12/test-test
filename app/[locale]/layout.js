@@ -35,11 +35,11 @@ const MainLayout = async ({ params: { locale }, children }) => {
       <html lang={t('language')}>
         <head>
         <Script
-        defer 
+       
         src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         />
-        <Script defer id="cookie-consent" strategy="afterInteractive">
+        <Script  id="cookie-consent" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)}
