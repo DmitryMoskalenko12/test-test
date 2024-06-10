@@ -34,7 +34,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-        <Script
+       {/*  <Script
        
         src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
         strategy="beforeInteractive"
@@ -58,7 +58,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
               window.cookiehub.load(cpm);
             });
           `}
-          </Script>
+          </Script> */}
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
