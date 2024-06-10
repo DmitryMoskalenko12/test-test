@@ -17,7 +17,7 @@ export default function LanguageChanger({ display, dividerClass }) {
  
   useEffect(() => {
     setActiveLang(currentLocale);
-  }, []);
+  }, [currentLocale]);
 
   const handleChange = (e) => {
     const newLocale = e.target.textContent.toLowerCase();
@@ -38,7 +38,7 @@ export default function LanguageChanger({ display, dividerClass }) {
         currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
       );
     }
-    window.location.reload();
+   /*  setTimeout(() => window.location.reload(), 300) */
     router.refresh();
   };
 
