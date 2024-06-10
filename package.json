@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "start:prod": "env-cmd -f .env.prod next start",
-    "start:testing": "env-cmd -f .env.testing next start",
+    "start": "next start",
     "build:prod": "env-cmd -f .env.prod next build",
     "build:testing": "env-cmd -f .env.testing next build",
     "format": "prettier --write \"app/**/*.js\" \"components/**/*.js\" \"modules/**/*.js\" \"helpers/**/*.js\" \"ui/**/*.js\""

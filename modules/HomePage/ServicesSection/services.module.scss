@@ -1,0 +1,250 @@
+@use '../../../style/HomePage/mixins.scss';
+@use '../../../style/HomePage/variables.scss';
+
+  .services {
+   padding: 92px 16px 0 16px;
+  }
+
+  .title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight500;
+  }
+
+  .imgWrapper {
+    display: none;
+  }
+
+  .servicesTitle {
+    background: variables.$primary-linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight600;
+  }
+
+  .text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: 300;
+    line-height: 150%;
+    margin-top: 8px;
+  }
+
+  .servicesButton {
+   display: none;
+  }
+
+  .servicesButtonCollapse {
+    width: 328px;
+    height: 48px;
+    display: block;
+    @include mixins.flex(flex, center, center);
+    text-align: center;
+    gap: 12px;
+    cursor: pointer;
+    border-radius: 32px;
+    text-decoration: none;
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    background: variables.$primary-button-bg;
+    margin: 0 auto;
+    margin-top: 48px;
+  }
+
+  .collapse {
+    margin-top: 48px;
+  }
+
+  @media(min-width: 768px) {
+    .services {
+        padding: 225px 16px 0 16px;
+    }
+
+    .wrapper {
+        @include mixins.flex(flex, space-between, flex-start);
+        gap: 120px;
+    }
+
+    .servicesTextBlock {
+      flex-shrink: 0;
+      width: 254px;
+    }
+
+    .collapse {
+      margin-top: 0;
+    }
+  }
+
+  @media(min-width: 992px) {
+    .services {
+        padding: 295px 16px 0 16px;
+    }
+
+    .servicesTextBlock {
+        position: sticky;
+        top: 55px;
+    }
+
+    .servicesButtonCollapse {
+      padding: 0;
+      gap: 12px;
+      @include mixins.flex(flex, center, center);
+      position: relative;
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    .servicesButtonCollapse::before {
+      content: '';
+      background: variables.$primary-linear-reverse;;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s;
+      z-index: -1;
+      border-radius: 32px;
+  }
+
+  .servicesButtonCollapse:hover {
+      svg {
+          position: relative;
+          animation: moveRight 0.3s forwards;
+      }
+      &::before {
+          opacity: 1;
+      }
+  }
+
+    .servicesButtonCollapse:not(:hover) {
+      svg {
+          position: relative;
+          animation: moveLeft 0.3s forwards;
+      }
+    }
+
+    @keyframes moveRight {
+      from {
+          transform: translateX(0);
+      }
+      to {
+          transform: translateX(6px);
+      }
+  }
+
+    @keyframes moveLeft {
+        from {
+            transform: translateX(6px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+  }
+
+  @media(min-width: 1280px) {
+    .services {
+      padding: 160px 76px 0 76px;
+    }
+
+    .title {
+      font-size: variables.$font-size48;
+    }
+
+    .servicesTitle {
+      font-size: variables.$font-size48;
+      font-weight: variables.$font-weight500;
+    }
+
+    .wrapper {
+      position: relative;
+      gap: 94px;
+    }
+
+    .text {
+      font-size: variables.$font-size18;
+      margin-top: 16px;
+    }
+
+    .servicesTextBlock {
+      width: 370px;
+      top: 67px;
+    }
+
+    .servicesButton {
+      @include mixins.flex(flex, center, center);
+      width: 264px;
+      height: 56px;
+      text-align: center;
+      cursor: pointer;
+      gap: 12px;
+      padding: 0;
+      border-radius: 32px;
+      text-decoration: none;
+      color: variables.$primary-color;
+      font-size: variables.$font-size16;
+      font-weight: variables.$font-weight400;
+      background: variables.$primary-button-bg;
+      margin-top: 88px;
+      position: relative;
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    .servicesButton::before {
+      content: '';
+      background: variables.$primary-linear-reverse;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s;
+      z-index: -1;
+      border-radius: 32px;
+  }
+
+  .servicesButton:hover {
+      svg {
+          position: relative;
+          animation: moveRight 0.3s forwards;
+      }
+      &::before {
+          opacity: 1;
+      }
+  }
+
+  .servicesButton:not(:hover) {
+    svg {
+        position: relative;
+        animation: moveLeft 0.3s forwards;
+    }
+}
+
+  @keyframes moveRight {
+      from {
+          transform: translateX(0);
+      }
+      to {
+          transform: translateX(6px);
+      }
+  }
+
+  @keyframes moveLeft {
+      from {
+          transform: translateX(6px);
+      }
+      to {
+          transform: translateX(0);
+      }
+  }
+    .servicesButtonCollapse {
+      display: none;
+    }
+  }

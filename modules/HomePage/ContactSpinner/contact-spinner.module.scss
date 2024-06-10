@@ -1,0 +1,48 @@
+@use '../../../style/HomePage/mixins.scss';
+@use '../../../style/HomePage/variables.scss';
+
+.spinner {
+    position: relative;
+    height: 387px;
+    padding: 48px 16px 100px 16px;
+    background: variables.$primary-linear;
+    gap: 26px;
+    margin-top: 32px;
+}
+
+.wave {
+    position: absolute;
+    width: 360px;
+    height: 338px;
+    top: 114px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media(min-width: 768px) {
+    .spinner {
+        padding: 48px;
+        height: 490px;
+        width: 515px;
+        flex-shrink: 0;
+        border-radius: 32px;
+        margin-top: 0;
+    }
+
+    .wave {
+        display: none;
+    }
+}
+
+@media(min-width: 992px) {
+    .spinner {
+        width: 515px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .spinner {
+        width: 552px;
+        height: 501px;
+    }
+}

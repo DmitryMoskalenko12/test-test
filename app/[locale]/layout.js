@@ -1,8 +1,8 @@
 import './globals.scss';
 import initTranslations from '../i18n';
 import TranslationsProvider from '../TranslationsProvider';
-import Header from '@/modules/start-page/header/Header';
-import Footer from '@/modules/start-page/footer/Footer';
+import Header from '@/modules/HomePage/Header/Header';
+import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
 

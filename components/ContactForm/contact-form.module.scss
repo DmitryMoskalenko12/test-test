@@ -1,0 +1,120 @@
+@use '../../style/mixins.scss';
+@use '../../style/variables.scss';
+
+
+.form {
+    @include mixins.flex(flex, center, center);
+    padding: 24px 16px 24px 16px;
+    flex-direction: column;
+    gap: 45px;
+    width: 360px;
+    height: min-content;
+    background: variables.$primary-white;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+
+.disable {
+    display: none;
+}
+
+.error_text {
+    display: block;
+    color: variables.$secondary-red;
+    border: none;
+}
+
+.label_error {
+    display: block;
+    color: variables.$secondary-red;
+    font-size: variables.$font-size12;
+    font-weight: variables.$font-weight400;
+}
+
+.error_required_name, .error_required_text {
+    color: variables.$secondary-red;
+    font-size: variables.$font-size12;
+    font-weight: variables.$font-weight400;
+}
+
+.error_name, .error_text {
+    border-bottom: 2px solid variables.$secondary-red;
+    color: variables.$secondary-red;
+    font-weight: variables.$font-weight400;
+}
+
+.input {
+    width: 343px;
+    height: 41px;
+    padding: 16px 0px 4px 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-family: "Mulish";
+    font-size: variables.$font-size16;
+    &::placeholder {
+        position: relative;
+        color: variables.$primary-dark-blue;
+        font-family: 'Mulish';
+        font-size: variables.$font-size16;
+        font-weight: variables.$font-weight400;
+        text-align: left;
+        font-family: "Mulish";
+    }
+    &:focus {
+        color: variables.$primary-dark-blue;
+        font-family: "Mulish";
+        font-size: variables.$font-size16;
+        font-weight: variables.$font-weight400;
+    }
+}
+
+@media(min-width: 767px) {
+    .form {
+        width: 575px;
+    }
+}
+
+@media(min-width: 991px) {
+    .form {
+        padding: 20px;
+        border-radius: 8px;
+        @include mixins.flex(flex, space-between, center);
+        flex-direction: row;
+        width: 900px;
+        height: 126px;
+        margin: 0;
+        margin-top: 48px;
+    }
+
+    .input {
+        width: 300px;
+        &::placeholder {
+            font-size: variables.$font-size16;
+        }
+
+        &:focus {
+            font-size: variables.$font-size16;
+        }
+    }
+
+    .label_error {
+        font-size: variables.$font-size14;
+    }
+    
+    .error_required_name, .error_required_text {
+        font-size: variables.$font-size14;
+    }
+}
+
+@media(min-width: 1280px) {
+    .form {
+        width: 1128px;
+        padding: 24px 40px;
+        width: 1128px;
+        margin: 0;
+        margin-top: 88px;
+    }
+
+}

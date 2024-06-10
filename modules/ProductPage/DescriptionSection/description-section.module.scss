@@ -1,0 +1,302 @@
+@use '../../../style/HomePage/variables.scss';
+@use '../../../style/HomePage/mixins.scss';
+
+.description {
+    padding: 56px 16px 0 16px;
+}
+
+.waveMobile {
+   width: 100%;
+   position: absolute;
+   left: 0;
+   top: 75px;
+   z-index: -5;
+}
+
+.waveDesktop {
+    display: none;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size32;
+    font-weight: variables.$font-weight700;
+}
+
+.filter {
+    width: max-content;
+    padding: 2px 8px;
+    color: variables.$primary-color;
+    font-size: variables.$font-size12;
+    font-weight: variables.$font-weight400;
+    border-radius: 16px;
+    border: 1px solid variables.$secondary-gray;
+    background: variables.$secondary-gray-bg;
+    backdrop-filter: blur(1.5px);
+    margin-top: 6px;
+}
+
+.descriptionProject {
+    @include mixins.flex(flex, center, center);
+    flex-direction: column;
+}
+
+.refreshingBlock {
+    margin-top: 16px;
+    align-self: flex-start;
+}
+
+.refreshing {
+    width: 328px;
+    color: variables.$primary-color;
+    font-size: variables.$font-size18;
+    font-weight: variables.$font-weight600;
+    line-height: 140%; 
+}
+
+.view {
+    display: block;
+    font-size: variables.$font-size18;
+    font-weight: variables.$font-weight700;
+    background: variables.$primary-button-bg;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 17px;
+}
+
+.technologies {
+    @include mixins.flex(flex, center, flex-start);
+    column-gap: 16px;
+    margin-top: 60px;
+    align-self: flex-start;
+}
+
+.list {
+    @include mixins.flex(flex, center, flex-start);
+    flex-direction: column;
+    gap: 24px;
+}
+
+.item {
+    @include mixins.flex(flex, center, center);
+    gap: 16px;
+}
+
+.item1 {
+    gap: 12px;
+}
+
+.item2 {
+    gap: 47px;
+}
+
+.item3 {
+    gap: 46px;
+}
+
+.item4 {
+    gap: 68px;
+}
+
+.word1 {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight600;
+}
+
+.word2 {
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    line-height: 140%;
+}
+
+.imgBlock {
+   width: 328px;
+   height: 332px;
+   margin: 0 auto;
+   margin-top: 40px;
+}
+
+.mobileImage {
+   width: 100%; 
+   height: 100%;
+   object-fit: contain;
+}
+
+.desktopImage {
+   display: none;
+}
+
+@media(min-width: 576px) {
+    .waveMobile {
+        top: 82px;
+    }
+}
+
+@media(min-width: 768px) {
+    .description {
+        overflow: hidden;
+        padding: 88px 16px 0 16px;
+    }
+
+    .refreshing {
+        position: relative;
+        top: -4px;
+    }
+
+    .refreshingBlock {
+        margin-top: 0;
+    }
+
+    .technologies {
+        margin-top: 0;
+    }
+    
+    .descriptionProject {
+        @include mixins.flex(flex, center, flex-start);
+        flex-direction: row;
+        gap: 55px;
+        margin-top: 40px;
+    }
+
+    .imgBlock {
+        width: 600px;
+        margin-top: 40px;
+     }
+
+    .mobileImage {
+        display: none;
+     }
+
+    .desktopImage {
+        display: initial;
+        width: 100%; 
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    .waveMobile {
+        display: none;
+    }
+
+    .waveDesktop {
+        display: initial;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        z-index: -5;
+    }
+}
+
+@media(min-width: 992px) {
+    .view {
+        display: block;
+        width: 116px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            height: 1.5px;
+            width: 0%;
+            bottom: 0;
+            background: variables.$primary-linear;
+            transition: 1s width;
+           }
+        &:hover {
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                height: 1.5px;
+                width: 100%;
+                bottom: 0;
+                background: variables.$primary-linear;
+                transition: 1s width;
+            }
+        }
+    }
+
+    .imgBlock {
+        width: 830px;
+        height: 500px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .description {
+        padding: 140px 76px 0 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size48;
+    }
+
+    .filter {
+        color: variables.$primary-color;
+        font-size: variables.$font-size14;
+    }
+
+    .descriptionProject {
+      justify-content: space-between;
+    }
+
+    .refreshing {
+        font-size: variables.$font-size32; 
+        top: -10px;
+        width: initial;
+    }
+
+    .view {
+        margin-top: 33px;
+    }
+
+    .word1 {
+        font-size: variables.$font-size24;
+    }
+
+    .word2 {
+        width: 277px;
+        font-size: variables.$font-size18;
+    }
+
+    .item1 {
+        gap: 44px;
+    }
+    
+    .item2 {
+        gap: 99px;
+    }
+    
+    .item3 {
+        gap: 94px;
+    }
+    
+    .item4 {
+        gap: 128px;
+    }
+
+    .imgBlock {
+        width: 1128px;
+        height: 612px;
+    }
+
+    .waveWrapper {
+        position: relative;
+        width: 1280px;
+    }
+
+    .waveDesktop {
+        display: initial;
+        width: 100%;
+        height: initial;
+        position: absolute;
+        left: -75px;
+        top: -123px;
+        z-index: -5;
+    }
+}

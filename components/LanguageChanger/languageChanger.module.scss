@@ -21,7 +21,7 @@
 
 .en, .uk {
     color: variables.$secondary-no-active;
-    font-family: 'Proxima Nova';
+    font-family: 'Mulish';
     font-size: variables.$font-size16;
     font-weight: variables.$font-weight400;
     width: 21px;
@@ -33,7 +33,7 @@
 
 .active {
     @include mixins.flex(flex, center, center);
-    font-family: 'Proxima Nova';
+    font-family: 'Mulish';
     color: variables.$primary-dark-blue;
     font-size: variables.$font-size16;
     font-weight: variables.$font-weight600;

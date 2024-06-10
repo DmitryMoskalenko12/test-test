@@ -1,0 +1,152 @@
+@use '../../../style/HomePage/mixins.scss';
+@use '../../../style/HomePage/variables.scss';
+
+.projects {
+    padding: 88px 16px 0 16px;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight500;
+}
+
+.projectsTitle {
+    background: variables.$primary-linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight500;
+}
+
+.text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size18;
+    font-weight: variables.$font-weight300;
+    line-height: 150%;
+    margin-top: 8px;
+}
+
+.projectLink {
+    position: relative;
+    width: 328px;
+    height: 48px;
+    padding: 12px 48px;
+    gap: 0;
+    @include mixins.flex(flex, center, center);
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    text-decoration: none;
+    gap: 12px;
+    border-radius: 32px;
+    background: variables.$primary-button-bg;
+    margin: 0 auto;
+    margin-top: 48px;
+}
+
+.projectsWrapper {
+    @include mixins.flex(flex, center, center);
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 48px;
+}
+
+
+@media(min-width: 992px) {
+    .projectsWrapper {
+        @include mixins.flex(flex, space-between, flex-start);
+        flex-direction: row;
+        gap: 24px;
+        margin-top: 48px;
+    }
+
+    .projectLink {
+        padding: 0;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        transition: 0.5s;
+    }
+    
+    .projectLink::before {
+        content: '';
+        background: variables.$primary-linear-reverse;;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: -1;
+        border-radius: 32px;
+    }
+
+    .projectLink:hover {
+        svg {
+            position: relative;
+            animation: moveRight 0.3s forwards;
+        }
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    .projectLink:not(:hover) {
+        svg {
+            position: relative;
+            animation: moveLeft 0.3s forwards;
+        }
+      }
+
+    @keyframes moveRight {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(6px);
+        }
+    }
+  
+    @keyframes moveLeft {
+        from {
+            transform: translateX(6px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media(min-width: 1280px) {
+    .projects {
+        padding: 160px 76px 0 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size48;
+    }
+    
+    .projectsTitle {
+        font-size: variables.$font-size48;
+    }
+
+    .projectsWrapper {
+        margin-top: 40px;
+    }
+
+    .text {
+        width: 455px;
+        margin-top: 16px;
+    }
+
+    .projectLink {
+        width: 264px;
+        height: 56px;
+        @include mixins.flex(flex, center, center);
+        padding: 0;
+        font-size: variables.$font-size16;
+    }
+}

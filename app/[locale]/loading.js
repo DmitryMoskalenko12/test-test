@@ -1,4 +1,4 @@
-import Spinner from '@/ui/start-page/spinner/Spinner';
+import Spinner from '@/ui/HomePage/Spinner/Spinner';
 
 const Loading = () => {
   return (

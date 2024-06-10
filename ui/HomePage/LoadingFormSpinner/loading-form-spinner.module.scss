@@ -1,0 +1,64 @@
+@use '../../../style/HomePage/variables.scss';
+@use '../../../style/HomePage/mixins.scss';
+
+.loading {
+    @include mixins.flex(flex, initial, stretch);
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    width: 360px;
+    height: 435px;
+    border-radius: 3px;
+    background: variables.$primary-linear;
+    z-index: 100000;
+}
+
+@media(min-width: 425px) {
+    .loading {
+        width: 345px;
+        right: 0;
+        top: 0;
+        height: 100%;
+        transform: none;
+        left: initial;
+    }
+}
+
+@media(min-width: 576px) {
+    .loading {
+        left: initial;
+        right: 0;
+        width: 70%;
+        height: 100%;
+    }
+}
+
+@media(min-width: 768px) {
+    .loading {
+        width: 55%;
+    }
+
+}
+
+@media(min-width: 992px) {
+    .loading {
+        width: 42%;
+    }
+
+}
+
+@media(min-width: 1200px) {
+    .loading {
+        width: 520px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .loading {
+        padding: 152px 37.5px 150px 37.5px;
+    }
+}

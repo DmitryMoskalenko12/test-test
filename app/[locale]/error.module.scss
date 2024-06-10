@@ -1,5 +1,5 @@
-@use '../../style/start-page/mixins.scss';
-@use '../../style/start-page/variables.scss';
+@use '../../style/HomePage/mixins.scss';
+@use '../../style/HomePage/variables.scss';
 
 .error {
     overflow: hidden;
@@ -71,7 +71,7 @@
         top: -164px;
         right: 0;
         bottom: 0;
-        z-index: -5; 
+        z-index: -5;
     }
 
     .content {
@@ -83,7 +83,7 @@
     }
 
     .text {
-        font-size: variables.$font-size18; 
+        font-size: variables.$font-size18;
         margin-top: 24px;
     }
 
@@ -96,19 +96,66 @@
 }
 
 @media(min-width: 992px) {
- .link {
+    .link {
         justify-content: center;
         gap: 12px;
         padding: 0;
- }
-
- .link:hover {
-    svg {
         position: relative;
-        left: 6px;
+        z-index: 1;
+        transition: 0.5s;
     }
-    background: variables.$primary-linear-reverse;
-}
+
+    .link::before {
+        content: '';
+        background: variables.$primary-linear-reverse;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s;
+        z-index: -1;
+        border-radius: 32px;
+    }
+
+    .link:hover {
+        svg {
+            position: relative;
+            animation: moveRight 0.3s forwards;
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    .link:not(:hover) {
+        svg {
+            position: relative;
+            animation: moveLeft 0.3s forwards;
+        }
+    }
+
+    @keyframes moveRight {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(6px);
+        }
+    }
+
+    @keyframes moveLeft {
+        from {
+            transform: translateX(6px);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
 }
 
 @media(min-width: 1280px) {

@@ -1,0 +1,88 @@
+@use '../.././../style/HomePage/variables.scss';
+
+.result {
+    padding-top: 64px;
+}
+
+.titleWrapper {
+    padding: 0 16px;
+}
+
+.title {
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight600;
+    background: variables.$productLinear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgWrapper {
+    width: 360px;
+    height: 972px;
+    margin: 0 auto;
+    margin-top: 24px;
+}
+
+.mobile {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.desktop {
+    display: none;
+}
+
+@media(min-width: 992px) {
+    .mobile {
+        display: none;
+    }
+
+    .imgWrapper {
+        width: 100%;
+        height: 815px;
+        margin: 0 auto;
+        margin-top: 24px;
+    }
+
+    .desktop {
+        display: initial;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+@media(min-width: 1280px) {
+    .result {
+        padding-top: 158px;
+    }
+
+    .mobile {
+        display: none;
+    }
+    
+    .title {
+        font-size: variables.$font-size40;
+    }
+
+    .titleWrapper {
+        padding: 0;
+    }
+
+    .imgWrapper {
+        width: 1262px;
+        height: 1036px;
+        margin-top: 24px;
+    }
+
+    .desktop {
+        display: initial;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}

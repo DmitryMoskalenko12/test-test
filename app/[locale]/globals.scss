@@ -2,44 +2,41 @@
 @import '../../style/reset.scss';
 
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../../fonts/ProximaNova-Light.eot');
-  src: url('../../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
-  url('../../fonts/ProximaNova-Light.woff') format('woff'),
-  url('../../fonts/ProximaNova-Light.ttf') format('truetype');
+  font-family: 'Mulish';
+  src: url('../../fonts/Mulish-Light.ttf'),
+  url('../../fonts/Mulish-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../../fonts/ProximaNova-Regular.eot');
-  src: local('ProximaNova-Regular'), local('ProximaNova-Regular'),
-    url('../../fonts/ProximaNova-Regular.eot') format('embedded-opentype'),
-    url('../../fonts/ProximaNova-Regular.woff') format('woff'),
-    url('../../fonts/ProximaNova-Regular.ttf') format('truetype');
+  font-family: 'Mulish';
+  src: url('../../fonts/Mulish-Regular.ttf'),
+  url('../../fonts/Mulish-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../../fonts/ProximaNova-Semibold.eot');
-  src: local('ProximaNova-Regular'), local('ProximaNova-Regular'),
-    url('../../fonts/ProximaNova-Semibold.eot') format('embedded-opentype'),
-    url('../../fonts/ProximaNova-Semibold.woff') format('woff'),
-    url('../../fonts/ProximaNova-Semibold.ttf') format('truetype');
+  font-family: 'Mulish';
+  src: url('../../fonts/Mulish-Medium.ttf'),
+  url('../../fonts/Mulish-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('../../fonts/Mulish-SemiBold.ttf'),
+  url('../../fonts/Mulish-SemiBold.ttf') format('truetype');
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Proxima Nova';
-  src: url('../../fonts/ProximaNova-Bold.eot');
-  src: local('ProximaNova-Bold'), local('ProximaNovaCond-Bold'),
-    url('../../fonts/ProximaNova-Bold.eot') format('embedded-opentype'),
-    url('../../fonts/ProximaNova-Bold.woff') format('woff'),
-    url('../../fonts/ProximaNova-Bold.ttf') format('truetype');
+  font-family: 'Mulish';
+  src: url('../../fonts/Mulish-Bold.ttf'),
+  url('../../fonts/Mulish-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -60,7 +57,7 @@ body {
   background: #FDFFFE;
   margin: 0;
   padding: 0;
-  font-family: 'Proxima Nova', sans-serif;
+  font-family: 'Mulish', sans-serif;
 }
 
 ul {

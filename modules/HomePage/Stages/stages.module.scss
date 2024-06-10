@@ -1,0 +1,187 @@
+@use '../../../style/HomePage/mixins.scss';
+@use '../../../style/HomePage/variables.scss';
+
+.stages {
+    padding: 88px 16px 1210px 16px;
+}
+
+.wrapper {
+    @include mixins.flex(flex, center, center);
+    flex-direction: column;
+    gap: 48px;
+    position: relative;
+}
+
+.imgWrapperDesktop {
+    display: none;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight500;
+}
+
+.stagesTitle {
+    background: variables.$primary-linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight500;
+}
+
+.text {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: 300;
+    line-height: 150%;
+    margin-top: 8px;
+}
+
+.imgWrapper {
+    width: 360px;
+    height: 1214px;
+    position: absolute;
+    top: 33px;
+    left: -18px;
+    z-index: -5;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.project {
+    width: 156px;
+    height: auto;
+    @include mixins.flex(flex, center, flex-start);
+    flex-direction: column;
+}
+
+.stagesCardsBlock {
+  width: 324px;
+  position: relative;
+}
+
+.projectTitle {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight700;
+    margin-top: 16px;
+}
+
+.projectList {
+    width: 134px;
+    list-style-type: disc;
+    @include mixins.flex(flex, center, flex-start);
+    gap: 1px;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.item {
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    line-height: 140%;
+}
+
+@media(min-width: 576px) {
+    .stages {
+        padding: 88px 16px 1215px 16px;
+    }
+
+    .imgWrapper {
+        width: 389px;
+        left: -96px;
+    }
+
+    .stagesCardsBlock {
+        width: 271px;
+    }
+}
+
+@media(min-width: 768px) {
+    .stages {
+        position: relative;
+        padding: 88px 16px 460px 16px;
+    }
+
+    .imgWrapper {
+     display: none;
+    }
+
+    .wrapper {
+        @include mixins.flex(flex, center, flex-start);
+    } 
+
+    .text {
+      width: 333px;
+    }
+
+    .imgWrapperDesktop {
+        width: 100%;
+        position: absolute;
+        top: -240px;
+        left: 0;
+        z-index: -5;
+        display: initial;
+    }
+    
+    .svgWave {
+        width: 100%;
+    }
+
+    .stagesCardsBlock {
+        position: relative;
+    }
+
+    .project {
+        width: 147px;
+    }
+}
+
+@media(min-width: 1200px) {
+    .project {
+        width: 168px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .stages {
+        padding: 160px 76px 550px 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size48;
+    }
+    
+    .stagesTitle {
+        font-size: variables.$font-size48;
+        font-weight: variables.$font-weight600;
+    }
+
+    .text {
+        font-size: variables.$font-size18;
+        margin-top: 16px;
+    } 
+
+    .imgWrapperDesktop {
+        width: 1263px;
+        height: 1063px;
+        top: -172px;
+        left: 50%;
+        z-index: -5;
+        transform: translateX(-50%);
+    }
+
+    .svgWave {
+        width: 100%;
+    }
+
+    .projectTitle {
+        font-size: variables.$font-size18;
+    }
+}

@@ -1,0 +1,392 @@
+@use '../../../style/HomePage/mixins.scss';
+@use '../../../style/HomePage/variables.scss';
+
+.contact {
+    padding: 88px 0 0 0;
+}
+
+.form {
+    position: relative;
+    @include mixins.flex(flex, center, flex-start);
+    flex-direction: column;
+    padding: 48px 16px 100px 16px;
+    background: variables.$primary-linear;
+    gap: 26px;
+    margin-top: 32px;
+}
+
+.titleTextWrapper {
+    padding: 0 16px;
+}
+
+.desktopWave {
+    display: none;
+}
+
+.us {
+    background: variables.$primary-color;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight500;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title {
+    position: relative;
+    z-index: 5;
+    background: variables.$primary-linear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: variables.$font-size40;
+    font-weight: variables.$font-weight500;
+}
+
+.text {
+    position: relative;
+    z-index: 5;
+    color: variables.$primary-color;
+    font-size: variables.$font-size24;
+    font-weight: variables.$font-weight400;
+    margin-top: 16px;
+    line-height: 150%;
+}
+
+.input {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 48px;
+    padding: 12px;
+    border-radius: 32px;
+    border: none;
+    background: variables.$input-bg;
+    outline: none;
+    font-family: "Mulish";
+    font-size: variables.$font-size16;
+}
+
+.input::placeholder {
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    font-family: "Mulish";
+}
+
+.input:focus {
+    background: variables.$input-bg;
+    color: variables.$primary-color;
+    font-size: variables.$font-size16;
+    font-weight: variables.$font-weight400;
+    font-family: "Mulish";
+}
+
+.check {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+  }
+
+  .check:checked+.label:before {
+    content: '';
+    background: variables.$primary-bg;
+  }
+
+  .check:checked+.label:after {
+    content: '✓';
+    opacity: 1;
+  }
+
+  .checkWrapper {
+    @include mixins.flex(flex, center, center);
+    position: relative;
+    height: 24px;
+  }
+
+  .label {
+    color: variables.$primary-bg;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight600;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+
+  .label:before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid variables.$primary-color;
+    border-radius: 19.75%;
+    background-color: variables.$primary-bg;
+    position: absolute;
+    top: -1px;
+    left: -26px;
+    z-index: 1;
+    transition: .1s linear, border .1s linear;
+  }
+
+  .label:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: -20px;
+    z-index: 2;
+    opacity: 0;
+  }
+
+.label {
+    position: relative;
+    z-index: 5;
+    @include mixins.flex(flex, center, center);
+    gap: 3px;
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+}
+
+.labelLink {
+    color: variables.$primary-color;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    text-decoration: underline;
+}
+
+.button {
+    width: 328px;
+    height: 48px;
+    position: relative;
+    @include mixins.flex(flex, center, center);
+    border-radius: 32px;
+    border: none;
+    background: variables.$primary-color;
+    color: variables.$primary-bg;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    font-family: "Mulish";
+    cursor: pointer;
+    z-index: 5;
+    margin: 0 auto;
+}
+
+.wave {
+    position: absolute;
+    width: 360px;
+    height: 338px;
+    top: 282px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.inputWrapper {
+ width: 100%;
+ position: relative;
+}
+
+.error {
+ border: 1px solid variables.$secondary-red;
+}
+
+.error_required {
+    position: absolute;
+    left: 10px;
+    color: variables.$secondary-red;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+}
+
+@media(min-width: 576px) {
+     .form {
+        padding: 48px 65px 100px 65px;;
+     }
+}
+
+@media(min-width: 680px) {
+    .form {
+        padding: 48px 86px 100px 86px;
+    }
+}
+
+@media(min-width: 768px) {
+    .contact {
+        padding: 88px 0 88px 0;
+    }
+
+    .titleTextWrapper {
+        width: initial;
+        padding: 0;
+    }
+
+    .wrapper {
+        @include mixins.flex(flex, center, center);
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .input {
+        width: 100%;
+    }
+
+    .wave {
+        display: none;
+    }
+
+    .label {
+        align-self: flex-start;
+    }
+
+    .form {
+        padding: 48px;
+        width: 515px;
+        flex-shrink: 0;
+        border-radius: 32px;
+        margin-top: 0;
+    }
+}
+
+@media(min-width: 992px) {
+    .contact {
+        padding: 88px 16px 88px 16px;
+    }
+
+    .wrapper {
+        @include mixins.flex(flex, space-between, flex-start);
+        flex-direction: row;
+        gap: 48px;
+    }
+
+    .input:hover {
+        box-shadow: variables.$input-shadow;
+    }
+
+    .form {
+        @include mixins.flex(flex, center, flex-start);
+        flex-direction: column;
+        width: 515px;
+    }
+
+    .button {
+        gap: 12px;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        svg {
+            margin-left: initial;
+            margin-bottom: 3px;
+        }
+
+    }
+
+    .button:hover {
+        color: variables.$primary-color;
+        background: variables.$primary-bg;
+        border: none;
+        transition: 0.3s all;
+        svg {
+            position: relative;
+            animation: moveRight 0.3s forwards;
+            path {
+                fill: variables.$primary-color;
+            }
+        }
+    }
+
+    .button:not(:hover) {
+        transition: 0.3s all;
+        svg {
+            position: relative;
+            animation: moveLeft 0.3s forwards;
+        }
+    }
+
+    @keyframes moveRight {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(6px);
+        }
+    }
+  
+    @keyframes moveLeft {
+        from {
+            transform: translateX(6px);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .titleTextWrapper {
+        position: relative;
+    }
+
+    .desktopWave {
+        width: 122%;
+        display: initial;
+        position: absolute;
+        top: -15px;
+        left: -15px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .contact {
+        padding: 160px 76px 88px 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size48;
+    }
+
+    .us {
+        font-size: variables.$font-size48;
+        font-weight: variables.$font-weight500; 
+    }
+
+    .text {
+        margin-top: 48px;
+        font-size: variables.$font-size35;
+        font-weight: variables.$font-weight400; 
+        line-height: 140%;
+    }
+
+    .wrapper {
+        gap: 114px;
+    }
+
+    .input::placeholder {
+        font-size: variables.$font-size16;
+    }
+    
+    .input:focus {
+        font-size: variables.$font-size16;
+    }
+
+    .form {
+        @include mixins.flex(flex, center, flex-start);
+        flex-direction: column;
+        width: 552px;
+        height: 501px;
+    }
+
+    .button {
+        @include mixins.flex(flex, center, center);
+        font-size: variables.$font-size16;
+        width: 264px;
+        height: 56px;
+    }
+
+    .titleTextWrapper {
+        flex-shrink: 0;
+        width: 462px;
+    }
+
+    .desktopWave {
+        width: 186%;
+        top: -2px;
+        left: -76px;
+    }
+}

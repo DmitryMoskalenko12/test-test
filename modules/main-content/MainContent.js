@@ -1,7 +1,7 @@
 'use client';
 
 import classes from './main-content.module.scss';
-import ContactForm from '@/components/contact-form/ContactForm';
+import ContactForm from '@/components/ContactForm/ContactForm';
 import { useTranslation } from 'react-i18next';
 
 const MainContent = () => {
