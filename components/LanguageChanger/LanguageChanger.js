@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
-
+import Script from 'next/script';
 export default function LanguageChanger({ display, dividerClass }) {
   const [activeLang, setActiveLang] = useState('');
 
