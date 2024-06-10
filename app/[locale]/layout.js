@@ -5,6 +5,7 @@ import Header from '@/modules/HomePage/Header/Header';
 import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
+import Script from 'next/script';
 
 export const metadata = {
   authors: [{ url: 'http://uviten.com' }],
@@ -43,6 +44,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <meta property='og:image:width' content='1200' />
           <meta property='og:image:height' content='630' />
         </head>
+        <Script id="cookieyes" src='https://cdn-cookieyes.com/client_data/806733f930ef29dd5223d1e0/script.js'/>
         <body
           style={{
             display: 'flex',
