@@ -34,6 +34,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
+        <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/ff8770b770f96af9e5d4e271/script.js"></script>
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
@@ -54,12 +55,12 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale} />
-          <div style={{position: 'absolute', marginTop: '150px' , zIndex: 999999}} data-consent="analytics">
+          {/* <div style={{position: 'absolute', marginTop: '150px' , zIndex: 999999}} data-consent="analytics">
              Analytics category allowed
           </div>
           <div style={{position: 'absolute' , marginTop: '150px', zIndex: 999999}} data-consent="analytics" data-inverse>
               Analytics category not allowed
-          </div>
+          </div> */}
           {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
         </body>
       </html>
