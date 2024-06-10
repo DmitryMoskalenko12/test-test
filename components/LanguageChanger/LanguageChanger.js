@@ -28,21 +28,23 @@ export default function LanguageChanger({ display, dividerClass }) {
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     const expires = date.toUTCString();
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
-
+    let newPathname = window.location.pathname;
     if (
       currentLocale === i18nConfig.defaultLocale &&
       !i18nConfig.prefixDefault
     ) {
-      router.push('/' + newLocale + currentPathname);
+      newPathname = '/' + newLocale + newPathname;
+      /* router.push('/' + newLocale + currentPathname); */
       <Banner/>
-        document.location.reload()
+       /*  document.location.reload() */
     } else {
-      router.push(
-        currentPathname.replace(`/${currentLocale}`, `/${newLocale}`),
-      );
+
+        newPathname = newPathname.replace(`/${currentLocale}`, `/${newLocale}`);
+     
       <Banner/>
-        document.location.reload()
+       /*  document.location.reload() */
     }
+    window.location.href = newPathname;
     router.refresh();
   };
 
