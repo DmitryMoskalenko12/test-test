@@ -34,7 +34,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-          <Script id="cookieyes" src='https://cdn-cookieyes.com/client_data/806733f930ef29dd5223d1e0/script.js'/>
+          <script id="cookieyes" type="text/javascript" src='https://cdn-cookieyes.com/client_data/806733f930ef29dd5223d1e0/script.js'/>
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
