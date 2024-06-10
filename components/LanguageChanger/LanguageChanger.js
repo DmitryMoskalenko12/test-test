@@ -39,6 +39,7 @@ export default function LanguageChanger({ display, dividerClass }) {
       );
     }
 
+    router.refresh();
   };
 
   return (
