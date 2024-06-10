@@ -34,31 +34,6 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-       {/*  <Script
-       
-        src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
-        strategy="beforeInteractive"
-        />
-        <Script  id="cookie-consent" strategy="beforeInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)}
-            gtag('consent','default', {
-              'security_storage': 'granted',
-              'functionality_storage': 'denied',
-              'personalization_storage': 'denied',
-              'ad_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied',
-              'analytics_storage': 'denied',
-              'wait_for_update': 500
-            });
-            document.addEventListener("DOMContentLoaded", function(event) {
-              var cpm = {};
-              window.cookiehub.load(cpm);
-            });
-          `}
-          </Script> */}
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />

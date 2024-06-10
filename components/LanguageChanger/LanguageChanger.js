@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
-import Script from 'next/script';
+
 export default function LanguageChanger({ display, dividerClass }) {
   const [activeLang, setActiveLang] = useState('');
 
@@ -17,23 +17,7 @@ export default function LanguageChanger({ display, dividerClass }) {
 
   useEffect(() => {
     setActiveLang(currentLocale);
-    const checkCookieHubInit = () => {
-      if (window.cookiehub && window.cookiehub.settings) {
-        // Если CookieHub инициализирован, то находим и показываем шестеренку
-        const settingsIcon = document.querySelector('.ch2-settings-tablist');
-        if (settingsIcon) {
-          settingsIcon.style.display = 'block';
-        }
-      }
-    };
-
-    // Ждем полной загрузки DOM
-    document.addEventListener('DOMContentLoaded', checkCookieHubInit);
-
-    return () => {
-      document.removeEventListener('DOMContentLoaded', checkCookieHubInit);
-    };
-  }, [activeLang]);
+  }, []);
 
   const handleChange = (e) => {
     const newLocale = e.target.textContent.toLowerCase();
@@ -73,34 +57,6 @@ export default function LanguageChanger({ display, dividerClass }) {
       >
         UA
       </button>
-     {
-      activeLang === 'ua' || activeLang === 'en' ?  <>
-      <Script
-      src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
-      strategy="beforeInteractive"
-    />
-    <Script id="cookie-consent" strategy="afterInteractive">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)}
-        gtag('consent','default', {
-          'security_storage': 'granted',
-          'functionality_storage': 'denied',
-          'personalization_storage': 'denied',
-          'ad_storage': 'denied',
-          'ad_user_data': 'denied',
-          'ad_personalization': 'denied',
-          'analytics_storage': 'denied',
-          'wait_for_update': 500
-        });
-        document.addEventListener("DOMContentLoaded", function(event) {
-          var cpm = {};
-          window.cookiehub.load(cpm);
-        });
-      `}
-    </Script>
-      </> : null
-     }
     </div>
   );
 }
