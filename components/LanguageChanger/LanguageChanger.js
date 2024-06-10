@@ -17,7 +17,23 @@ export default function LanguageChanger({ display, dividerClass }) {
 
   useEffect(() => {
     setActiveLang(currentLocale);
-  }, []);
+    const checkCookieHubInit = () => {
+      if (window.cookiehub && window.cookiehub.settings) {
+        // Если CookieHub инициализирован, то находим и показываем шестеренку
+        const settingsIcon = document.querySelector('.cookiehub-settings-icon');
+        if (settingsIcon) {
+          settingsIcon.style.display = 'block';
+        }
+      }
+    };
+
+    // Ждем полной загрузки DOM
+    document.addEventListener('DOMContentLoaded', checkCookieHubInit);
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', checkCookieHubInit);
+    };
+  }, [currentLocale]);
 
   const handleChange = (e) => {
     const newLocale = e.target.textContent.toLowerCase();
