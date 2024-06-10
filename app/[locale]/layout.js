@@ -37,9 +37,9 @@ const MainLayout = async ({ params: { locale }, children }) => {
         <Script
        
         src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         />
-        <Script  id="cookie-consent" strategy="afterInteractive">
+        <Script  id="cookie-consent" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments)}
