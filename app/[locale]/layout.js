@@ -34,7 +34,8 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-         <Script
+        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0907a095-6a81-49cd-a930-1a3e80707e12" data-blockingmode="auto" type="text/javascript"></script>
+     {/*     <Script
           src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
           strategy="afterInteractive"
          />
@@ -57,7 +58,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
               window.cookiehub.load(cpm);
             });
           `}
-          </Script>
+          </Script> */}
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
@@ -78,13 +79,13 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale} />
-          <div style={{position: 'absolute', marginTop: '120px'}} data-consent="analytics">
+    {/*       <div style={{position: 'absolute', marginTop: '120px'}} data-consent="analytics">
              Analytics category allowed
              {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
           </div>
           <div style={{position: 'absolute', marginTop: '120px'}} data-consent="analytics" data-inverse>
               Analytics category not allowed
-          </div>
+          </div> */}
         </body>
       </html>
     </TranslationsProvider>
