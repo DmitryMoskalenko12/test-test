@@ -5,9 +5,10 @@ import Header from '@/modules/HomePage/Header/Header';
 import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
+import Script from 'next/script';
 
 export const metadata = {
-  authors: [{ url: 'http://uviten.com/' }],
+  authors: [{ url: 'http://uviten.com' }],
   robots: {
     index: true,
     follow: true,
@@ -54,7 +55,6 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale} />
-          {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
         </body>
       </html>
     </TranslationsProvider>

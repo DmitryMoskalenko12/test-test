@@ -5,7 +5,7 @@ import Link from 'next/link';
 const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
   return (
     <article className={classes.card}>
-      <Link href={href} className={classes.imgWrapper}>
+      <div className={classes.imgWrapper}>
         <Image
           className={classes.mobileProject}
           src={imgMobile}
@@ -23,7 +23,7 @@ const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
           loading='lazy'
         />
         <div className={classes.filter}>{filter}</div>
-      </Link>
+      </div>
       <div className={classes.titleWrapper}>
         <h3 className={classes.title}>{title}</h3>
         <Link className={classes.projectLink} href={href}>
