@@ -14,20 +14,6 @@ export default function LanguageChanger({ display, dividerClass }) {
  
   useEffect(() => {
     setActiveLang(currentLocale);
-    const handleCookiebotOnAccept = (e) => {
-      if (window.Cookiebot && window.Cookiebot.consents && window.Cookiebot.consents.marketing) {
-        // Execute code that sets marketing cookies
-        console.log("Marketing consent given, setting marketing cookies...");
-        // Ваш код для установки маркетинговых cookies
-      }
-    };
-
-    window.addEventListener('CookiebotOnAccept', handleCookiebotOnAccept);
-
-    return () => {
-      window.removeEventListener('CookiebotOnAccept', handleCookiebotOnAccept);
-    };
-
   }, []);
 
   const handleChange = (e) => {
@@ -66,12 +52,12 @@ export default function LanguageChanger({ display, dividerClass }) {
       >
         UA
       </button>
-        <script type="text/javascript">
+        <Script type="text/javascript" strategy="afterInteractive">
         {
                 window.addEventListener('CookiebotOnAccept', function (e) {
                   Cookiebot.consent.marketing ? console.log('hhh') : null})
         }
-       </script>
+       </Script>
     </div>
   );
 }
