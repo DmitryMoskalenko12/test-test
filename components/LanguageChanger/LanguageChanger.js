@@ -57,10 +57,10 @@ export default function LanguageChanger({ display, dividerClass }) {
         {`
           window.addEventListener('CookiebotOnAccept', function (e) {
             if (Cookiebot.consent.marketing) {
-              // Execute code that sets marketing cookies
               console.log("Marketing consent given, setting marketing cookies...");
-              // Ваш код для установки маркетинговых cookies
-            }
+            } else {
+             console.log("NO");
+             }
           }, false);
         `}
       </Script>
