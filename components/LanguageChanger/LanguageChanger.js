@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 
 export default function LanguageChanger({ display, dividerClass }) {
   const [activeLang, setActiveLang] = useState('');
@@ -13,6 +14,20 @@ export default function LanguageChanger({ display, dividerClass }) {
  
   useEffect(() => {
     setActiveLang(currentLocale);
+    const handleCookiebotOnAccept = (e) => {
+      if (window.Cookiebot && window.Cookiebot.consents && window.Cookiebot.consents.marketing) {
+        // Execute code that sets marketing cookies
+        console.log("Marketing consent given, setting marketing cookies...");
+        // Ваш код для установки маркетинговых cookies
+      }
+    };
+
+    window.addEventListener('CookiebotOnAccept', handleCookiebotOnAccept);
+
+    return () => {
+      window.removeEventListener('CookiebotOnAccept', handleCookiebotOnAccept);
+    };
+    
   }, []);
 
   const handleChange = (e) => {
