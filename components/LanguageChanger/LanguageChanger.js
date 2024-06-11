@@ -1,7 +1,5 @@
 'use client';
 import classes from './languageChanger.module.scss';
-import { useRouter } from 'next/navigation';
-import { usePathname } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import cn from 'classnames';
@@ -12,8 +10,6 @@ export default function LanguageChanger({ display, dividerClass }) {
 
   const { i18n } = useTranslation();
   const currentLocale = i18n.language;
-  const router = useRouter();
-  const currentPathname = usePathname();
  
   useEffect(() => {
     setActiveLang(currentLocale);
@@ -27,24 +23,17 @@ export default function LanguageChanger({ display, dividerClass }) {
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
     const expires = date.toUTCString();
     document.cookie = `NEXT_LOCALE=${newLocale};expires=${expires};path=/`;
+
     let newPathname = window.location.pathname;
     if (
       currentLocale === i18nConfig.defaultLocale &&
       !i18nConfig.prefixDefault
     ) {
       newPathname = '/' + newLocale + newPathname;
-      /* router.push('/' + newLocale + currentPathname); */
-   /*    <Banner/> */
-       /*  document.location.reload() */
     } else {
-
-        newPathname = newPathname.replace(`/${currentLocale}`, `/${newLocale}`);
-     
- /*      <Banner/> */
-       /*  document.location.reload() */
+      newPathname = newPathname.replace(`/${currentLocale}`, `/${newLocale}`);
     }
     window.location.href = newPathname;
-   /*  router.refresh(); */
   };
 
   return (

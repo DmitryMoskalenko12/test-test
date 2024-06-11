@@ -78,8 +78,12 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale} />
-          <div data-consent="analytics">
+          <div style={{position: 'absolute', marginTop: '120px'}} data-consent="analytics">
+             Analytics category allowed
              {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
+          </div>
+          <div style={{position: 'absolute', marginTop: '120px'}} data-consent="analytics" data-inverse>
+              Analytics category not allowed
           </div>
         </body>
       </html>
