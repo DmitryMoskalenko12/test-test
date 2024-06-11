@@ -21,6 +21,7 @@
     color: variables.$primary-color;
     font-size: variables.$font-size32;
     font-weight: variables.$font-weight700;
+    line-height: 140%;
 }
 
 .filter {
@@ -33,7 +34,7 @@
     border: 1px solid variables.$secondary-gray;
     background: variables.$secondary-gray-bg;
     backdrop-filter: blur(1.5px);
-    margin-top: 6px;
+    margin-top: 4px;
 }
 
 .descriptionProject {
@@ -55,6 +56,7 @@
 }
 
 .view {
+    width: max-content;
     display: block;
     font-size: variables.$font-size18;
     font-weight: variables.$font-weight700;
@@ -63,10 +65,11 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: 17px;
+    line-height: 140%;
 }
 
 .technologies {
-    @include mixins.flex(flex, center, flex-start);
+    @include mixins.flex(flex, center, baseline);
     column-gap: 16px;
     margin-top: 60px;
     align-self: flex-start;
@@ -76,6 +79,12 @@
     @include mixins.flex(flex, center, flex-start);
     flex-direction: column;
     gap: 24px;
+}
+
+.listDescr {
+    @include mixins.flex(flex, center, flex-start);
+    flex-direction: column;
+    gap: 20px;
 }
 
 .item {
@@ -155,7 +164,7 @@
     }
     
     .descriptionProject {
-        @include mixins.flex(flex, center, flex-start);
+        @include mixins.flex(flex, space-between, flex-start);
         flex-direction: row;
         gap: 55px;
         margin-top: 40px;
@@ -190,12 +199,15 @@
         top: 28px;
         z-index: -5;
     }
+
+    .listDescr {
+        gap: 21px
+    }
 }
 
 @media(min-width: 992px) {
     .view {
         display: block;
-        width: 116px;
         position: relative;
         &::after {
             content: '';
@@ -234,6 +246,10 @@
 
     .title {
         font-size: variables.$font-size48;
+    }
+
+    .listDescr {
+        gap: 22.5px;
     }
 
     .filter {

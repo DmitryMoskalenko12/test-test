@@ -5,10 +5,9 @@ import Header from '@/modules/HomePage/Header/Header';
 import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
-import Script from 'next/script';
 
 export const metadata = {
-  authors: [{ url: 'http://uviten.com' }],
+  authors: [{ url: 'http://uviten.com/' }],
   robots: {
     index: true,
     follow: true,
@@ -35,30 +34,6 @@ const MainLayout = async ({ params: { locale }, children }) => {
       <html lang={t('language')}>
         <head>
         <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0907a095-6a81-49cd-a930-1a3e80707e12" data-blockingmode="auto" type="text/javascript"></script>
-     {/*     <Script
-          src="https://cdn.cookiehub.eu/c2/ddd5f08e.js"
-          strategy="afterInteractive"
-         />
-         <Script id="cookie-consent" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments)}
-            gtag('consent','default', {
-              'security_storage': 'granted',
-              'functionality_storage': 'denied',
-              'personalization_storage': 'denied',
-              'ad_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied',
-              'analytics_storage': 'denied',
-              'wait_for_update': 500
-            });
-            document.addEventListener("DOMContentLoaded", function(event) {
-              var cpm = {};
-              window.cookiehub.load(cpm);
-            });
-          `}
-          </Script> */}
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
@@ -79,13 +54,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale} />
-    {/*       <div style={{position: 'absolute', marginTop: '120px'}} data-consent="analytics">
-             Analytics category allowed
-             {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
-          </div>
-          <div style={{position: 'absolute', marginTop: '120px'}} data-consent="analytics" data-inverse>
-              Analytics category not allowed
-          </div> */}
+          {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
         </body>
       </html>
     </TranslationsProvider>

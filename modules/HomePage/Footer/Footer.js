@@ -8,19 +8,8 @@ import { useRef, useState } from 'react';
 const Footer = ({ locale }) => {
   const route = useRouter();
   const { t } = useTranslation('start');
-  const [scroll, setScroll] = useState(true);
   const [scrollServices, setScrollServices] = useState(true);
-  const refProjects = useRef();
   const refServices = useRef();
-
-  const cancelReloadProjects = () => {
-    if (scroll) {
-      route.push('/');
-      setTimeout(() => {
-        refProjects.current.click();
-      }, 1300);
-    }
-  };
 
   const cancelReloadServices = () => {
     if (scrollServices) {
@@ -94,17 +83,12 @@ const Footer = ({ locale }) => {
                   </a>
                 </li>
                 <li className={classes.li}>
-                  <a
-                    ref={refProjects}
+                  <Link
                     className={classes.link}
-                    onClick={() => {
-                      setScroll((prev) => !prev);
-                      cancelReloadProjects();
-                    }}
-                    href='#projects'
+                    href='/projects/'
                   >
                     {t('projects')}
-                  </a>
+                  </Link>
                 </li>
                 <li className={classes.li}>
                   <Link className={classes.link} href='/stub/'>

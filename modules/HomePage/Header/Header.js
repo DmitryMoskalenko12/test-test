@@ -13,12 +13,11 @@ import { useRouter } from 'next/navigation';
 const Header = () => {
   const [active, setActive] = useState(false);
   const [asideModalActive, setAsideModalActive] = useState(false);
-  const [scroll, setScroll] = useState(true);
   const [scrollServices, setScrollServices] = useState(true);
+
   const path = usePathname().includes('stub');
   const { t } = useTranslation('start');
   const route = useRouter();
-  const refProjects = useRef();
   const refServices = useRef();
 
   useEffect(() => {
@@ -36,15 +35,6 @@ const Header = () => {
       document.querySelector('body').style.overflow = 'initial';
     }
   }, [asideModalActive]);
-
-  const cancelReloadProjects = () => {
-    if (scroll) {
-      route.push('/');
-      setTimeout(() => {
-        refProjects.current.click();
-      }, 1300);
-    }
-  };
 
   const cancelReloadServices = () => {
     if (scrollServices) {
@@ -310,18 +300,15 @@ const Header = () => {
                   </a>
                 </li>
                 <li className={classes.li}>
-                  <a
-                    ref={refProjects}
-                    onClick={(e) => {
+                  <Link
+                    onClick={() => {
                       setActive(false);
-                      setScroll((prev) => !prev);
-                      cancelReloadProjects();
                     }}
                     className={classes.link}
-                    href='#projects'
+                    href='/projects/'
                   >
                     {t('projects')}
-                  </a>
+                  </Link>
                 </li>
                 <li className={classes.li}>
                   <Link
@@ -471,7 +458,6 @@ const Header = () => {
         </div>
       </div>
       {asideModalActive ? <AsideModal close={setAsideModalActive} /> : null}
-
     </header>
   );
 };

@@ -1,0 +1,177 @@
+@use '../../../style/HomePage/variables.scss';
+@use '../../../style/HomePage/mixins.scss';
+
+.projects {
+   overflow: hidden;
+   padding: 80px 16px 0 16px;
+}
+
+.title {
+    color: variables.$primary-color;
+    font-size: variables.$font-size40;
+    font-style: normal;
+    font-weight: variables.$font-weight500;
+    line-height: 140%;
+}
+
+.titleProjects {
+    background: variables.$productLinear;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+    color: variables.$primary-color;
+    font-size: variables.$font-size18;
+    font-weight: variables.$font-weight400;
+    line-height: 140%;
+    margin-top: 8px;
+}
+
+.projectsWrapper {
+    @include mixins.flex(flex, center, center);
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 48px;
+}
+
+.filters {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 0px;
+    margin-top: 88px;
+}
+
+.filters::-webkit-scrollbar {
+    width: 0;
+}
+
+.filterButton {
+    width: max-content;
+    color: variables.$primary-color;
+    @include mixins.flex(flex, center, center);
+    text-align: center;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    border-radius: 16px;
+    border: 1px solid variables.$secondary-gray;
+    background: variables.$secondary-gray-bg;
+    backdrop-filter: blur(1.5px);
+    cursor: pointer;
+    padding: 8px 16px;
+    flex-shrink: 0;
+}
+
+.activeFilter {
+    border-radius: 16px;
+    background: variables.$primary-linear;
+    backdrop-filter: blur(1.5px);
+    border: none;
+}
+
+.disabled {
+    width: max-content;
+    color: variables.$secondary-gray;;
+    @include mixins.flex(flex, center, center);
+    text-align: center;
+    font-size: variables.$font-size14;
+    font-weight: variables.$font-weight400;
+    border-radius: 16px;
+    border: 1px solid variables.$secondary-gray;
+    background: variables.$secondary-gray-bg;
+    backdrop-filter: blur(1.5px);
+    padding: 8px 16px;
+    flex-shrink: 0;
+}
+
+.waveMobile {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: -5;
+}
+
+.waveDesktop {
+    display: none;
+}
+
+@media(min-width: 576px) {
+    .waveMobile {
+        top: 82px;
+    }
+}
+
+@media(min-width: 768px) {
+    .projects {
+        padding: 103px 16px 0 16px;
+    }
+
+    .waveMobile {
+        display: none;
+    }
+
+    .waveDesktop {
+        display: initial;
+        width: 100%;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top: 28px;
+        z-index: -5;
+    }
+}
+
+@media(min-width: 992px) {
+    .projectsWrapper {
+        @include mixins.flex(flex, space-between, flex-start);
+        flex-direction: row;
+        gap: 24px;
+        margin-top: 48px;
+    }
+}
+
+@media(min-width: 1280px) {
+    .projects {
+        padding: 140px 76px 0 76px;
+    }
+
+    .title {
+        font-size: variables.$font-size48;
+    }
+
+    .titleProjects {
+        font-size: variables.$font-size48; 
+    }
+
+    .filters {
+        position: relative;
+        bottom: -30px;
+        margin-top: 72px;
+    }
+
+    .subtitle {
+        font-size: variables.$font-size32; 
+    }
+
+    .projectsWrapper {
+        margin-top: 72px;
+    }
+
+    .waveWrapper {
+        position: relative;
+        width: 1280px;
+    }
+
+    .waveDesktop {
+        display: initial;
+        width: 100%;
+        height: initial;
+        position: absolute;
+        left: -75px;
+        top: -128px;
+        z-index: -5;
+    }
+}

@@ -10,18 +10,18 @@ import TranslationsProvider from "@/app/TranslationsProvider";
 
 const ProductPage = async ({ params: { locale, id } }) => {
     const { t, resources } = await initTranslations(locale, ['main', 'start']);
-    const product = productsArr().find(item => String(item.id) === id);
+    const product = productsArr(t).find(item => String(item.id) === id);
 
     return <TranslationsProvider
             resources={resources}
             locale={locale}
             namespaces={['main', 'start']}
           >
-             <DescriptionSection product = {product}/>
-             <StagesSection product = {product}/>
-             <Result product = {product}/>
-             <ProjectSummary/>
-             <MoreProjects/>
+             <DescriptionSection locale = {locale} product = {product}/>
+             <StagesSection locale = {locale} product = {product}/>
+             <Result locale = {locale} product = {product}/>
+             <ProjectSummary locale = {locale}/>
+             <MoreProjects locale = {locale}/>
              <Contact locale={locale}/>
            </TranslationsProvider>
 }

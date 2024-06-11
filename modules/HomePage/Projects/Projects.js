@@ -56,7 +56,7 @@ const Projects = async ({ locale }) => {
             },
           )}
         </div>
-        <LinkUi clazz={classes.projectLink} href={'/stub/'} text={t('cases')} />
+        <LinkUi clazz={classes.projectLink} href={'/projects/'} text={t('cases')} />
       </div>
     </section>
   );

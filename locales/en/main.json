@@ -20,7 +20,40 @@
    "required_name": "This field is required",
    "min_name": "Minimum 2 characters",
    "lang-title": "Uviten | Software development company",
-   "lang-description": "Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve. "
+   "lang-description": "Unlock growth opportunities with our tailored software development and innovative web solutions. Our dedicated team offers exceptional service across different industries, ensuring your business stays ahead of the curve.",
+   "shedule": "Schedule a demo",
+
+
+
+    "refreshing": "Refreshing cargo delivery company website",
+    "view": "View website",
+    "technologies": "Technologies",
+    "industry": "Industry",
+    "timeline": "Timeline",
+    "team": "Team",
+    "task": "Task",
+    "taskSection": "Our task was to redesign the website with a sleek and visually captivating style, incorporating the latest trends and aesthetics in web design, to attract more clients and remain competitive in the market.",
+    "solution": "Solution",
+    "solutionText": "Refreshing typography, color palettes, and overall visual components to ensure they resonate with present-day standards. Incorporating interactive elements and multimedia content to engage users effectively. Additionally, crafting a cohesive branding strategy to strengthen the website's identity and messaging.",
+    "project-stages": "Project stages",
+    "briefing": "Briefing and Analysis",
+    "briefing-text": "We conducted a briefing with the client to learn about their needs. Following this, we analyzed a variety of websites from competitors and industry leaders to understand the mood and standards of transportation companies globally. We then outlined the expected structure of the future website, considering the client's expectations for the brand's look and feel.",
+    "ideate": "Ideate and Moodboard",
+    "ideate-text": "We brainstormed creative ideas and compiled a moodboard to visualize the design direction. This included gathering inspiration, color schemes, typography, and imagery that aligned with the client's brand and industry trends.",
+    "ui-design": "UI Design",
+    "ui-design-text": "During the UI Design stage, we transformed the moodboard concepts into detailed interface designs. This included creating wireframes and high-fidelity mockups to develop a user-friendly and visually appealing interface.",
+    "development": "Development",
+    "developmen-text": "During the Development stage, we coded the UI designs into a functional website, ensuring responsiveness and performance. We integrated interactive elements, conducted thorough testing, and optimized for a smooth user experience before deployment.",
+    "assurance": "Quality Assurance",
+    "assurance-text": "We rigorously tested the website to identify and fix any bugs or issues. This involved checking functionality, performance, and responsiveness across different devices and browsers. We ensured that all features worked seamlessly and that the site met the highest standards of quality and usability before the final launch.",
+    "result": "Result",
+    "summary": "Project summary",
+    "enhanced": "Enhanced User Experience",
+    "enhanced-text": "The redesigned website offers a sleek, visually captivating interface that improves navigation and engagement, resulting in a more satisfying user experience",
+    "reliability": "Performance and Reliability",
+    "reliability-text": "Rigorous development and quality assurance processes have ensured that the website performs efficiently across all devices and browsers, providing a seamless and reliable user experience.",
+    "increased-attraction": "Increased Client Attraction",
+    "increased-attraction-text": "By integrating the latest design trends and ensuring a cohesive brand look, the website now stands out in the market, attracting more clients and boosting the company’s competitive edge."
    
 
 }

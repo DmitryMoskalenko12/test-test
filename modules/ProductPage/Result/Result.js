@@ -1,11 +1,14 @@
 import classes from './result.module.scss';
 import Image from 'next/image';
+import initTranslations from '@/app/i18n';
 
-const Result = ({product}) => {
+const Result = async ({product, locale}) => {
+    const { t, resources } = await initTranslations(locale, ['main', 'start']);
+
     return <section className={classes.result}>
                 <div className='container'>
                     <div className={classes.titleWrapper}>
-                       <h2 className={classes.title}>Result:</h2>
+                       <h2 className={classes.title}>{t('result')}:</h2>
                     </div>
                 </div>
                 <div className={classes.imgWrapper}>

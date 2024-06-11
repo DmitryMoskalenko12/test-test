@@ -1,8 +1,10 @@
 import classes from './description-section.module.scss';
 import Image from 'next/image';
 import wave from '../../../images/ProductPage/waveDesktop.png';
+import initTranslations from '@/app/i18n';
 
-const DescriptionSection = ({product}) => {
+const DescriptionSection = async ({product, locale}) => {
+    const { t, resources } = await initTranslations(locale, ['main', 'start']);
 
     return <section className={classes.description}>
                 <div className='container'>
@@ -39,26 +41,38 @@ const DescriptionSection = ({product}) => {
 
                    <div className={classes.descriptionProject}>
                        <div className={classes.refreshingBlock}>
-                           <div className={classes.refreshing}>Refreshing cargo delivery company website</div>
-                           <a target='__blank' className={classes.view} href={product.linkToSite}>View website</a>
+                           <div className={classes.refreshing}>{product.description}</div>
+                           <a target='__blank' className={classes.view} href={product.linkToSite}>{t('view')}</a>
                        </div>
 
                        <div className={classes.technologies}>
                            <ul className={classes.list}>
                                <li className={`${classes.item} ${classes.item1}`}>
-                                <span className={classes.word1}>Technologies:</span> 
-                                <span className={classes.word2}>{product.technologies}</span>
+                                <span className={classes.word1}>{t('technologies')}:</span> 
                                </li>
                                <li className={`${classes.item} ${classes.item2}`}>
-                                <span className={classes.word1}>Industry:</span> 
-                                <span className={classes.word2}>{product.industry}</span></li>
+                                <span className={classes.word1}>{t('industry')}:</span> 
+                                </li>
                                <li className={`${classes.item} ${classes.item3}`}>
-                                <span className={classes.word1}>Timeline:</span>
-                                <span className={classes.word2}>{product.timeline}</span>
+                                <span className={classes.word1}>{t('timeline')}:</span>
                                </li>
                                <li className={`${classes.item} ${classes.item4}`}>
-                                <span className={classes.word1}>Team:</span>
-                                <span className={classes.word2}>{product.team}</span>
+                                <span className={classes.word1}>{t('team')}:</span>
+                               </li>
+                           </ul>
+
+                           <ul className={classes.listDescr}>
+                               <li>
+                                 <span className={classes.word2}>{product.technologies}</span>
+                               </li>
+                               <li>
+                                 <span className={classes.word2}>{product.industry}</span>
+                               </li>
+                               <li>
+                                  <span className={classes.word2}>{product.timeline}</span>
+                               </li>
+                               <li>
+                                  <span className={classes.word2}>{product.team}</span>
                                </li>
                            </ul>
                        </div>

@@ -2,24 +2,26 @@ import classes from './stages-section.module.scss';
 import Image from 'next/image';
 import SvgProjectCardBg from '@/ui/ProjectPage/SvgProjectCardBg/SvgProjectCardBg';
 import SvgProjectCardBgMobile from '@/ui/ProjectPage/SvgProjectCardBg/SvgProjectCardBgMobile';
+import initTranslations from '@/app/i18n';
 
+const StagesSection = async ({product, locale}) => {
+    const { t, resources } = await initTranslations(locale, ['main', 'start']);
 
-const StagesSection = ({product}) => {
     return <section className={classes.stages}>
                 <div className="container">
                      <div className={classes.taskBlock}>
                           <div className={classes.taskSubblock}>
-                               <h2 className={classes.task}>Task:</h2>
+                               <h2 className={classes.task}>{t('task')}:</h2>
                                <p className={classes.taskText}>{product.task}</p>
                           </div>
 
                           <div className={classes.solutionSubblock}>
-                               <h2 className={classes.solution}>Solution:</h2>
+                               <h2 className={classes.solution}>{t('solution')}</h2>
                                <p className={classes.solutionText}>{product.solution}</p>
                           </div>
                      </div>
 
-                     <h2 className={classes.project}>Project stages:</h2>
+                     <h2 className={classes.project}>{t('project-stages')}:</h2>
 
                      <div className={classes.stagesWrapper}>
 
