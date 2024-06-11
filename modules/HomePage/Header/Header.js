@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation';
 import AsideModal from '../AsideModal/AsideModal';
 import { useTranslation } from 'react-i18next';
 import { useRouter } from 'next/navigation';
+import Script from 'next/script';
 
 const Header = () => {
   const [active, setActive] = useState(false);
