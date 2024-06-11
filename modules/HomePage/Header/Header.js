@@ -458,6 +458,16 @@ const Header = () => {
         </div>
       </div>
       {asideModalActive ? <AsideModal close={setAsideModalActive} /> : null}
+      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0907a095-6a81-49cd-a930-1a3e80707e12" data-blockingmode="auto" type="text/javascript"></script>
+      <Script id="cookiebot-custom-script" strategy="afterInteractive">
+        {`
+          window.addEventListener('CookiebotOnAccept', function (e) {
+            if (Cookiebot.consent.marketing) {
+              console.log("Marketing consent given, setting marketing cookies...");
+            } 
+          }, false);
+        `}
+      </Script>
     </header>
   );
 };
