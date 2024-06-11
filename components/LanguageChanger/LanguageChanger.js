@@ -52,12 +52,7 @@ export default function LanguageChanger({ display, dividerClass }) {
       >
         UA
       </button>
-        <Script type="text/javascript" strategy="afterInteractive">
-        {
-                window.addEventListener('CookiebotOnAccept', function (e) {
-                  Cookiebot.consent.marketing ? console.log('hhh') : null})
-        }
-       </Script>
+      <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0907a095-6a81-49cd-a930-1a3e80707e12" data-blockingmode="auto" type="text/javascript"></script>
     </div>
   );
 }

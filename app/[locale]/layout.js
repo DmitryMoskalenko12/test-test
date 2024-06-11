@@ -34,7 +34,6 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-        <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="0907a095-6a81-49cd-a930-1a3e80707e12" data-blockingmode="auto" type="text/javascript"></script>
           <title>{t('lang-title')}</title>
           <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
