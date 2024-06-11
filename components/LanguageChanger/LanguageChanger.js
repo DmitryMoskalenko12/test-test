@@ -58,9 +58,11 @@ export default function LanguageChanger({ display, dividerClass }) {
           window.addEventListener('CookiebotOnAccept', function (e) {
             if (Cookiebot.consent.marketing) {
               console.log("Marketing consent given, setting marketing cookies...");
-            } else {
+            } 
+
+            if(!Cookiebot.consent.marketing) {
              console.log("NO");
-             }
+            }
           }, false);
         `}
       </Script>
