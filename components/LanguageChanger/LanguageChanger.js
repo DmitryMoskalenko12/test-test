@@ -27,7 +27,7 @@ export default function LanguageChanger({ display, dividerClass }) {
     return () => {
       window.removeEventListener('CookiebotOnAccept', handleCookiebotOnAccept);
     };
-    
+
   }, []);
 
   const handleChange = (e) => {
@@ -66,6 +66,12 @@ export default function LanguageChanger({ display, dividerClass }) {
       >
         UA
       </button>
+        <script type="text/javascript">
+        {
+                window.addEventListener('CookiebotOnAccept', function (e) {
+                  Cookiebot.consent.marketing ? console.log('hhh') : null})
+        }
+       </script>
     </div>
   );
 }
