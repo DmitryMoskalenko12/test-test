@@ -14,7 +14,7 @@ const ProjectsSection = ({locale}) => {
   const [active, setActive] = useState(1);
   const [productsData, setProductsData] = useState([]);
   const [filter, setFilter] = useState('ALL');
-
+  const [test, setTest] = useState([]);
   const arrButtonsFilters = [
     {text: 'ALL', id: 1},
     {text: 'LANDING PAGE', id: 2},
@@ -47,6 +47,20 @@ const ProjectsSection = ({locale}) => {
   const filteredProjects = filter === 'ALL' ? productsData : projectsArr.filter((project) => project.filter === filter);
 
   useEffect(() => {
+    fetch('https://api.airtable.com/v0/appd4zO6rZafNjMQG/tblC0MEomtJsAZdtG',
+      {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer patFgyMGok90pxsG8.b6b972c512c48d9aef7bf1023e114fb984ac6e6ed981c30319782db7f22061ae'
+        }
+      }
+    )
+    .then(async result => {
+      const data = await result.json();
+      
+        setTest(data.records)
+    })
     setProductsData(projectsArr)
    },[])
 
@@ -110,7 +124,13 @@ const ProjectsSection = ({locale}) => {
                       },
                     )}
                  </div>
-               </div>   
+               </div>  
+               {
+                test.map(({fields}, i) => {
+                  console.log(fields.icon)
+                  return <img key={i} width={70} height={70} src={fields.icon} alt="test" />
+                 })
+               } 
            </section>
 }
 
