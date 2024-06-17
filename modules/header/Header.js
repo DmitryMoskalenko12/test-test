@@ -3,7 +3,8 @@ import LanguageChanger from '@/components/LanguageChanger/LanguageChanger';
 
 const Header = async () => {
   return (
-    <header className={classes.header}>
+    <></>
+/*     <header className={classes.header}>
       <svg
         className={classes.dots}
         width='46'
@@ -396,7 +397,7 @@ const Header = async () => {
           <LanguageChanger dividerClass={classes.divider} />
         </div>
       </div>
-    </header>
+    </header> */
   );
 };
 
