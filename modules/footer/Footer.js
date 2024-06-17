@@ -3,8 +3,7 @@ import classes from './footer.module.scss';
 import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
-  return <></>
-  /* const { t } = useTranslation('main');
+  const { t } = useTranslation('main');
 
   return (
     <footer className={classes.footer}>
@@ -501,7 +500,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  ); */
+  );
 };
 
 export default Footer;

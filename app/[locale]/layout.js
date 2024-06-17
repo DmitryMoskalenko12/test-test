@@ -6,7 +6,7 @@ import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
 
-/* export async function generateMetadata({params: {locale}}) {
+export async function generateMetadata({params: {locale}}) {
   const { t } = await initTranslations(locale, ['main', 'start']);
  
   return {
@@ -25,7 +25,7 @@ import ogPicture from '@/images/socialMedia.webp';
       icon: '/favicon.ico',
     },
   };
-} */
+}
 
 const MainLayout = async ({ params: { locale }, children }) => {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);

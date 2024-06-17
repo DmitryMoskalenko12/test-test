@@ -12,7 +12,6 @@ const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
           width={328}
           height={204}
           alt='You will see project'
-          loading="lazy"
         />
         <Image
           className={classes.desktopProject}
@@ -20,7 +19,6 @@ const ProjectCard = ({ filter, href, title, text, imgDesktop, imgMobile }) => {
           width={552}
           height={344}
           alt='You will see project'
-          loading='lazy'
         />
         <div className={classes.filter}>{filter}</div>
       </Link>

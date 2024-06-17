@@ -31,7 +31,7 @@ const DescriptionSection = async ({product, locale}) => {
                         <path d="M-245.236 245.977C-231.263 216.593 -196.806 191.821 -153.004 175.734C-147.976 173.896 -142.841 172.158 -137.61 170.564C-97.3161 158.164 -52.2012 152.506 -12.8145 155.916C5.53642 157.498 22.4004 160.836 39.0781 164.336C51.9257 167.038 64.7733 169.739 78.0848 171.808C114.204 177.395 154.974 176.384 191.121 157.754C209.121 148.454 223.1 136.447 239.765 126.306C275.295 104.648 322.827 103.848 363.888 116.008C371.742 118.345 379.223 121.008 386.467 124.009C408.331 133.024 427.68 144.467 448.4 154.548C453.156 156.873 458.005 159.115 463.027 161.239C487.209 171.501 514.559 178.991 543.84 178.823C579.265 178.63 617.18 164.257 626.556 142.917" stroke="#56E4CD" strokeMiterlimit="10"/>
                         </g>
                     </svg>
-                    <Image priority quality={100} className={classes.waveDesktop} src={wave.src} width={5120} height={2182} alt='Background wave'/>
+                    <Image loading='eager' priority quality={100} className={classes.waveDesktop} src={wave.src} width={5120} height={2182} alt='Background wave'/>
                 </div>
                 <div className='container'>
                    <div className={classes.titleBlock}>
@@ -78,8 +78,8 @@ const DescriptionSection = async ({product, locale}) => {
                        </div>
                    </div>
                    <div className={classes.imgBlock}>
-                           <Image className={classes.mobileImage} src={product.imgMobile} width={328} height={332} alt='Vinitruck'/>
-                           <Image className={classes.desktopImage} src={product.imgDesktop} width={1128} height={612} alt='Vinitruck'/>
+                           <Image loading='eager' priority className={classes.mobileImage} src={product.imgMobile} width={328} height={332} alt='Vinitruck'/>
+                           <Image loading='eager' priority className={classes.desktopImage} src={product.imgDesktop} width={1128} height={612} alt='Vinitruck'/>
                   </div>
                 </div>
            </section>

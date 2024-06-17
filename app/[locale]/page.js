@@ -16,12 +16,12 @@ export default async function Home({ params: { locale, id } }) {
       locale={locale}
       namespaces={['main', 'start']}
     >
-  {/*     <Idea locale={locale} />
+      <Idea locale={locale} />
       <Services />
       <Projects locale={locale}/>
       <Stages locale={locale} />
       <Engagemet locale={locale} />
-      <Contact locale={locale} /> */}
+      <Contact locale={locale} />
     </TranslationsProvider>
   );
 }

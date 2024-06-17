@@ -11,7 +11,7 @@ import Image from 'next/image';
 import wave from '../../../images/ProductPage/waveDesktop.webp';
 import ProjectsLinesSvg from '@/ui/ProjectsPage/ProjectsLinesSvg';
 import { useTranslation } from 'react-i18next';
-/* import NotFound from '@/app/[locale]/[...notFound]/page'; */
+import NotFound from '@/app/[locale]/[...notFound]/page';
 
 const ProjectsSection = ({locale}) => {
   const [active, setActive] = useState(1);
@@ -47,12 +47,12 @@ const ProjectsSection = ({locale}) => {
     },
   ];
 
- /*  const filteredProjects = filter === 'ALL' ? projectsArr : projectsArr.filter((project) => project.filter === filter); */
+  const filteredProjects = filter === 'ALL' ? projectsArr : projectsArr.filter((project) => project.filter === filter);
   
-/*   if (!filteredProjects) {
+  if (!filteredProjects) {
     return <NotFound params = {locale}/>
   }
- */
+
     return <section className={classes.projects}>
                <div className={classes.waveWrapper}>
                   <ProjectsLinesSvg clazz={classes.waveMobile}/>
@@ -75,7 +75,7 @@ const ProjectsSection = ({locale}) => {
                 </div>
 
                 <div className={classes.projectsWrapper}>
-                   {/*  {filteredProjects?.map(
+                    {filteredProjects.map(
                       ({ filter, href, title, text, imgDesktop, imgMobile, id }) => {
                         return (
                           <ProjectCard
@@ -89,7 +89,7 @@ const ProjectsSection = ({locale}) => {
                           />
                         );
                       },
-                    )} */}
+                    )}
                  </div>
                </div>   
            </section>

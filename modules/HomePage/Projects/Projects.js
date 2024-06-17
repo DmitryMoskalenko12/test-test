@@ -40,7 +40,7 @@ const Projects = async ({ locale }) => {
         </h2>
         <p className={classes.text}>{t('discover')}</p>
         <div className={classes.projectsWrapper}>
-  {/*         {projectsArr.map(
+          {projectsArr.map(
             ({ filter, href, title, text, imgDesktop, imgMobile, id }) => {
               return (
                 <ProjectCard
@@ -54,7 +54,7 @@ const Projects = async ({ locale }) => {
                 />
               );
             },
-          )} */}
+          )}
         </div>
         <LinkUi clazz={classes.projectLink} href={'/projects/'} text={t('cases')} />
       </div>

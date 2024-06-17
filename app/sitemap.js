@@ -20,7 +20,7 @@ export default function sitemap() {
         },
       },
     },
-    /* {
+    {
       url: 'https://uviten.com/projects',
       lastModified: new Date(),
       alternates: {
@@ -69,6 +69,6 @@ export default function sitemap() {
           ua: 'https://uviten.com/ua/vinitruck',
         },
       },
-    }, */
+    },
   ];
 }
