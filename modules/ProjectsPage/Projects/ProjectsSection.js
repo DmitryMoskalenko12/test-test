@@ -75,7 +75,7 @@ const ProjectsSection = ({locale}) => {
                 </div>
 
                 <div className={classes.projectsWrapper}>
-                    {filteredProjects?.map(
+                   {/*  {filteredProjects?.map(
                       ({ filter, href, title, text, imgDesktop, imgMobile, id }) => {
                         return (
                           <ProjectCard
@@ -89,7 +89,7 @@ const ProjectsSection = ({locale}) => {
                           />
                         );
                       },
-                    )}
+                    )} */}
                  </div>
                </div>   
            </section>

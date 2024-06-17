@@ -92,8 +92,8 @@ export const productsArr = (t) => [
      moreProject: [
         {
            filter: 'LANDING PAGE',
-           imgMobile: project2,
-           imgDesktop: project2Desktop,
+           imgMobile: project2.src,
+           imgDesktop: project2Desktop.src,
            href: `/projects/${'dentacare'}/`,
            title: 'DentaCare',
            text: t('crafting'),
@@ -155,8 +155,8 @@ export const productsArr = (t) => [
         moreProject: [
          {
             filter: 'LANDING PAGE',
-            imgMobile: project1,
-            imgDesktop: project1Desktop,
+            imgMobile: project1.src,
+            imgDesktop: project1Desktop.src,
             href: `/projects/${'vinitruck'}/`,
             title: 'ViniTruck',
             text: t('redesign'),

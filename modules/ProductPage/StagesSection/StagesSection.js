@@ -32,7 +32,7 @@ const StagesSection = async ({product, locale}) => {
                               <div className={classes.svgMobile}>
                                    <SvgProjectCardBgMobile/>
                               </div>
-                              {
+                             {/*  {
                                    product.stages.map(({title, titleText, imgIcon, card, text, id}) => {
                                         return  <article key={id} className={`${classes.card} ${classes[card]}`}>
                                                   <div className={classes.iconWrapper}>
@@ -46,7 +46,7 @@ const StagesSection = async ({product, locale}) => {
                                                   </div>
                                              </article>
                                    })
-                              }
+                              } */}
                           </div>
 
                           <div className={classes.imgWrapper}>
