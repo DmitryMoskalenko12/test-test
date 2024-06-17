@@ -19,8 +19,8 @@ const Projects = async ({ params: { locale, id } }) => {
             locale={locale}
             namespaces={['main', 'start']}
             >
-             <ProjectsSection locale = {locale}/>
-             <Contact locale = {locale}/>
+            {/*  <ProjectsSection locale = {locale}/>
+             <Contact locale = {locale}/> */}
           </TranslationsProvider>
 }
 
