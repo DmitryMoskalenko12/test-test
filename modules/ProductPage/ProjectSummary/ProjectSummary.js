@@ -10,7 +10,7 @@ const ProjectSummary = async ({locale, product}) => {
               <div className='container'>
                   <h2 className={classes.title}>{t('summary')}:</h2>
                   <div className={classes.wrapper}>
-                         {
+                       {/*   {
                             product.summary.map(({title, text, summaryIcon, id}) => {
                                 return  <article key={id} className={classes.card}>
                                             <div className={classes.iconWrapper}>
@@ -22,7 +22,7 @@ const ProjectSummary = async ({locale, product}) => {
                                             </p>
                                        </article>
                             })
-                         }
+                         } */}
                   </div>
                   <AnchorUI
                     href={'#contact'}
