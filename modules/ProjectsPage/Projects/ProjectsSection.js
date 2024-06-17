@@ -11,7 +11,7 @@ import Image from 'next/image';
 import wave from '../../../images/ProductPage/waveDesktop.webp';
 import ProjectsLinesSvg from '@/ui/ProjectsPage/ProjectsLinesSvg';
 import { useTranslation } from 'react-i18next';
-import NotFound from '@/app/[locale]/[...notFound]/page';
+/* import NotFound from '@/app/[locale]/[...notFound]/page'; */
 
 const ProjectsSection = ({locale}) => {
   const [active, setActive] = useState(1);
