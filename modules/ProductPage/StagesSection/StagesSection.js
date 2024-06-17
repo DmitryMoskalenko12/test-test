@@ -26,9 +26,7 @@ const StagesSection = async ({product, locale}) => {
                      <div className={classes.stagesWrapper}>
 
                           <div className={classes.cardsWrapper}>
-                              <div className={classes.svgDesktop}>
-                                   <SvgProjectCardBg/>
-                              </div>
+                            
                               <div className={classes.svgMobile}>
                                    <SvgProjectCardBgMobile/>
                               </div>
