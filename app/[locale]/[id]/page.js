@@ -7,7 +7,7 @@ import MoreProjects from "@/modules/ProductPage/MoreProjects/MoreProjects";
 import Contact from "@/modules/HomePage/Contact/Contact";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/app/TranslationsProvider";
-import NotFound from "../[...notFound]/page";
+/* import NotFound from "../[...notFound]/page"; */
 
 /* export async function generateMetadata({ params: {locale, id} }) {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
@@ -18,13 +18,13 @@ import NotFound from "../[...notFound]/page";
   }
 } */
 
-const ProductPage = async ({ params: { locale, id } }) => {
+/* const ProductPage = async ({ params: { locale, id } }) => {
     const { t, resources } = await initTranslations(locale, ['main', 'start']);
     const product = productsArr(t).find(item => String(item.id) === id);
 
-/*     if (!product) {
+    if (!product) {
       return <NotFound params={locale}/>
-    } */
+    }
 
     return <TranslationsProvider
             resources={resources}
@@ -40,4 +40,4 @@ const ProductPage = async ({ params: { locale, id } }) => {
            </TranslationsProvider>
 }
 
-export default ProductPage;
+export default ProductPage; */

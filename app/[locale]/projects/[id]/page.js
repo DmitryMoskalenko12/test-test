@@ -7,7 +7,7 @@ import Result from "@/modules/ProductPage/Result/Result";
 import ProjectSummary from "@/modules/ProductPage/ProjectSummary/ProjectSummary";
 import MoreProjects from "@/modules/ProductPage/MoreProjects/MoreProjects";
 import Contact from "@/modules/HomePage/Contact/Contact";
-import NotFound from "../../[...notFound]/page";
+/* import NotFound from "../../[...notFound]/page"; */
 
 /* export async function generateMetadata({ params: {locale, id} }) {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
