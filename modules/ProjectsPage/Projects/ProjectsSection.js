@@ -47,7 +47,7 @@ const ProjectsSection = ({locale}) => {
     },
   ];
 
-  const filteredProjects = filter === 'ALL' ? projectsArr : projectsArr.filter((project) => project.filter === filter);
+ /*  const filteredProjects = filter === 'ALL' ? projectsArr : projectsArr.filter((project) => project.filter === filter); */
   
 /*   if (!filteredProjects) {
     return <NotFound params = {locale}/>

@@ -43,14 +43,14 @@ const Header = () => {
     }
   }, [asideModalActive]);
 
-  const cancelReloadServices = () => {
+/*   const cancelReloadServices = () => {
     if (scrollServices) {
       route.push('/');
       setTimeout(() => {
         refServices.current.click();
       }, 1300);
     }
-  };
+  }; */
 
   return (
     <header className={`${classes.header} header`}>
@@ -75,7 +75,7 @@ const Header = () => {
                     onClick={(e) => {
                       setActive(false);
                       setScrollServices((prev) => !prev);
-                      cancelReloadServices();
+                  /*     cancelReloadServices(); */
                     }}
                     className={classes.link}
                     href='#services'

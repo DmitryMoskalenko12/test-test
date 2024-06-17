@@ -26,7 +26,7 @@ import project1Desktop from '../../images/HomePage/project1Desktop.webp';
 import project2 from '../../images/ProductPage/project2.webp';
 import project2Desktop from '../../images/ProductPage/project2Desktop.webp'
 
-export const productsArr = (t) => [
+/* export const productsArr = (t) => [
     {
      title:"ViniTruck",
      description: t('refreshing'),
@@ -165,4 +165,4 @@ export const productsArr = (t) => [
         ],
         id: 'dentacare'
     }
-]
+] */
