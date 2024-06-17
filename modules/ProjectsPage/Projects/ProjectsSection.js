@@ -49,10 +49,10 @@ const ProjectsSection = ({locale}) => {
 
   const filteredProjects = filter === 'ALL' ? projectsArr : projectsArr.filter((project) => project.filter === filter);
   
-  if (!filteredProjects) {
+/*   if (!filteredProjects) {
     return <NotFound params = {locale}/>
   }
-
+ */
     return <section className={classes.projects}>
                <div className={classes.waveWrapper}>
                   <ProjectsLinesSvg clazz={classes.waveMobile}/>

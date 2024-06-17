@@ -22,9 +22,9 @@ const ProductPage = async ({ params: { locale, id } }) => {
     const { t, resources } = await initTranslations(locale, ['main', 'start']);
     const product = productsArr(t).find(item => String(item.id) === id);
 
-    if (!product) {
+/*     if (!product) {
       return <NotFound params={locale}/>
-    }
+    } */
 
     return <TranslationsProvider
             resources={resources}
