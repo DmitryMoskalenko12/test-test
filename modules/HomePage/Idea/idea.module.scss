@@ -15,17 +15,18 @@
     display: none;
 }
 
-.imgWrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -75px;
-    z-index: -999;
-}
-
 .lines {
     width: 100%;
+    height: 963px;
+    position: absolute;
+    left: 0;
+    bottom: -240px;
+    z-index: -999;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 .title {
@@ -97,9 +98,6 @@
         font-size: variables.$font-size74;
     }
 
-    .imgWrapper {
-        bottom: -75px;
-    }
 }
 
 @media(min-width: 768px) {
@@ -121,17 +119,23 @@
         margin-top: 0;
     }
 
-    .imgWrapper {
-        bottom: 200px;
-    }
-
     .lines {
         display: none;
     }
 
     .linesDesktop {
+        position: absolute;
+        bottom: -400px;
+        height: 614px;
+        left: 0;
         width: 100%;
         display: initial;
+        z-index: -5;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     .ideaButton {
@@ -159,10 +163,6 @@
 
     .text {
         font-size: variables.$font-size32;
-    }
-
-    .imgWrapper {
-        bottom: 80px;
     }
 
     .ideaButton {
@@ -256,17 +256,26 @@
         font-size: variables.$font-size32;
     }
 
-    .imgWrapper {
-        width: 1263px;
-        left: 50%;
-        height: 100%;
-        bottom: -20px;
-        transform: translateX(-50%);
-    }
-
     .ideaButton {
         padding: 0;
         gap: 12px;
         font-size: variables.$font-size16;
     }
+
+    .linesDesktop {
+        position: absolute;
+        bottom: -263px;
+        height: 800px;
+    }
+}
+
+@media(min-width: 1921px) {
+    .linesDesktop {
+        width: 1280px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        bottom: -263px;
+        height: 800px;
+    } 
 }

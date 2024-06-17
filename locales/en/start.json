@@ -106,5 +106,6 @@
     "testing":"Software testing & QA ",
     "testingText":"Our software testing services are designed to ensure that your product meets the highest standards of quality and performance. From automated testing to manual testing and everything in between, we tailor our approach to take your software to the next level. Let us help you build confidence in your product and drive success for your business.",
     "infrastructure":"IT Infrastructure",
-    "infrastructureText":"Take your IT infrastructure to the next level with DevOps solutions designed for success. From designing scalable architectures to implementing CI/CD pipelines, our experienced team ensures seamless integration and delivery of your software products. With our DevOps expertise, you can accelerate innovation, reduce costs, and respond quickly to changing business needs. "
+    "infrastructureText":"Take your IT infrastructure to the next level with DevOps solutions designed for success. From designing scalable architectures to implementing CI/CD pipelines, our experienced team ensures seamless integration and delivery of your software products. With our DevOps expertise, you can accelerate innovation, reduce costs, and respond quickly to changing business needs.",
+    "dentist-clinic": "Website design for dentist clinic"
 }

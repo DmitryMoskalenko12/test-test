@@ -410,11 +410,11 @@ const Policy = () => {
                 <span style={{ color: 'rgb(0, 58, 250)' }}>
                   <span className='question'>
                     <a
-                      href='http://www.uivten.com'
+                      href='http://www.uviten.com'
                       target='_blank'
                       data-custom-class='link'
                     >
-                      http://www.uivten.com
+                      http://www.uviten.com
                     </a>
                   </span>
                 </span>
@@ -12497,11 +12497,11 @@ const Policy = () => {
                                                                                         >
                                                                                           <span className='question'>
                                                                                             <a
-                                                                                              href='http://www.uivten.com'
+                                                                                              href='http://www.uviten.com'
                                                                                               target='_blank'
                                                                                               data-custom-class='link'
                                                                                             >
-                                                                                              http://www.uivten.com
+                                                                                              http://www.uviten.com
                                                                                             </a>
                                                                                           </span>
                                                                                         </span>
@@ -13062,11 +13062,11 @@ const Policy = () => {
                                                                                       }}
                                                                                     >
                                                                                       <a
-                                                                                        href='http://www.uivten.com'
+                                                                                        href='http://www.uviten.com'
                                                                                         target='_blank'
                                                                                         data-custom-class='link'
                                                                                       >
-                                                                                        http://www.uivten.com
+                                                                                        http://www.uviten.com
                                                                                       </a>
                                                                                     </span>
                                                                                   </span>
@@ -13574,11 +13574,11 @@ const Policy = () => {
                                                                                   >
                                                                                     <span className='question'>
                                                                                       <a
-                                                                                        href='http://www.uivten.com'
+                                                                                        href='http://www.uviten.com'
                                                                                         target='_blank'
                                                                                         data-custom-class='link'
                                                                                       >
-                                                                                        http://www.uivten.com
+                                                                                        http://www.uviten.com
                                                                                       </a>
                                                                                     </span>
                                                                                   </span>
@@ -14043,11 +14043,11 @@ const Policy = () => {
                                                                                     >
                                                                                       <span className='question'>
                                                                                         <a
-                                                                                          href='http://www.uivten.com'
+                                                                                          href='http://www.uviten.com'
                                                                                           target='_blank'
                                                                                           data-custom-class='link'
                                                                                         >
-                                                                                          http://www.uivten.com
+                                                                                          http://www.uviten.com
                                                                                         </a>
                                                                                       </span>
                                                                                     </span>
@@ -14775,11 +14775,11 @@ const Policy = () => {
                                                                                       >
                                                                                         <span className='question'>
                                                                                           <a
-                                                                                            href='http://www.uivten.com'
+                                                                                            href='http://www.uviten.com'
                                                                                             target='_blank'
                                                                                             data-custom-class='link'
                                                                                           >
-                                                                                            http://www.uivten.com
+                                                                                            http://www.uviten.com
                                                                                           </a>
                                                                                         </span>
                                                                                       </span>
@@ -16212,11 +16212,11 @@ const Policy = () => {
                                                                                         >
                                                                                           <span className='question'>
                                                                                             <a
-                                                                                              href='http://www.uivten.com'
+                                                                                              href='http://www.uviten.com'
                                                                                               target='_blank'
                                                                                               data-custom-class='link'
                                                                                             >
-                                                                                              http://www.uivten.com
+                                                                                              http://www.uviten.com
                                                                                             </a>
                                                                                           </span>
                                                                                         </span>

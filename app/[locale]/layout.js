@@ -5,22 +5,27 @@ import Header from '@/modules/HomePage/Header/Header';
 import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
-import Script from 'next/script';
 
-export const metadata = {
-  authors: [{ url: 'http://uviten.com' }],
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata({params: {locale}}) {
+  const { t } = await initTranslations(locale, ['main', 'start']);
+ 
+  return {
+    title: t('lang-title'),
+    description: t('lang-description'),
+    authors: [{ url: 'http://uviten.com/' }],
+    robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+      },
     },
-  },
-  icons: {
-    icon: '/favicon.ico',
-  },
-};
+    icons: {
+      icon: '/favicon.ico',
+    },
+  };
+}
 
 const MainLayout = async ({ params: { locale }, children }) => {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
@@ -34,8 +39,6 @@ const MainLayout = async ({ params: { locale }, children }) => {
     >
       <html lang={t('language')}>
         <head>
-          <title>{t('lang-title')}</title>
-          <meta name='description' content={t('lang-description')} />
           <meta property='og:image' content={ogPicture.src} />
           <meta property='og:title' content={t('ogTitle')} />
           <meta property='og:description' content={t('ogDescr')} />
@@ -54,6 +57,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
           <Header />
           <main style={{ flexGrow: 1 }}>{children}</main>
           <Footer locale={locale} />
+          {analyticsId ? <GoogleAnalytics gaId={analyticsId} /> : null}
         </body>
       </html>
     </TranslationsProvider>

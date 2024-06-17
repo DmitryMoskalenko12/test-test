@@ -69,9 +69,6 @@
 .imgWrapper {
     margin: 0 auto;
     margin-top: 32px;
-    width: 328px;
-    height: 273px;
-
     img {
         width: 100%;
         height: 100%;
@@ -84,9 +81,8 @@
 }
 
 .svgMobile {
-    height: 1055px;
     position: absolute;
-    left: -26px;
+    left: 8px;
     top: -113px;
     z-index: -5;
 
@@ -135,6 +131,12 @@
         height: 860px;
         left: -40px;
         top: -120px;
+    }
+
+    .imgWrapper {
+        width: 544px;
+        margin: 0 auto;
+        margin-top: 32px;
     }
 }
 
@@ -187,12 +189,34 @@
         height: 600px;
         flex-shrink: 0;
     }
+
+    .taskBlock {
+        align-items: initial;
+      }
+  
+    .taskText, .solutionText  {
+        width: 500px;
+    }
+
+    .taskSubblock, .solutionSubblock {
+        gap: 0;
+        justify-content: space-between;
+    }
 }
 
 @media(min-width: 992px) {
     .svgMobile {
+        height: initial;
         left: -25px;
         top: -160px;
+    }
+    
+    .taskBlock {
+      align-items: initial;
+    }
+
+    .taskText, .solutionText  {
+        width: 785px;
     }
 }
 
@@ -267,6 +291,6 @@
 
   .imgWrapper {
     width: 406px;
-    height: 895px;
+    height: initial;
 }
 }

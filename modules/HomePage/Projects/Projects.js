@@ -1,10 +1,10 @@
 import classes from './projects.module.scss';
 import LinkUi from '@/ui/HomePage/Links/LinkUi';
 import ProjectCard from '@/components/HomePage/ProjectCard/ProjectCard';
-import project1 from '@/images/HomePage/project1.png';
-import project1Desktop from '@/images/HomePage/project1Desktop.png';
-import project2 from '@/images/HomePage/project2.png';
-import project2Desktop from '@/images/HomePage/project2Desktop.png';
+import project1 from '@/images/HomePage/project1.webp';
+import project1Desktop from '@/images/HomePage/project1Desktop.webp';
+import project2 from '@/images/HomePage/project2.webp';
+import project2Desktop from '@/images/HomePage/project2Desktop.webp';
 import initTranslations from '@/app/i18n';
 
 const Projects = async ({ locale }) => {
@@ -15,19 +15,19 @@ const Projects = async ({ locale }) => {
       filter: 'LANDING PAGE',
       imgMobile: project1,
       imgDesktop: project1Desktop,
-      href: `/${locale}/${1}/`,
-      title: 'Vini Truck',
+      href: `/${locale}/${'vinitruck'}/`,
+      title: 'ViniTruck',
       text: t('redesign'),
-      id: 1,
+      id: 'vinitruck',
     },
     {
       filter: 'LANDING PAGE',
       imgMobile: project2,
       imgDesktop: project2Desktop,
-      href: '/stub/',
+      href: `/${locale}/${'dentacare'}/`,
       title: 'DentaCare',
       text: t('crafting'),
-      id: 2,
+      id: 'dentacare',
     },
   ];
 

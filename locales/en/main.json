@@ -32,8 +32,10 @@
     "timeline": "Timeline",
     "team": "Team",
     "task": "Task",
+    "crafting": "Crafting a user-friendly and stylish landing page for a dentist clinic with intuitive functionality to provide visitors with a seamless experience.",
     "taskSection": "Our task was to redesign the website with a sleek and visually captivating style, incorporating the latest trends and aesthetics in web design, to attract more clients and remain competitive in the market.",
-    "solution": "Solution",
+    "solution": "Solution:",
+    "redesign": "Redesign the website with a modern and visually appealing layout, incorporating contemporary design trends and aesthetics.",
     "solutionText": "Refreshing typography, color palettes, and overall visual components to ensure they resonate with present-day standards. Incorporating interactive elements and multimedia content to engage users effectively. Additionally, crafting a cohesive branding strategy to strengthen the website's identity and messaging.",
     "project-stages": "Project stages",
     "briefing": "Briefing and Analysis",
@@ -53,7 +55,15 @@
     "reliability": "Performance and Reliability",
     "reliability-text": "Rigorous development and quality assurance processes have ensured that the website performs efficiently across all devices and browsers, providing a seamless and reliable user experience.",
     "increased-attraction": "Increased Client Attraction",
-    "increased-attraction-text": "By integrating the latest design trends and ensuring a cohesive brand look, the website now stands out in the market, attracting more clients and boosting the company’s competitive edge."
-   
-
+    "increased-attraction-text": "By integrating the latest design trends and ensuring a cohesive brand look, the website now stands out in the market, attracting more clients and boosting the company’s competitive edge.",
+    "dentist-clinic": "Website design for dentist clinic",
+    "denta-task": "Our task was to create a modern landing page for a dental clinic to attract more users, drive business growth, increase brand recognition, and engage clients through promotions.",
+    "denta-solution": "We designed a sleek, user-friendly landing page with compelling content highlighting the clinic's services and expertise. Promotional offers were integrated to attract new clients. The page was optimized for SEO and designed to be fully responsive across all devices. Clear calls to action were strategically placed to guide users towards booking appointments or contacting the clinic.",
+    "attracting": "Attracting more clients",
+    "attracting-text": "The modern and visually appealing design effectively captures the attention of potential clients, encouraging them to explore the clinic’s services.",
+    "increased-brand": "Increased brand identity",
+    "increased-text": "A cohesive and professional design enhances the clinic’s brand identity, making it more recognizable and trustworthy in the market.",
+    "convenient-booking": "Convenient online booking",
+    "convenient-text": "The inclusion of an easy-to-use online booking system allows clients to schedule appointments at their convenience, further enhancing their experience and encouraging more frequent visits.",
+    "projects-page": "Projects Page"
 }

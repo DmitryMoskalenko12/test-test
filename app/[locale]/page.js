@@ -7,7 +7,7 @@ import Projects from '@/modules/HomePage/Projects/Projects';
 import Contact from '@/modules/HomePage/Contact/Contact';
 import Engagemet from '@/modules/HomePage/Engagemet/Engagemet';
 
-export default async function Home({ params: { locale } }) {
+export default async function Home({ params: { locale, id } }) {
   const { t, resources } = await initTranslations(locale, ['main', 'start']);
 
   return (

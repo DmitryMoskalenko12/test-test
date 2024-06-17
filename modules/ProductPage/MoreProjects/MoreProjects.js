@@ -1,24 +1,10 @@
 import classes from './more-projects.module.scss'
-import project2Desktop from '../../../images/ProductPage/project2Desktop.png';
-import project2 from '../../../images/ProductPage/project2.png';
 import ProjectCard from '@/components/HomePage/ProjectCard/ProjectCard';
 import initTranslations from '@/app/i18n';
 
-const MoreProjects = async ({locale}) => {
+const MoreProjects = async ({locale, product}) => {
   const { t, resources } = await initTranslations(locale, ['start']);
 
-    const projectsArr = [
-        {
-          filter: 'LANDING PAGE',
-          imgMobile: project2,
-          imgDesktop: project2Desktop,
-          href: '/stub/',
-          title: 'DentaCare',
-          text: t('crafting'),
-          id: 1,
-        },
-      ];
-    
       return (
         <section className={classes.projects}>
           <div className='container'>
@@ -28,7 +14,7 @@ const MoreProjects = async ({locale}) => {
             </h2>
             <p className={classes.text}>{t('discover')}</p>
             <div className={classes.projectsWrapper}>
-              {projectsArr.map(
+              {product.moreProject.map(
                 ({ filter, href, title, text, imgDesktop, imgMobile, id }) => {
                   return (
                     <ProjectCard

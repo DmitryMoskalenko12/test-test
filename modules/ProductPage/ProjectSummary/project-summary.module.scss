@@ -71,13 +71,13 @@
 
     .wrapper {
         flex-direction: row;
-        align-items: flex-start
+        align-items: flex-start;
+        gap: 26px;
     }
 
     .card {
-        width: initial;
-        @include mixins.flex(flex, center, center);
         justify-content: space-between;
+        width: 223px;
     }
 
 
@@ -142,6 +142,10 @@
               transform: translateX(0);
           }
       }
+
+      .card {
+        width: 300px;
+    }
 }
 
 @media(min-width: 1280px) {
@@ -154,12 +158,13 @@
     }
 
     .card {
-        width: 360px;
+        width: 328px;
     }
 
     .wrapper {
         gap: 24px;
         margin-top: 72px;
+        justify-content: space-between;
     }
 
     .subTitle {
