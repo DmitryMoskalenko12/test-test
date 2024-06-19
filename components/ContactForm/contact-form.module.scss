@@ -51,22 +51,22 @@
     border-left: none;
     border-right: none;
     outline: none;
-    font-family: "Mulish";
+    font-weight: 400;
+    font-family: inherit;
     font-size: variables.$font-size16;
     &::placeholder {
         position: relative;
         color: variables.$primary-dark-blue;
-        font-family: 'Mulish';
         font-size: variables.$font-size16;
-        font-weight: variables.$font-weight400;
+        font-weight: 400;
         text-align: left;
-        font-family: "Mulish";
+        font-family: inherit;
     }
     &:focus {
         color: variables.$primary-dark-blue;
-        font-family: "Mulish";
+        font-family: inherit;
         font-size: variables.$font-size16;
-        font-weight: variables.$font-weight400;
+        font-weight: 400;
     }
 }
 

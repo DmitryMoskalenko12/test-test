@@ -6,6 +6,17 @@ import { useTranslation } from 'react-i18next';
 import i18nConfig from '@/i18nConfig';
 import cn from 'classnames';
 import { useEffect, useState } from 'react';
+import localFont from 'next/font/local';
+
+const mulish = localFont({
+  src: [
+    {
+      path: '../../fonts/Mulish-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+})
 
 export default function LanguageChanger({ display, dividerClass }) {
   const [activeLang, setActiveLang] = useState('');
@@ -46,14 +57,14 @@ export default function LanguageChanger({ display, dividerClass }) {
     <div className={display}>
       <button
         onClick={handleChange}
-        className={cn(classes.en, { [classes.active]: activeLang === 'en' })}
+        className={cn(classes.en, mulish.className, { [classes.active]: activeLang === 'en' })}
       >
         EN
       </button>
       <div className={dividerClass}></div>
       <button
         onClick={handleChange}
-        className={cn(classes.uk, { [classes.active]: activeLang === 'ua' })}
+        className={cn(classes.uk,  mulish.className, { [classes.active]: activeLang === 'ua' })}
       >
         UA
       </button>

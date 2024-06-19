@@ -68,7 +68,7 @@ const ContactForm = () => {
               label={'name-placeholder'}
             />
             <ContactBlockInput
-              classes={classes}
+              classes={`${classes}`}
               htmlFor={'text'}
               error={errors.text}
               touched={touched.text}

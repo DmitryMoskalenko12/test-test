@@ -5,7 +5,7 @@
 
 .title {
     color: variables.$primary-dark-blue;
-    font-family: 'Mulish';
+    font-family: inherit;
     font-size: variables.$font-size30;
     font-weight: variables.$font-weight600;
     text-align: left;
@@ -39,7 +39,7 @@
 
 .text {
     color: variables.$primary-dark-blue;
-    font-family: 'Mulish';
+    font-family: inherit;
     font-size: variables.$font-size18;
     font-weight: variables.$font-weight400;
     text-align: left;

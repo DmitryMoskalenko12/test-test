@@ -1,7 +1,7 @@
 @use '/style/variables.scss';
 @import '../../style/reset.scss';
 
-@font-face {
+/* @font-face {
   font-family: 'Mulish';
   src: url('../../fonts/Mulish-Light.ttf'),
   url('../../fonts/Mulish-Light.ttf') format('truetype');
@@ -39,7 +39,7 @@
   url('../../fonts/Mulish-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -57,7 +57,7 @@ body {
   background: #FDFFFE;
   margin: 0;
   padding: 0;
-  font-family: 'Mulish', sans-serif;
+/*   font-family: 'Mulish', sans-serif; */
 }
 
 ul {

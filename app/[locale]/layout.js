@@ -5,6 +5,37 @@ import Header from '@/modules/HomePage/Header/Header';
 import Footer from '@/modules/HomePage/Footer/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import ogPicture from '@/images/socialMedia.webp';
+import localFont from 'next/font/local';
+
+const mulish = localFont({
+  src: [
+    {
+      path: '../../fonts/Mulish-Light.ttf',
+      weight: '300',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/Mulish-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/Mulish-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/Mulish-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../fonts/Mulish-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
 
 export async function generateMetadata({params: {locale}}) {
   const { t } = await initTranslations(locale, ['main', 'start']);
@@ -14,11 +45,11 @@ export async function generateMetadata({params: {locale}}) {
     description: t('lang-description'),
     authors: [{ url: 'http://uviten.com/' }],
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       googleBot: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
       },
     },
     icons: {
@@ -37,7 +68,7 @@ const MainLayout = async ({ params: { locale }, children }) => {
       resources={resources}
       namespaces={['main', 'start']}
     >
-      <html lang={t('language')}>
+      <html lang={t('language')} className={mulish.className}>
         <head>
           <meta property='og:image' content={ogPicture.src} />
           <meta property='og:title' content={t('ogTitle')} />

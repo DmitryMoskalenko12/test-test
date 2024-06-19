@@ -54,6 +54,7 @@ const Header = () => {
 
   return (
     <header className={`${classes.header} header`}>
+        <h1>Test</h1>
       <div className='container'>
         <div
           style={{ height: active ? '40px' : 'initial' }}

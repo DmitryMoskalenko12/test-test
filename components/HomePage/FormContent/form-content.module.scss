@@ -83,7 +83,7 @@
     border-radius: 32px;
     border: none;
     background: variables.$input-bg;
-    font-family: "Mulish";
+    font-family: inherit;
     outline: none;
     font-size: variables.$font-size16;
 }
@@ -92,7 +92,7 @@
     color: variables.$primary-color;
     font-size: variables.$font-size16;
     font-weight: variables.$font-weight400;
-    font-family: "Mulish";
+    font-family: inherit;
 }
 
 .input:focus {
@@ -100,7 +100,7 @@
     color: variables.$primary-color;
     font-size: variables.$font-size16;
     font-weight: variables.$font-weight400;
-    font-family: "Mulish";
+    font-family: inherit;
 }
 
   .check {
@@ -188,7 +188,7 @@
     font-weight: variables.$font-weight400;
     cursor: pointer;
     z-index: 5;
-    font-family: "Mulish";
+    font-family: inherit;
     margin: 0 auto;
 }
 

@@ -1,6 +1,17 @@
 'use client';
 import { useEffect } from 'react';
 import classes from './collapse-item.module.scss';
+import localFont from 'next/font/local';
+
+const mulish = localFont({
+  src: [
+    {
+      path: '../../../fonts/Mulish-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+})
 
 const CollapseItem = ({
   title,
@@ -26,8 +37,8 @@ const CollapseItem = ({
         }}
         className={
           toggle && activeTitle === title
-            ? classes.titleCollapseActive
-            : classes.titleCollapse
+            ? `${classes.titleCollapseActive} ${mulish.className}`
+            : `${classes.titleCollapse} ${mulish.className}`
         }
       >
         {title}
