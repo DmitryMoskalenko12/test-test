@@ -5,7 +5,7 @@ const ContactThanksMessage = ({ setSuccess }) => {
   const { t } = useTranslation('start');
 
   return (
-    <div className={classes.thanks}>
+    <div data-testid="thanks" className={classes.thanks}>
       <button onClick={() => setSuccess(null)} className={classes.close}>
         <svg
           xmlns='http://www.w3.org/2000/svg'

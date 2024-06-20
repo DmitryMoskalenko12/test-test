@@ -57,6 +57,7 @@ const Contact = () => {
               error={errors.name}
               touched={touched.name}
               name={'name'}
+              dataTestid="name"
               placeholder={t('name')}
             />
             <ContactInputBlock
@@ -65,6 +66,7 @@ const Contact = () => {
               error={errors.text}
               touched={touched.text}
               name={'text'}
+              dataTestid="email"
               placeholder={t('email')}
             />
             <Field
@@ -72,11 +74,13 @@ const Contact = () => {
               name='website'
               type='text'
               placeholder={t('website')}
+              data-testid="website"
             />
             <Field
               className={classes.input}
               name='about'
               type='text'
+              data-testid="about"
               placeholder={t('tell-us')}
             />
             <div className={classes.checkWrapper}>
@@ -84,6 +88,7 @@ const Contact = () => {
                 id='policy'
                 className={classes.check}
                 name='policy'
+                data-testid="policy"
                 type='checkbox'
               />
               <label htmlFor='policy' className={classes.label}>
@@ -93,7 +98,7 @@ const Contact = () => {
                 </Link>{' '}
               </label>
             </div>
-            <button type='submit' className={classes.button}>
+            <button data-testid="send" type='submit' className={classes.button}>
               {t('send')}
               <svg
                 xmlns='http://www.w3.org/2000/svg'

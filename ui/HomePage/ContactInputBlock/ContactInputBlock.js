@@ -8,6 +8,7 @@ const ContactInputBlock = ({
   name,
   placeholder,
   type,
+  dataTestid,
 }) => {
   return (
     <div className={classes.inputWrapper}>
@@ -15,6 +16,7 @@ const ContactInputBlock = ({
         className={`${classes.input} ${error && touched ? classes.error : ''}`}
         type={type}
         name={name}
+        data-testid={dataTestid}
         placeholder={placeholder}
       />
       <ErrorMessage

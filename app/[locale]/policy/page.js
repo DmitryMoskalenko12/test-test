@@ -60,17 +60,17 @@ const Policy = () => {
                   PE Rekhletskyi
                   <span className='block-component' />
                 </span>{' '}
-                (<span className='block-component' />"<strong>we</strong>," "
-                <strong>us</strong>," or "<strong>our</strong>"
+                (<span className='block-component' /><strong>we</strong>,
+                <strong>us</strong>, or <strong>our</strong>
                 <span className='statement-end-if-in-editor' />
               </span>
               <span data-custom-class='body_text'>
                 ), describes how and why we might collect, store, use, and/or
-                share (<span className='block-component' />"
-                <strong>process</strong>"
+                share (<span className='block-component' />
+                <strong>process</strong>
                 <span className='statement-end-if-in-editor' />) your
                 information when you use our services (
-                <span className='block-component' />"<strong>Services</strong>"
+                <span className='block-component' /><strong>Services</strong>
                 <span className='statement-end-if-in-editor' />
                 ), such as when you:
               </span>
@@ -1087,7 +1087,6 @@ const Policy = () => {
                     features you use), device event information (such as system
                     activity, error reports (sometimes called{' '}
                     <span className='block-component' />
-                    "crash dumps"
                     <span className='statement-end-if-in-editor' />
                     ), and hardware settings).
                     <span style={{ fontSize: 15 }}>
@@ -1155,7 +1154,7 @@ const Policy = () => {
                 <span style={{ fontSize: 15, color: 'rgb(89, 89, 89)' }}>
                   <span data-custom-class='body_text'>
                     <em>Location Data.</em> We collect location data such as
-                    information about your device's location, which can be
+                    information about your devices location, which can be
                     either precise or imprecise. How much information we collect
                     depends on the type and settings of the device you use to
                     access the Services. For example, we may use GPS and other
@@ -1423,7 +1422,7 @@ const Policy = () => {
                                         your marketing preferences. You can opt
                                         out of our marketing emails at any time.
                                         For more information, see{' '}
-                                        <span className='block-component' />"
+                                        <span className='block-component' />
                                         <span className='statement-end-if-in-editor' />
                                       </span>
                                     </span>
@@ -1463,7 +1462,7 @@ const Policy = () => {
                                       }}
                                     >
                                       <span data-custom-class='body_text'>
-                                        <span className='block-component' />"
+                                        <span className='block-component' />
                                         <span className='statement-end-if-in-editor' />{' '}
                                         below.
                                       </span>
@@ -1658,7 +1657,7 @@ const Policy = () => {
                                                       >
                                                         <strong>
                                                           To save or protect an
-                                                          individual's vital
+                                                          individuals vital
                                                           interest.
                                                         </strong>{' '}
                                                         We may process your
@@ -4796,7 +4795,7 @@ const Policy = () => {
                                                                       in the
                                                                       section{' '}
                                                                       <span className='block-component' />
-                                                                      "
+                                                                      
                                                                       <span className='statement-end-if-in-editor' />
                                                                     </span>
                                                                   </span>
@@ -4846,7 +4845,7 @@ const Policy = () => {
                                                                   >
                                                                     <span data-custom-class='body_text'>
                                                                       <span className='block-component' />
-                                                                      "
+                                                                      
                                                                       <span className='statement-end-if-in-editor' />{' '}
                                                                       below.
                                                                     </span>
@@ -5208,7 +5207,7 @@ const Policy = () => {
                                                                       in the
                                                                       section{' '}
                                                                       <span className='block-component' />
-                                                                      "
+                                                                      
                                                                       <span className='statement-end-if-in-editor' />
                                                                     </span>
                                                                   </span>
@@ -5258,7 +5257,7 @@ const Policy = () => {
                                                                   >
                                                                     <span data-custom-class='body_text'>
                                                                       <span className='block-component' />
-                                                                      "
+                                                                      
                                                                       <span className='statement-end-if-in-editor' />{' '}
                                                                       below
                                                                       <span className='block-component' />
@@ -5379,7 +5378,7 @@ const Policy = () => {
                                                                     provided in
                                                                     the section{' '}
                                                                     <span className='block-component' />
-                                                                    "
+                                                                    
                                                                     <span className='statement-end-if-in-editor' />
                                                                   </span>
                                                                 </span>
@@ -5410,7 +5409,7 @@ const Policy = () => {
                                                                 >
                                                                   <span data-custom-class='body_text'>
                                                                     <span className='block-component' />
-                                                                    "
+                                                                    
                                                                     <span className='statement-end-if-in-editor' />{' '}
                                                                     below. You
                                                                     will then be
@@ -5803,7 +5802,7 @@ const Policy = () => {
                                                                       Do-Not-Track
                                                                       (
                                                                       <span className='block-component' />
-                                                                      "DNT"
+                                                                      
                                                                       <span className='statement-end-if-in-editor' />
                                                                       ) feature
                                                                       or setting
@@ -8801,7 +8800,7 @@ const Policy = () => {
                                                                                   the
                                                                                   section,{' '}
                                                                                   <span className='block-component' />
-                                                                                  "
+                                                                                  
                                                                                   <span className='statement-end-if-in-editor' />
                                                                                 </span>
                                                                                 <a
@@ -8831,7 +8830,7 @@ const Policy = () => {
                                                                                 >
                                                                                   <span className='block-component' />
 
-                                                                                  "
+                                                                                  
                                                                                 </span>
                                                                                 <span className='statement-end-if-in-editor'>
                                                                                   <span
@@ -8984,7 +8983,7 @@ const Policy = () => {
                                                                                       the
                                                                                       section,{' '}
                                                                                       <span className='block-component' />
-                                                                                      "
+                                                                                      
                                                                                       <span className='statement-end-if-in-editor' />
                                                                                     </span>
                                                                                   </span>
@@ -9036,7 +9035,7 @@ const Policy = () => {
                                                                                   >
                                                                                     <span data-custom-class='body_text'>
                                                                                       <span className='block-component' />
-                                                                                      "
+                                                                                      
                                                                                       <span className='statement-end-if-in-editor' />
                                                                                     </span>
                                                                                   </span>
@@ -9100,7 +9099,7 @@ const Policy = () => {
                                                                                       to
                                                                                       be{' '}
                                                                                       <span className='block-component' />
-                                                                                      "selling"
+                                                                                      
                                                                                       <span className='statement-end-if-in-editor' />{' '}
                                                                                       of
                                                                                       your
@@ -9304,9 +9303,7 @@ const Policy = () => {
                                                                                   as
                                                                                   the{' '}
                                                                                   <span className='block-component' />
-                                                                                  "Shine
-                                                                                  The
-                                                                                  Light"
+                                                                                 
                                                                                   <span className='statement-end-if-in-editor' />{' '}
                                                                                   law
                                                                                   permits
@@ -9655,7 +9652,7 @@ const Policy = () => {
                                                                                     defines
                                                                                     a{' '}
                                                                                     <span className='block-component' />
-                                                                                    "residents"
+                                                                                    
                                                                                     <span className='statement-end-if-in-editor' />{' '}
                                                                                     as:
                                                                                   </span>
@@ -9787,7 +9784,7 @@ const Policy = () => {
                                                                                     defined
                                                                                     as{' '}
                                                                                     <span className='block-component' />
-                                                                                    "non-residents."
+                                                                                  
                                                                                     <span className='statement-end-if-in-editor' />
                                                                                   </span>
                                                                                 </span>
@@ -9825,7 +9822,7 @@ const Policy = () => {
                                                                                     definition
                                                                                     of{' '}
                                                                                     <span className='block-component' />
-                                                                                    "resident"
+                                                                                   
                                                                                     <span className='statement-end-if-in-editor' />{' '}
                                                                                     applies
                                                                                     to
@@ -11356,7 +11353,7 @@ const Policy = () => {
                                                                                   do
                                                                                   not
                                                                                   process
-                                                                                  consumer's
+                                                                                  consumers
                                                                                   sensitive
                                                                                   personal
                                                                                   information.
@@ -12958,7 +12955,7 @@ const Policy = () => {
                                                                                         effects
                                                                                         (
                                                                                         <span className='block-component' />
-                                                                                        "profiling"
+                                                                                       
                                                                                         <span className='statement-end-if-in-editor' />
 
                                                                                         )
@@ -13520,7 +13517,7 @@ const Policy = () => {
                                                                                         effects
                                                                                         (
                                                                                         <span className='block-component' />
-                                                                                        "profiling"
+                                                                                     
                                                                                         <span className='statement-end-if-in-editor' />
 
                                                                                         )
@@ -14169,7 +14166,7 @@ const Policy = () => {
                                                                                     <span className='block-component'>
                                                                                       <span data-custom-class='body_text' />
                                                                                     </span>
-                                                                                    "Consumer"
+                                                                                  
                                                                                     <span className='statement-end-if-in-editor' />{' '}
                                                                                     means
                                                                                     a
@@ -14235,8 +14232,7 @@ const Policy = () => {
                                                                                     <span className='block-component'>
                                                                                       <span data-custom-class='body_text' />
                                                                                     </span>
-                                                                                    "Personal
-                                                                                    data"
+                                                                             
                                                                                     <span className='statement-end-if-in-editor' />{' '}
                                                                                     means
                                                                                     any
@@ -14255,8 +14251,7 @@ const Policy = () => {
                                                                                     natural
                                                                                     person.{' '}
                                                                                     <span className='block-component' />
-                                                                                    "Personal
-                                                                                    data"
+                                                                                  
                                                                                     <span className='statement-end-if-in-editor' />{' '}
                                                                                     does
                                                                                     not
@@ -14298,10 +14293,7 @@ const Policy = () => {
                                                                                     <span className='block-component'>
                                                                                       <span data-custom-class='body_text' />
                                                                                     </span>
-                                                                                    "Sale
-                                                                                    of
-                                                                                    personal
-                                                                                    data"
+                                                                                
                                                                                     <span className='statement-end-if-in-editor' />{' '}
                                                                                     means
                                                                                     the
@@ -14345,7 +14337,7 @@ const Policy = () => {
                                                                                       definition
                                                                                       of{' '}
                                                                                       <span className='block-component' />
-                                                                                      "consumer"
+                                                                                     
                                                                                       <span className='statement-end-if-in-editor' />{' '}
                                                                                       applies
                                                                                       to
@@ -14678,7 +14670,7 @@ const Policy = () => {
                                                                                         effects
                                                                                         (
                                                                                         <span className='block-component' />
-                                                                                        "profiling"
+                                                                                    
                                                                                         <span className='statement-end-if-in-editor' />
 
                                                                                         )
@@ -14928,7 +14920,7 @@ const Policy = () => {
                                                                                       you
                                                                                       and
                                                                                       your
-                                                                                      consumer's
+                                                                                      consumers
                                                                                       request.
                                                                                       If
                                                                                       you
@@ -15512,7 +15504,7 @@ const Policy = () => {
                                                                                         an
                                                                                         updated{' '}
                                                                                         <span className='block-component' />
-                                                                                        "Revised"
+                                                                                      
                                                                                         <span className='statement-end-if-in-editor' />{' '}
                                                                                         date
                                                                                         and

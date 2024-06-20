@@ -18,6 +18,7 @@ const Services = () => {
 
   useEffect(() => {
     setCollapseItems(collapseArr(t));
+    //eslint-disable-next-line
   }, []);
 
   return (

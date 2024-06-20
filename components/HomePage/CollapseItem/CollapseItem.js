@@ -26,7 +26,7 @@ const CollapseItem = ({
 }) => {
   useEffect(() => {
     setHeight(linkRef.current.scrollHeight);
-  }, [activeTitle]);
+  }, [activeTitle, setHeight, linkRef]);
 
   return (
     <div className={classes.content}>

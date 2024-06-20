@@ -5,7 +5,7 @@ const ContactErrorMessage = ({ setSuccess, setLoading, setError }) => {
   const { t } = useTranslation('start');
 
   return (
-    <div className={classes.error}>
+    <div data-testid="error" className={classes.error}>
       <button
         onClick={() => {
           setSuccess(null);

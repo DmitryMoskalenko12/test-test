@@ -28,7 +28,7 @@ export default function LanguageChanger({ display, dividerClass }) {
 
   useEffect(() => {
     setActiveLang(currentLocale);
-  }, []);
+  }, [currentLocale]);
 
   const handleChange = (e) => {
     const newLocale = e.target.textContent.toLowerCase();

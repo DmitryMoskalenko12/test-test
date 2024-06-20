@@ -3,7 +3,7 @@ import Spinner from '@/ui/HomePage/Spinner/Spinner';
 
 const ContactSpinner = () => {
   return (
-    <div className={classes.spinner}>
+    <div data-testid="spinner" className={classes.spinner}>
       <Spinner />
       <svg
         className={classes.wave}
